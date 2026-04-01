@@ -1,7 +1,8 @@
 % beamerthemeUU.sty - legacy-named implementation file for the beamer-up derivative
 % Public project identity: beamer-up
 % Approved first-release public theme identifier: UP
-% Current inherited usage in this working tree: \usetheme{UU}
+% Canonical public usage: \usetheme{UP}
+% Direct legacy usage retained as deprecated compatibility: \usetheme{UU}
 % Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
 % Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
 %
@@ -16,7 +17,12 @@
 %   \venue{Conference, City}
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerthemeUU}[2026/03/17 Legacy-named theme package for the beamer-up derivative]
+\ProvidesPackage{beamerthemeUU}[2026/04/01 Legacy-named theme package for the beamer-up derivative]
+
+\@ifundefined{beamerup@loadedfromupwrapper}{%
+  \PackageWarningNoLine{beamerthemeUU}{Direct legacy theme loading is deprecated.\MessageBreak
+    Load the theme with \string\usetheme{UP} instead of \string\usetheme{UU}.}%
+}{}
 
 % -- Options -----------------------------------------------------------
 \newif\if@UUnosection\@UUnosectionfalse

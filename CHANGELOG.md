@@ -1,6 +1,6 @@
 # Changelog
 
-Status: independently maintained derivative work with approved brownfield baselines and a drafted public `UP` migration plan.
+Status: independently maintained derivative work with approved brownfield baselines and an implemented public `UP` entry path; direct `UU` loading remains deprecated compatibility.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: independently maintained derivative work with approved brownfield baseli
 
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
+
+## v0.0.7
+
+### Added or Changed
+- Implemented and approved the public `UP` theme interface so the checked-in demo and public usage guidance now load through `\usetheme{UP}`.
+- Added `beamer-up/beamerthemeUP.sty` as the canonical public loader and updated `beamer-up/beamerthemeUU.sty` to treat direct `UU` loading as deprecated compatibility with warning guidance.
+- Updated the bundled showcase deck in `beamer-up/main.tex` to exercise the supported `UP` path, refresh usage messaging, and point users to the current repository instead of the upstream Utrecht project.
+- Reconciled `README.md`, `CHANGELOG.md`, and `CONTRIBUTING.md` so the public docs now describe `U-C` as complete and position `U-D` visual adaptation as the next major workstream.
+- Added `docs/version-0-0-7-docs.md` as the public milestone note for the implemented `UP` interface release.
+
+### For Deletion
+- None from this task context.
 
 ## v0.0.6
 

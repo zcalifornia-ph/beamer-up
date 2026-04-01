@@ -1,0 +1,17 @@
+% beamerthemeUP.sty - canonical public theme entry file for the beamer-up derivative
+% Public project identity: beamer-up
+% Supported public theme identifier: UP
+% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
+% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeUP}[2026/04/01 Canonical public theme package for the beamer-up derivative]
+
+\def\beamerup@loadedfromupwrapper{1}
+
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{beamerthemeUU}}
+\ProcessOptions\relax
+
+\RequirePackage{beamerthemeUU}
+
+\endinput
