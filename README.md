@@ -27,11 +27,11 @@
   <h3 align="center">beamer-up</h3>
 
   <p align="center">
-    <strong>An unofficial beamer theme for the University of the Philippines System.</strong>
+    <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.5
+    Version: v0.0.6
     <br />
-    Status: independently maintained derivative work with approved governance and brownfield baselines; the bundled demo still loads through <code>\usetheme{UU}</code>, and the public <code>UP</code> interface migration is next.
+    Status: independently maintained derivative work with approved governance and brownfield baselines; the public <code>UP</code> entry-point migration plan is now drafted, while the shipped implementation still loads through inherited <code>UU</code> paths until the next implementation milestone lands.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -51,6 +51,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#current-status">Current Status</a></li>
+        <li><a href="#public-naming-contract">Public Naming Contract</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -64,6 +65,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#immediate-next-actions">Immediate Next Actions</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -82,9 +84,10 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- Brownfield structural and compile-behavior baselines for the inherited theme are now approved.
+- Brownfield structural and compile-behavior baselines for the inherited theme are approved and can now serve as downstream migration context.
 - The bundled demo compile was validated locally on April 1, 2026 through `latexmk`, `biber`, and `pdflatex`.
-- The approved first-release public theme identifier is `UP`, but the current bundled demo still exercises the inherited `UU` loader and helper surface.
+- The public `UP` entry-point design and migration policy are now drafted, including the plan to add `beamerthemeUP.sty` and move public examples to `\usetheme{UP}`.
+- The current checked-in implementation still loads through inherited `UU` entry surfaces, and no `UP` runtime file has shipped yet.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they remain compatibility details and migration-sensitive implementation surfaces rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
@@ -92,15 +95,8 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 - Canonical project identity: `beamer-up`
 - Approved first-release public theme identifier: `UP`
-- Current `UU` identifiers in the checked-in working tree are transitional brownfield details until the public-interface migration lands.
-- Public docs must not present `UU` as the retained long-term supported theme alias.
-
-### Branding and Distribution Guidance
-
-- GitHub and Overleaf distribution surfaces must identify `beamer-up` as an independently maintained derivative based on `beamer-uu`.
-- UP-branded assets or template packages should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
-- Public wording must not imply official UP System endorsement, Utrecht University ownership of this derivative, or upstream continuity.
-- Public release notes and packaging guidance should preserve derivative provenance, non-endorsement wording, and clear statements about which assets are actually bundled.
+- Current `UU` identifiers in the checked-in working tree are transitional brownfield details until the public-interface migration is implemented
+- Public docs must not present `UU` as the retained long-term supported theme alias
 
 ### Built With
 
@@ -129,11 +125,12 @@ docs/
   version-0-0-3-docs.md
   version-0-0-4-docs.md
   version-0-0-5-docs.md
+  version-0-0-6-docs.md
 repo/images/
   project_screen.png
 ```
 
-The checked-in implementation still loads as `UU` because the public-interface migration has not yet been completed. Internal maintainer-only design and traceability records are intentionally omitted from this public layout summary.
+The checked-in implementation still loads as `UU` because the `UP` public-interface implementation has not yet landed. Maintainer-only workflow artifacts are intentionally omitted from this public layout summary.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,7 +166,7 @@ The checked-in implementation still loads as `UU` because the public-interface m
 
 ## Usage
 
-The current working tree still exposes inherited `UU` identifiers in the theme interface. This snippet documents the present brownfield state only; the approved first-release public contract is `UP`, and `UU` is not intended to remain the supported long-term public alias once the migration lands.
+The current working tree still exposes inherited `UU` identifiers in the theme interface. This snippet documents the present brownfield runtime surface:
 
 ```tex
 \documentclass[aspectratio=169]{beamer}
@@ -182,19 +179,20 @@ The current working tree still exposes inherited `UU` identifiers in the theme i
 \date{\today}
 ```
 
-Useful options and helpers already present in the baseline:
+The drafted next-step public contract is:
 
-- `showlogo` to show the small corner logo on content slides.
-- `nl` as a legacy upstream option that remains in the implementation.
-- `nosectionpage` to suppress automatic section divider slides.
-- `\multiauthor`, `\addinstitute{}`, and `\venue{}` for conference-style title slides.
-- `\sectionframe{}`, `\standoutframe{}`, and `\thankframe{}{}` for common presentation transitions.
+```tex
+\documentclass[aspectratio=169]{beamer}
+\usetheme[showlogo]{UP}
+```
 
-Migration-note expectations for future public docs:
+Planned migration expectations:
 
-- switch public examples to `\usetheme{UP}` once the interface migration lands
-- label any remaining `UU` example as transitional brownfield behavior only
-- keep derivative attribution and UP branding-use disclaimer wording aligned across release and distribution surfaces
+- `UP` becomes the supported public loader once the next implementation milestone lands.
+- Existing options `showlogo`, `nl`, and `nosectionpage` are expected to carry forward unchanged.
+- Existing helper commands such as `\multiauthor`, `\addinstitute`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
+- Any temporary `UU` compatibility path should be treated as a deprecated bridge rather than a coequal long-term public alias.
+- Direct `UU` subtheme loading remains an internal compatibility detail, not part of the intended public first-release contract.
 
 These inherited identifiers are implementation details, not statements of project affiliation, branding policy, or upstream support.
 
@@ -202,8 +200,9 @@ These inherited identifiers are implementation details, not statements of projec
 
 ## Roadmap
 
-- [x] Reverse engineer the inherited theme structure and compile behavior.
 - [x] Establish the derivative naming, attribution, disclaimer, and asset-governance baseline.
+- [x] Reverse engineer the inherited theme structure and compile behavior.
+- [x] Draft the public `UP` entry-point design and migration policy.
 - [ ] Implement the public `\usetheme{UP}` entry path and publish the user-facing migration notes.
 - [ ] Adapt the inherited visual system toward a deliberate UP-directed presentation identity.
 - [ ] Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
@@ -211,6 +210,15 @@ These inherited identifiers are implementation details, not statements of projec
 - [ ] Preserve explicit attribution, release provenance, and legal clarity for the derivative foundation.
 
 See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for proposed improvements and open questions.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Immediate Next Actions
+
+1. Review and approve the drafted `UP` migration policy.
+2. Add `beamerthemeUP.sty` and wire the canonical `UP` loader into the existing implementation.
+3. Update the showcase deck and public usage snippets from `UU` to `UP`.
+4. Run compile validation through the supported `UP` entry path and capture migration evidence.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,6 +1,6 @@
 # Changelog
 
-Status: independently maintained derivative baseline.
+Status: independently maintained derivative work with approved brownfield baselines and a drafted public `UP` migration plan.
 
 ## Unreleased
 
@@ -9,6 +9,17 @@ Status: independently maintained derivative baseline.
 
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
+
+## v0.0.6
+
+### Added or Changed
+- Approved the brownfield dynamic compile and usage baseline so downstream migration work can depend on one canonical runtime model.
+- Drafted the public `UP` entry-point migration policy: `UP` becomes the canonical loader, helper commands and options stay stable, and any remaining `UU` loader behavior is treated as deprecated compatibility rather than a coequal public contract.
+- Updated the root `README.md` from stale unrelated project content to the current `beamer-up` public state, including the approved brownfield baseline, the drafted `UP` migration plan, and the next implementation milestone.
+- Added `docs/version-0-0-6-docs.md` as the public narrative note for this planning-and-docs milestone.
+
+### For Deletion
+- `test.tmp` (temporary scratch file created during local editing workaround and not part of the project).
 
 ## v0.0.5
 
