@@ -5,10 +5,10 @@
 % Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
 % This file documents the supported public naming contract for the current migration milestone.
 \documentclass[aspectratio=169]{beamer}
-\usetheme[showlogo]{UP}
+\usetheme[showlogo,english]{UP}
 
 % -- Metadata -----------------------------------
-\title[UP Beamer Theme]{Beamer Theme for UP {\footnotesize \quad \textcolor{UPGold}{v1.0.0}}}
+\title[UP Beamer Theme]{Beamer Theme for UP {\footnotesize \quad \textcolor{UPYellow}{v1.0.0}}}
 \subtitle{A \LaTeX\ presentation template for the University of the Philippines System}
 \author[H. Doofenshmirtz]{Dr. Heinz Doofenshmirtz}
 \institute{Department of Information and Computing Sciences}
@@ -62,6 +62,8 @@
   \begin{itemize}
     \item \texttt{\textbackslash usetheme\{UP\}} --- basic usage
     \item \texttt{\textbackslash usetheme[showlogo]\{UP\}} --- logo on every slide
+    \item \texttt{\textbackslash usetheme[showlogo,english]\{UP\}} --- English UP logotype
+    \item \texttt{\textbackslash usetheme[showlogo,filipino]\{UP\}} --- Unibersidad ng Pilipinas logotype
     \item \texttt{\textbackslash usetheme[nl]\{UP\}} --- legacy Dutch-logo compatibility path
   \end{itemize}
 
@@ -84,7 +86,7 @@
     \begin{column}{0.48\textwidth}
       \begin{block}{Flags} \footnotesize
         Pass as options to \texttt{\textbackslash usetheme[...]}\texttt{\{UP\}}:
-        \texttt{nl}, \texttt{showlogo}, \texttt{nosectionpage}.
+        \texttt{showlogo}, \texttt{english}, \texttt{filipino}, \texttt{nl}, \texttt{nosectionpage}.
       \end{block}
       \vskip 6pt
       \begin{block}{Special Frames} \footnotesize
@@ -117,9 +119,9 @@
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \begin{alertblock}{Core Palette}
-        \textcolor{UPMaroon}{\rule{1em}{1em}}~Maroon \texttt{\#751518}\\[3pt]
-        \textcolor{UPForestGreen}{\rule{1em}{1em}}~Forest green \texttt{\#0A4424}\\[3pt]
-        \textcolor{UPGold}{\rule{1em}{1em}}~Gold \texttt{\#F5AB29}\\[3pt]
+        \textcolor{UPMaroon}{\rule{1em}{1em}}~Maroon \texttt{\#8E1537}\\[3pt]
+        \textcolor{UPForestGreen}{\rule{1em}{1em}}~Forest green \texttt{\#005740}\\[3pt]
+        \textcolor{UPYellow}{\rule{1em}{1em}}~Yellow \texttt{\#FFB81D}\\[3pt]
         \textcolor{UPBlack}{\rule{1em}{1em}}~Spot black \texttt{\#231F20}\\[3pt]
         \textcolor{white}{\rule{1em}{1em}}~White \texttt{\#FFFFFF}
       \end{alertblock}
@@ -129,8 +131,8 @@
         \begin{itemize}
           \item Maroon carries hero surfaces and alerts.
           \item Forest green supports section structure and examples.
-          \item Gold stays an accent for rules, bullets, and emphasis.
-          \item Spot black anchors body text and labels on gold.
+          \item Yellow stays an accent for rules, bullets, and emphasis.
+          \item Spot black anchors body text and labels on yellow.
         \end{itemize}
     \end{exampleblock}
     \end{column}
@@ -158,12 +160,12 @@
 \end{frame}
 
 \begin{frame}{Lists}
-  Itemize now uses a single gold marker family across levels:
+  Itemize now uses a single yellow marker family across levels:
 
   \begin{itemize}
-    \item First-level items use \textcolor{UPGold}{gold} squares
+    \item First-level items use \textcolor{UPYellow}{yellow} squares
     \begin{itemize}
-      \item Second-level items stay gold and shrink with depth
+      \item Second-level items stay yellow and shrink with depth
       \begin{itemize}
         \item Third-level items keep the same accent hue for consistency
       \end{itemize}
@@ -173,7 +175,7 @@
   \end{itemize}
 
   \vskip 8pt
-  Enumerate uses dark labels on gold chips:
+  Enumerate uses dark labels on yellow chips:
   \begin{enumerate}
     \item First item
     \item Second item
@@ -212,7 +214,7 @@ $$
     arr/.style={->, >=stealth, semithick, UPBlack80},
     scale=0.95, transform shape
   ]
-    \node[box, fill=UPGold, text=UPBlack] (data) {Data};
+    \node[box, fill=UPYellow, text=UPBlack] (data) {Data};
     \node[box, fill=UPForestGreen, text=white, right=of data] (preprocess) {Pre-process};
     \node[box, fill=UPMaroon, text=white, right=of preprocess] (model) {Model};
     \node[box, fill=UPForestGreen!85!UPBlack, text=white, right=of model] (evaluate) {Evaluate};
@@ -223,7 +225,7 @@ $$
     \draw[arr] (model) -- (evaluate);
     \draw[arr] (evaluate) -- (deploy);
 
-    \draw[arr, UPGold!85!UPBlack, dashed]
+    \draw[arr, UPYellow!85!UPBlack, dashed]
       (evaluate.south) -- ++(0,-0.7) -| node[below, pos=0.25, font=\tiny\sffamily, UPMaroon] {iterate} (model.south);
   \end{tikzpicture}
   \caption{Example process diagram with a numbered figure caption.}
@@ -231,7 +233,7 @@ $$
 
   \vskip 6pt
   TikZ diagrams now stay inside the mapped UP token set.
-  Use \texttt{UPGold}, \texttt{UPForestGreen}, \texttt{UPMaroon}, and \texttt{UPBlack} directly.
+  Use \texttt{UPYellow}, \texttt{UPForestGreen}, \texttt{UPMaroon}, and \texttt{UPBlack} directly.
 \end{frame}
 
 \begin{frame}[fragile]{Code Listing}
@@ -329,7 +331,7 @@ print(fibonacci(10))  # 55
     \item Supported public loader: \texttt{\textbackslash usetheme\{UP\}}
     \item Palatino-led reading surface with a restrained sans heading hierarchy
     \item Special frames: \texttt{\textbackslash standoutframe}, \texttt{\textbackslash thankframe}, \texttt{\textbackslash sectionframe}
-    \item Options: \texttt{nl}, \texttt{showlogo}, \texttt{nosectionpage}
+    \item Options: \texttt{showlogo}, \texttt{english}, \texttt{filipino}, \texttt{nl}, \texttt{nosectionpage}
     \item Multi-author slides: \texttt{\textbackslash addinstitute\{n\}\{Name\}} + \texttt{\textbackslash multiauthor}
     \item Legacy \texttt{\textbackslash usetheme\{UU\}} loading remains deprecated compatibility during migration
   \end{enumerate}

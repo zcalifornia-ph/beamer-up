@@ -15,6 +15,10 @@
 % -- Internal: logo path storage (set by beamerthemeUU.sty) -----------
 \newcommand{\@uulogopath}{}
 \newcommand{\@uulogoblackpath}{}
+\newcommand{\@uulogowhitepath}{}
+\newcommand{\@uulogoinclude}[1]{\includegraphics[height=#1]{\@uulogopath}}
+\newcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
+\newcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
 
 % -- Conference author switch -----------------------------------------
 % Enable conference-style multi-author formatting explicitly with:
@@ -143,9 +147,15 @@
       ([xshift=1.45cm, yshift=-7.35cm]current page.north west) rectangle
       ([xshift=7.25cm, yshift=-7.18cm]current page.north west);
     \ifx\@uulogopath\@empty\else
-      \node[anchor=north east, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
-        at ([xshift=-1.0cm, yshift=-1.0cm]current page.north east)
-        {\includegraphics[height=1.65cm]{\@uulogopath}};
+      \ifx\@uulogowhitepath\@empty
+        \node[anchor=north east, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
+          at ([xshift=-1.0cm, yshift=-1.0cm]current page.north east)
+          {\@uulogoinclude{1.65cm}};
+      \else
+        \node[anchor=north east, inner sep=0pt]
+          at ([xshift=-0.7cm, yshift=-0.8cm]current page.north east)
+          {\@uulogowhiteinclude{6.3cm}};
+      \fi
     \fi
   \end{tikzpicture}%
   %

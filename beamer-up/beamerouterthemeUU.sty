@@ -43,8 +43,8 @@
     \begin{tikzpicture}[overlay, remember picture]
       \ifx\@uulogoblackpath\@empty\else
         \node[anchor=north east, inner sep=0pt]
-          at ([xshift=-0.45cm, yshift=-0.55cm]current page.north east)
-          {\includegraphics[height=1.08cm]{\@uulogoblackpath}};
+          at ([xshift=-0.45cm, yshift=-0.12cm]current page.north east)
+          {\if@UUnl\@uulogoblackinclude{1.4cm}\else\@uulogoblackinclude{5.2cm}\fi};
       \fi
     \end{tikzpicture}%
   \fi
@@ -61,9 +61,13 @@
       {\color{UPWhite}\Huge\sffamily\bfseries #1}\\[16pt]
       {\color{UPWhite}\normalsize\rmfamily #2}%
       \vskip 26pt%
-      \ifx\@uulogopath\@empty\else
-        \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
-          {\includegraphics[height=1.5cm]{\@uulogopath}};}
+      \ifx\@uulogowhitepath\@empty
+        \ifx\@uulogopath\@empty\else
+          \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
+            {\@uulogoinclude{1.5cm}};}
+        \fi
+      \else
+        \@uulogowhiteinclude{6.8cm}%
       \fi
     \end{center}
     \vfill

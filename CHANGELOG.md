@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.9`; the supported `UP` loader and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
+Status: current repo milestone `v0.0.10`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,26 @@ Status: current repo milestone `v0.0.9`; the supported `UP` loader and the curre
 
 ### For Deletion
 - None yet.
+
+## v0.0.10
+
+### Added or Changed
+- Added selectable UP logotype language variants in `beamer-up/beamerthemeUU.sty`, with `english` as the default and `filipino` as the `Unibersidad ng Pilipinas` switch while preserving `nl` as the Dutch compatibility path.
+- Updated `beamer-up/beamerinnerthemeUU.sty` and `beamer-up/beamerouterthemeUU.sty` so the selected UP logotype is reused on content, title, and thank-you slides with light-surface and dark-surface variants where available.
+- Added runtime-cropped UP logotype assets under `beamer-up/logos/` so the theme can place the new wordmarks consistently without depending on the large transparent source canvases.
+- Corrected the active UP palette in `beamer-up/beamercolorthemeUU.sty` to the official core values `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, promoted `UPYellow` as the canonical accent token, and kept `UPGold` only as a compatibility alias.
+- Updated `beamer-up/main.tex` and `README.md` usage notes to document the `english` / `filipino` theme options and the revised logo behavior.
+- Updated the root docs and `docs/version-0-0-10-docs.md` so the public release note set now reflects the current logo-source, runtime-asset, corrected-palette, and temporary inspection-artifact state alongside the root release notes.
+- Revalidated the supported compile path on April 1, 2026: `latexmk -pdf main.tex` succeeds from `beamer-up/` after the new logo-option work.
+
+### For Deletion
+- `beamer-up/logos/up-logotype-eng-black-preview.png` (temporary local inspection composite generated while checking logo visibility on a background).
+- `beamer-up/logos/up-logotype-eng-white-preview.png` (temporary local inspection composite generated while checking logo visibility on a background).
+- `beamer-up/logos/uu-logo-en-black-render.png` (temporary local rasterized comparison output for the inherited Utrecht logo).
+- `beamer-up/logos/uu-logo-en-rgb-render.png` (temporary local rasterized comparison output for the inherited Utrecht logo).
+- `beamer-up/preview-page-1.png` (temporary local PDF page render used to inspect the title slide).
+- `beamer-up/preview-page-3.png` (temporary local PDF page render used to inspect the outline slide).
+- `beamer-up/preview-page-23.png` (temporary local PDF page render used to inspect the thank-you slide).
 
 ## v0.0.9
 

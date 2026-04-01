@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.9
+    Version: v0.0.10
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme and showcase use the current UP-directed visual system, and release-ready packaging plus public validation notes remain in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme now exposes selectable UP logotype variants on light and dark slide surfaces, applies the corrected official UP core palette, and still has release-ready packaging plus public validation notes in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -87,10 +87,11 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - The bundled showcase deck was revalidated locally on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
-- The checked-in theme now applies the UP-directed palette and slide treatments across title, section, content, standout, and closing-slide surfaces.
+- The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
 - The supported compile baseline is `pdfLaTeX` with `biber`; `latexmk` is the recommended entry command.
 - The checked-in font stack uses Palatino for body copy and a Helvetica-style sans family for headings under the supported `pdfLaTeX` path.
-- The default `showlogo` path now uses the bundled UP PNG logos; the `nl` option remains a legacy Dutch-logo compatibility path.
+- The default `showlogo` path now uses runtime-cropped UP logotype PNGs so the header placement remains stable on content slides, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the `nl` option remains a legacy Dutch-logo compatibility path.
+- Title and thank-you slides now reuse the selected UP logotype in a dark-surface white variant when that asset exists.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
@@ -133,6 +134,7 @@ docs/
   version-0-0-7-docs.md
   version-0-0-8-docs.md
   version-0-0-9-docs.md
+  version-0-0-10-docs.md
 repo/images/
   project_screen.png
 ```
@@ -178,7 +180,7 @@ The supported public loader is now `UP`:
 
 ```tex
 \documentclass[aspectratio=169]{beamer}
-\usetheme[showlogo]{UP}
+\usetheme[showlogo,english]{UP}
 
 \title[Short Title]{Your Presentation Title}
 \subtitle{Optional Subtitle}
@@ -190,10 +192,11 @@ The supported public loader is now `UP`:
 Migration expectations now in effect:
 
 - `UP` is the supported public loader.
-- Existing options `showlogo`, `nl`, and `nosectionpage` are expected to carry forward unchanged.
+- Existing options `showlogo`, `english`, `filipino`, `nl`, and `nosectionpage` are supported on the public loader.
 - Existing helper commands such as `\multiauthor`, `\singleauthor`, `\addinstitute`, `\clearinstitutes`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
-- `showlogo` currently renders the bundled UP logo assets by default; `nl` switches to the legacy Dutch-logo compatibility path.
-- The default visual system now uses UP maroon, forest green, gold, and spot black across the checked-in showcase and theme templates.
+- `showlogo` renders the bundled UP logotype by default; `english` selects `University of the Philippines`, `filipino` selects `Unibersidad ng Pilipinas`, and `nl` switches to the legacy Dutch-logo compatibility path.
+- The current UP runtime uses cropped logo copies inside `beamer-up/logos/` so the selected logotype can be positioned consistently on content, title, and closing slides without depending on oversized transparent source canvases.
+- The default visual system now uses UP maroon `#8E1537`, forest green `#005740`, yellow `#FFB81D`, and spot black `#231F20` across the checked-in showcase and theme templates.
 - Any remaining `UU` compatibility path should be treated as a deprecated bridge rather than a coequal public alias.
 - Direct `UU` subtheme loading remains an internal compatibility detail, not part of the intended public first-release contract.
 
