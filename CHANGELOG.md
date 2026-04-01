@@ -1,6 +1,6 @@
 # Changelog
 
-Status: independently maintained derivative work with approved brownfield baselines and an implemented public `UP` entry path; direct `UU` loading remains deprecated compatibility.
+Status: independently maintained derivative work with approved brownfield baselines, an implemented public `UP` entry path, and a drafted guide-backed `U-D` visual-direction baseline pending review before template restyling.
 
 ## Unreleased
 
@@ -9,6 +9,26 @@ Status: independently maintained derivative work with approved brownfield baseli
 
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
+
+## v0.0.8
+
+### Added or Changed
+- Drafted the `U-D` visual-direction baseline for `beamer-up`, including a concrete UP palette, typography hierarchy, logo strategy, and decorative-rule set for title, section, content, standout, and closing-slide surfaces.
+- Recorded contrast and readability guidance for the mapped visual system, including the explicit rejection of white-on-gold text and the approval of high-contrast maroon, forest-green, gold, and dark-text pairings.
+- Updated `README.md` to move the public project state to `v0.0.8`, document that the visual-system mapping is drafted, and position the next bolt as template styling rather than interface migration.
+- Added `docs/version-0-0-8-docs.md` as the public narrative note for this visual-direction planning milestone.
+
+### For Deletion
+- `beamer-up/main.bcf` (generated bibliography control file from local showcase compilation).
+- `beamer-up/main.fls` (generated `latexmk` file list from local showcase compilation).
+- `beamer-up/main.log` (generated TeX log from local showcase compilation).
+- `beamer-up/main.pdf` (generated showcase PDF build artifact).
+- `beamer-up/main.run.xml` (generated bibliography/runtime metadata artifact).
+- `beamer-up/main.synctex.gz` (generated editor sync artifact).
+- `beamer-up/main.toc` (generated table-of-contents artifact).
+- `beamer-up/main.vrb` (generated Beamer verbatim cache artifact).
+- `beamer-up/logos/UU_logo_EN_BLACK-eps-converted-to.pdf` (generated EPS-conversion artifact from local compile flow).
+- `beamer-up/logos/UU_logo_EN_RGB-eps-converted-to.pdf` (generated EPS-conversion artifact from local compile flow).
 
 ## v0.0.7
 

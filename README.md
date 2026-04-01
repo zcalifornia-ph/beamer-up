@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.7
+    Version: v0.0.8
     <br />
-    Status: independently maintained derivative work with approved governance and brownfield baselines; the approved public <code>UP</code> entry path is implemented and compile-validated, while direct <code>UU</code> loading remains deprecated compatibility only.
+    Status: independently maintained derivative work with approved governance and brownfield baselines; the approved public <code>UP</code> entry path remains implemented and compile-validated, and a guide-backed <code>U-D</code> visual-direction mapping is now drafted pending review before template restyling.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -87,6 +87,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Brownfield structural and compile-behavior baselines for the inherited theme are approved and now serve as downstream migration context.
 - The bundled demo compile was validated locally on April 1, 2026 through `latexmk`, `biber`, and `pdflatex`.
 - The public `UP` entry path is implemented, compile-validated, and approved as the supported public interface.
+- A guide-backed visual-system mapping is now drafted for palette, typography, logo handling, and decorative rules before the next styling bolt edits the templates.
 - The current checked-in implementation now loads through `UP`, and direct `UU` loading is retained only as explicit deprecated compatibility.
 - Legacy `\usetheme{UU}` loads now exist only as a transition bridge and should not appear in new public examples or user guidance.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they remain compatibility details and migration-sensitive implementation surfaces rather than the intended long-term public brand.
@@ -129,6 +130,7 @@ docs/
   version-0-0-5-docs.md
   version-0-0-6-docs.md
   version-0-0-7-docs.md
+  version-0-0-8-docs.md
 repo/images/
   project_screen.png
 ```
@@ -200,7 +202,8 @@ These inherited identifiers are implementation details, not statements of projec
 - [x] Reverse engineer the inherited theme structure and compile behavior.
 - [x] Draft the public `UP` entry-point design and migration policy.
 - [x] Implement the public `\usetheme{UP}` entry path and publish the user-facing migration notes.
-- [ ] Adapt the inherited visual system toward a deliberate UP-directed presentation identity.
+- [x] Draft the UP visual-system mapping for palette, typography, logo handling, and decorative rules.
+- [ ] Implement the approved UP-directed slide-surface styling across the theme and showcase deck.
 - [ ] Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
 - [ ] Document release packaging and distribution guidance for broader reuse.
 - [ ] Preserve explicit attribution, release provenance, and legal clarity for the derivative foundation.
@@ -211,8 +214,8 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 
 ## Immediate Next Actions
 
-1. Approve the `U-D` visual-direction baseline before slide-surface styling changes begin.
-2. Map the UP palette, typography, logo, and decorative treatments onto title, section, content, and closing-slide surfaces.
+1. Approve the drafted `U-D` visual-direction baseline before slide-surface styling changes begin.
+2. Apply the approved palette, typography, logo, and decorative rules to title, section, content, and closing-slide surfaces.
 3. Replace remaining Utrecht-facing visual language in the showcase deck and default theme output.
 4. Prepare validation evidence and distribution-ready packaging notes once the visual adaptation settles.
 
