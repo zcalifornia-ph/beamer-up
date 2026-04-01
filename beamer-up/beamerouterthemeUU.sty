@@ -42,9 +42,15 @@
   \if@UUshowlogo
     \begin{tikzpicture}[overlay, remember picture]
       \ifx\@uulogoblackpath\@empty\else
-        \node[anchor=north east, inner sep=0pt]
-          at ([xshift=-0.45cm, yshift=-0.12cm]current page.north east)
-          {\if@UUnl\@uulogoblackinclude{1.4cm}\else\@uulogoblackinclude{5.2cm}\fi};
+        \if@UUnl
+          \node[anchor=north east, inner sep=0pt]
+            at ([xshift=-0.45cm, yshift=-0.12cm]current page.north east)
+            {\@uulogoblackinclude{1.4cm}};
+        \else
+          \node[anchor=north east, inner sep=0pt]
+            at ([xshift=\dimexpr-\beamer@rightmargin+0.12cm\relax, yshift=-0.12cm]current page.north east)
+            {\@uulogoblackinclude{5.2cm}};
+        \fi
       \fi
     \end{tikzpicture}%
   \fi

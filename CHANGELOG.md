@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.10`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
+Status: current repo milestone `v0.0.11`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide logo alignment, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,20 @@ Status: current repo milestone `v0.0.10`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.11
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the UP content-slide `showlogo` wordmark now anchors against Beamer's right content margin instead of a fixed page-edge offset.
+- Preserved the legacy `nl` Dutch-logo compatibility branch while tightening the English and Filipino UP logotype placement so the visible right edge matches the right-side block margin on content slides.
+- Revalidated the content-slide header placement on April 1, 2026 with `latexmk -pdf main.tex` and local PDF page renders from `beamer-up/` after the alignment change.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-11-docs.md` so the public docs reflect the refined UP wordmark alignment behavior.
+
+### For Deletion
+- `beamer-up/preview-page-4.png` (temporary local PDF page render used to inspect the section divider during alignment checks).
+- `beamer-up/preview-page-5.png` (temporary local PDF page render used to inspect the usage slide during alignment checks).
+- `beamer-up/preview-page-6.png` (temporary local PDF page render used to inspect the content-slide wordmark alignment against the right content margin).
+- `beamer-up/preview-page-7.png` (temporary local PDF page render used to inspect the manual section-divider slide during alignment checks).
 
 ## v0.0.10
 
