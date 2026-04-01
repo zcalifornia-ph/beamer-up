@@ -32,11 +32,11 @@ Contributions should support these working values:
 - Approved first-release public theme identifier is `UP`.
 - Current `UU` identifiers in checked-in sources are transitional brownfield details; do not introduce new public-facing `UU` expectations unless you label them explicitly as transitional and migration-sensitive.
 - When you document current inherited `UU` behavior before the migration lands, pair it with migration-note language toward `UP`.
-- GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must include the branding-guidelines/internal-use disclaimer and the non-endorsement posture defined for this derivative.
-- Use `beamer-up/docs/identity-governance.md` as the wording baseline for naming, attribution order, and disclaimer language.
-- Use `beamer-up/docs/asset-governance.md` as the inventory baseline for shipped logo assets, generated outputs, and package-surface requirements.
+- GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must preserve derivative provenance, non-endorsement wording, and the internal-use branding disclaimer when applicable.
+- If your change affects branding, attribution, or packaged assets, keep the corresponding governance or inventory notes in sync as part of the same change set.
 
 ## Before You Start
+
 - Review open issues and pull requests to avoid duplicate work.
 - Open an issue first for substantial branding, packaging, or public-interface changes.
 - Keep changes focused and easy to review.
@@ -44,7 +44,7 @@ Contributions should support these working values:
 - If you modify distributed theme components, record the change clearly in the file, pull request, or companion documentation.
 - Do not imply support, sponsorship, or endorsement from the original author, Utrecht University, the University of the Philippines System, or repository maintainers unless maintainers explicitly approve that wording.
 - If you add or replace logos, fonts, or institutional assets, make sure you have the right to use and redistribute them.
-- If you add, replace, remove, or repackage logo assets, update `beamer-up/docs/asset-governance.md` in the same change.
+- If you add, replace, remove, or repackage logo assets, include provenance, redistribution basis, and disclaimer impact in the same change.
 - Confirm your contribution aligns with `CODE_OF_CONDUCT.md` and `SECURITY.md`.
 
 ## Recommended Contribution Areas
@@ -83,7 +83,7 @@ Open a pull request containing:
 - any risks, tradeoffs, or compatibility notes
 - attribution or licensing notes when assets, branding, or upstream-derived material changed
 - a short description of any modification notices or provenance cues needed for LPPL-compliant redistribution
-- any required `beamer-up/docs/asset-governance.md` updates when logo inventories or package surfaces changed
+- any governance, inventory, or release-note updates required by the change
 
 ## Branch Naming
 
@@ -133,4 +133,3 @@ Follow `SECURITY.md` for coordinated disclosure.
 ## Community Conduct
 
 Participation requires compliance with `CODE_OF_CONDUCT.md`.
-

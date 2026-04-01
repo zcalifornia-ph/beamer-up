@@ -10,50 +10,49 @@ Status: independently maintained derivative baseline.
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
 
+## v0.0.5
+
+### Added or Changed
+- Approved the brownfield dynamic compile and usage baseline for the inherited theme and recorded that the current bundled demo still compiles successfully through the legacy `UU` interface.
+- Reconciled public root docs so they reflect the approved governance plus brownfield baseline without naming maintainer-only workflow artifacts or ignored internal paths.
+- Updated `README.md` to move the public docs to `v0.0.5`, mark the brownfield baseline as approved, and position the public `UP` interface migration as the next major milestone.
+- Updated `CONTRIBUTING.md` to replace maintainer-only path references with public contribution expectations around attribution, branding, assets, and release notes.
+- Added `docs/version-0-0-5-docs.md` as the public narrative note for this documentation reconciliation milestone.
+
+### For Deletion
+- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
+
 ## v0.0.4
 
 ### Added or Changed
-- Closed the approved `B-UA-02` asset-governance review gate in `beamer-up/REQUIREMENTS.md`, `beamer-up/docs/traceability/U-A/b-ua-02-traceability.md`, and `beamer-up/ai-dlc-docs/design-artifacts/U-A/adr/b-ua-02-adr.md` so the `U-A` governance baseline is fully approved in repo state.
-- Extended `beamer-up/ai-dlc-docs/design-artifacts/U-B/static-model.md` with a `UU` migration-impact inventory and a feature-preservation baseline for the inherited theme implementation.
-- Added `U-B` / `B-UB-01` build-task artifacts: `domain-design.md`, `logical-design.md`, `adr/b-ub-01-adr.md`, and `docs/traceability/U-B/b-ub-01-traceability.md`.
-- Updated `README.md` to reflect `v0.0.4`, the fully approved `U-A` governance baseline, and the remaining `B-UB-01` review gate.
-- Added `docs/version-0-0-4-docs.md` for the `B-UA-02` approval plus `B-UB-01` static-model milestone.
+- Recorded final approval of the governance baseline and formalized the brownfield static theme model as a maintained migration baseline.
+- Added build-task-grade design, ADR, and traceability support around the static model so later interface work could depend on one canonical structural source.
+- Updated public docs to reflect the fully approved governance baseline and the then-open brownfield static-model review gate.
+- Added `docs/version-0-0-4-docs.md` for the public milestone note.
 
 ### For Deletion
-- None new from this task context beyond generated artifacts already recorded in `v0.0.2`.
+- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
 
 ## v0.0.3
 
 ### Added or Changed
-- Added `U-A` / `B-UA-02` asset-governance artifacts: updated domain and logical design, `beamer-up/docs/asset-governance.md`, ADR, and traceability for the current logo/package baseline.
-- Classified every current file under `beamer-up/logos/` as a brownfield runtime source, brownfield runtime path, generated compile output, or candidate future UP asset.
-- Closed the previously approved `B-UA-01` wording-review gate in `beamer-up/REQUIREMENTS.md`, `beamer-up/docs/traceability/U-A/b-ua-01-traceability.md`, and `beamer-up/ai-dlc-docs/design-artifacts/U-A/adr/b-ua-01-adr.md`.
-- Updated `README.md`, `CONTRIBUTING.md`, and release documentation to reflect the asset-governance baseline and the remaining `B-UA-02` review gate.
-- Added `docs/version-0-0-3-docs.md` for the current governance/packaging milestone and restored `docs/version-0-0-2-docs.md` to a version-accurate brownfield plus naming-baseline scope.
+- Added the asset-governance baseline for current logo and package-surface decisions.
+- Classified the current logo set by runtime source, generated output, and candidate future asset status.
+- Closed the earlier naming and disclaimer review gate and updated public docs to reflect the remaining asset-governance review.
+- Added `docs/version-0-0-3-docs.md` for the public milestone note.
 
 ### For Deletion
-- None new from this task context beyond generated artifacts already recorded in `v0.0.2`.
+- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
 
 ## v0.0.2
 
 ### Added or Changed
-- Completed brownfield reverse-engineering artifacts for the inherited theme implementation, including static and dynamic models under `beamer-up/ai-dlc-docs/design-artifacts/U-B/`.
-- Added `U-A` / `B-UA-01` governance artifacts: domain design, logical design, ADR, traceability, and `beamer-up/docs/identity-governance.md`.
-- Updated `README.md` versioning, repository layout, and roadmap text to reflect the current brownfield baseline and the approved first-release `UP` naming contract.
-- Updated `CONTRIBUTING.md` and scoped source headers so contributor guidance and shipped source metadata align with the derivative naming, attribution, and branding-use baseline.
-- Updated `beamer-up/REQUIREMENTS.md` to mark `B-UA-01` design, implementation, tests, and docs as complete while leaving the wording-review gate open.
+- Completed brownfield reverse-engineering artifacts for the inherited theme implementation and established the first naming, attribution, and disclaimer baseline for the derivative.
+- Updated root docs and contributor guidance so the repository described the brownfield migration posture and approved `UP` naming contract more accurately.
+- Added `docs/version-0-0-2-docs.md` for the public milestone note.
 
 ### For Deletion
-- `beamer-up/main.bcf`
-- `beamer-up/main.fls`
-- `beamer-up/main.log`
-- `beamer-up/main.pdf`
-- `beamer-up/main.run.xml`
-- `beamer-up/main.synctex.gz`
-- `beamer-up/main.toc`
-- `beamer-up/main.vrb`
-- `beamer-up/logos/UU_logo_EN_BLACK-eps-converted-to.pdf`
-- `beamer-up/logos/UU_logo_EN_RGB-eps-converted-to.pdf`
+- Generated LaTeX showcase build artifacts and EPS-conversion outputs from local compilation were recorded for later cleanup rather than deleted in place.
 
 ## v0.0.1
 
@@ -63,4 +62,4 @@ Status: independently maintained derivative baseline.
 - Added conservative ignore rules for local workspace files and generated LaTeX build artifacts for the bundled showcase deck.
 
 ### For Deletion
-- None from this task context. Existing generated artifacts remain in place for user review because `init.task` does not delete files.
+- None from this task context. Existing generated artifacts remain in place for user review because initialization does not delete files.

@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial beamer theme for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.4
+    Version: v0.0.5
     <br />
-    Status: independently maintained derivative work with brownfield, governance, and static-model baselines established; <code>B-UB-01</code> review is pending before downstream migration depends on it.
+    Status: independently maintained derivative work with approved governance and brownfield baselines; the bundled demo still loads through <code>\usetheme{UU}</code>, and the public <code>UP</code> interface migration is next.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -73,7 +73,7 @@
 
 ## About The Project
 
-`beamer-up` is an unofficial University of the Philippines System Beamer theme initiative and an independent derivative work that began from the original `beamer-uu` structure and design approach. It now maintains its own project identity, repository governance, and release path for students, researchers, and faculty across the UP System.
+`beamer-up` is an unofficial University of the Philippines System Beamer theme initiative and an independent derivative work that began from the original `beamer-uu` structure and design approach. It now maintains its own project identity, governance posture, and release path for students, researchers, and faculty across the UP System.
 
 This derivative work is maintained in this repository by Zildjian E. California. It preserves attribution to the original `beamer-uu` developer, A.J.H. (Jos) Zuijderwijk, and reflects the confirmed license basis in `LICENSE.txt`: the LaTeX Project Public License `LPPL 1.3c`. `beamer-up` should be identified as its own maintained derivative work rather than as the original `beamer-uu` release or a Utrecht University publication.
 
@@ -81,29 +81,26 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
-- `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or Utrecht logo usage as part of its public project identity.
-- Brownfield reverse-engineering artifacts for the inherited theme implementation now live under `beamer-up/ai-dlc-docs/design-artifacts/U-B/`.
-- The naming, attribution, and branding-governance source of truth for the upcoming `UP` migration now lives at `beamer-up/docs/identity-governance.md`.
-- The asset inventory, release-state rules, and GitHub/Overleaf package-surface baseline now live at `beamer-up/docs/asset-governance.md`.
-- `U-A` governance baseline is now fully approved, including the asset-governance review for `B-UA-02`.
-- `B-UB-01` static-model baseline is implemented and is the remaining open brownfield modeling review gate before downstream migration work depends on it.
-- Some internal file names and implementation identifiers still reflect the historical source lineage; they remain compatibility details and attribution anchors rather than the current public branding of the project.
-- The theme files in this repository are distributed under `LPPL 1.3c`; logo and institutional-brand usage may still involve separate constraints outside the software license.
+- `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
+- Brownfield structural and compile-behavior baselines for the inherited theme are now approved.
+- The bundled demo compile was validated locally on April 1, 2026 through `latexmk`, `biber`, and `pdflatex`.
+- The approved first-release public theme identifier is `UP`, but the current bundled demo still exercises the inherited `UU` loader and helper surface.
+- Some file names, helper names, and color tokens still reflect historical `UU` lineage; they remain compatibility details and migration-sensitive implementation surfaces rather than the intended long-term public brand.
+- The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
 ### Public Naming Contract
 
 - Canonical project identity: `beamer-up`
 - Approved first-release public theme identifier: `UP`
 - Current `UU` identifiers in the checked-in working tree are transitional brownfield details until the public-interface migration lands.
-- First-release public docs must not present `UU` as the retained long-term supported theme alias.
+- Public docs must not present `UU` as the retained long-term supported theme alias.
 
 ### Branding and Distribution Guidance
 
 - GitHub and Overleaf distribution surfaces must identify `beamer-up` as an independently maintained derivative based on `beamer-uu`.
-- UP-branded assets or template packages should follow the UP branding guidelines and are intended for UP constituents/internal use unless broader permission is documented explicitly.
+- UP-branded assets or template packages should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 - Public wording must not imply official UP System endorsement, Utrecht University ownership of this derivative, or upstream continuity.
-- The current wording baseline for these surfaces is recorded in `beamer-up/docs/identity-governance.md`.
-- Asset-specific release-state, provenance-note, and package-surface rules are recorded in `beamer-up/docs/asset-governance.md`.
+- Public release notes and packaging guidance should preserve derivative provenance, non-endorsement wording, and clear statements about which assets are actually bundled.
 
 ### Built With
 
@@ -120,29 +117,23 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ```text
 beamer-up/
-  ai-dlc-docs/
-    design-artifacts/
-  docs/
-    identity-governance.md
-    asset-governance.md
   beamerthemeUU.sty
+  beamercolorthemeUU.sty
   beamerinnerthemeUU.sty
   beamerouterthemeUU.sty
-  beamercolorthemeUU.sty
   logos/
   main.tex
   references.bib
-  REQUIREMENTS.md
-repo/images/
-  project_screen.png
 docs/
   version-0-0-2-docs.md
   version-0-0-3-docs.md
   version-0-0-4-docs.md
+  version-0-0-5-docs.md
+repo/images/
+  project_screen.png
 ```
 
-The theme source currently remains in the `beamer-up/` subdirectory. The checked-in implementation still loads as `UU` because the public-interface migration has not yet been completed.
-The approved first-release public theme identifier is `UP`; current `UU` names in the working tree are transitional brownfield state only and should be read together with the migration guidance in `beamer-up/docs/identity-governance.md` and the asset baseline in `beamer-up/docs/asset-governance.md`.
+The checked-in implementation still loads as `UU` because the public-interface migration has not yet been completed. Internal maintainer-only design and traceability records are intentionally omitted from this public layout summary.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,7 +163,7 @@ The approved first-release public theme identifier is `UP`; current `UU` names i
    pdflatex main.tex
    pdflatex main.tex
    ```
-4. Reuse the theme files and `logos/` directory in your own presentation project, or install them into a local TeX tree as needed. If you redistribute a modified version, keep the provenance and license context intact and consult `beamer-up/docs/asset-governance.md` before shipping logo-bearing packages.
+4. Reuse the theme files and `logos/` directory in your own presentation project, or install them into a local TeX tree as needed. If you redistribute a modified version, keep attribution, license context, provenance clarity, and non-endorsement wording intact.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,24 +190,24 @@ Useful options and helpers already present in the baseline:
 - `\multiauthor`, `\addinstitute{}`, and `\venue{}` for conference-style title slides.
 - `\sectionframe{}`, `\standoutframe{}`, and `\thankframe{}{}` for common presentation transitions.
 
-Migration-note requirements for first-release docs:
+Migration-note expectations for future public docs:
 
 - switch public examples to `\usetheme{UP}` once the interface migration lands
 - label any remaining `UU` example as transitional brownfield behavior only
-- keep derivative attribution and the UP branding-use disclaimer aligned across GitHub and Overleaf distribution surfaces
+- keep derivative attribution and UP branding-use disclaimer wording aligned across release and distribution surfaces
 
 These inherited identifiers are implementation details, not statements of project affiliation, branding policy, or upstream support.
-If you adapt the theme further, keep attribution to the original `beamer-uu` work, mark your modifications clearly, avoid implying upstream or institutional endorsement, and audit any logo or branding assets before redistributing them. See `beamer-up/docs/identity-governance.md` for the wording baseline and `beamer-up/docs/asset-governance.md` for the current asset inventory, release states, and package-surface rules.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Roadmap
 
-- [x] Capture brownfield static and dynamic models for the inherited `UU` implementation.
-- [x] Establish the naming, attribution, branding-governance, and asset-governance baseline for the `UP` migration.
+- [x] Reverse engineer the inherited theme structure and compile behavior.
+- [x] Establish the derivative naming, attribution, disclaimer, and asset-governance baseline.
 - [ ] Implement the public `\usetheme{UP}` entry path and publish the user-facing migration notes.
-- [ ] Expand the example deck for common UP use cases such as thesis defenses, class reports, and research talks.
-- [ ] Document TeX-tree installation and packaging guidance for broader reuse.
+- [ ] Adapt the inherited visual system toward a deliberate UP-directed presentation identity.
+- [ ] Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
+- [ ] Document release packaging and distribution guidance for broader reuse.
 - [ ] Preserve explicit attribution, release provenance, and legal clarity for the derivative foundation.
 
 See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for proposed improvements and open questions.
@@ -236,7 +227,7 @@ See `LICENSE.txt` for the full license text.
 
 The maintainer of this repository's derivative distribution is Zildjian E. California.
 If you redistribute a modified version, keep attribution clear, document the nature of your changes prominently, identify the result clearly as a modified derivative, and avoid implying support or endorsement from the original author, Utrecht University, or this repository's maintainers.
-Institutional names, logos, and other brand assets may still be subject to separate usage or trademark constraints. UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use unless broader permission is documented explicitly.
+Institutional names, logos, and other brand assets may still be subject to separate usage or trademark constraints. UP-branded assets should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -278,6 +269,4 @@ Project Link: [https://github.com/zcalifornia-ph/beamer-up](https://github.com/z
 [TikZ-url]: https://ctan.org/pkg/pgf
 [Biber]: https://img.shields.io/badge/Biber-7C3AED?style=for-the-badge&logo=latex&logoColor=white
 [Biber-url]: https://ctan.org/pkg/biber
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/zcalifornia
 [product-screenshot]: repo/images/project_screen.png
