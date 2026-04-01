@@ -2,6 +2,7 @@
 
 Thanks for contributing to `beamer-up`.
 This repository is an unofficial University of the Philippines System Beamer theme initiative, independently maintained by Zildjian E. California, and derived from the `beamer-uu` baseline under `LPPL 1.3c`.
+The supported public theme loader is now `UP`; any remaining `UU` usage in the tree is legacy compatibility rather than the intended public contract.
 Contributions should improve `beamer-up` as its own maintained project while preserving attribution clarity, clear modification history, and defensible branding decisions.
 
 ## Values Framework
@@ -26,20 +27,31 @@ Contributions should support these working values:
 - Treat `beamer-up` as an independent derivative project; do not reintroduce Utrecht-branded positioning, logo policy claims, or statements that this repository follows Utrecht University branding guidance.
 - Institutional names, logos, and brand assets may require separate permission or policy compliance beyond the software license.
 
+## Naming and Branding Contract
+
+- Public project identity remains `beamer-up`.
+- Approved first-release public theme identifier is `UP`.
+- Current `UU` identifiers in checked-in sources are legacy compatibility details; do not introduce new public-facing `UU` expectations unless you are documenting deprecated migration behavior explicitly.
+- When you mention inherited `UU` behavior, label it as deprecated compatibility and direct readers to `UP` as the supported loader.
+- GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must preserve derivative provenance, non-endorsement wording, and the internal-use branding disclaimer when applicable.
+- If your change affects branding, attribution, or packaged assets, keep the corresponding governance or inventory notes in sync as part of the same change set.
+
 ## Before You Start
 
 - Review open issues and pull requests to avoid duplicate work.
 - Open an issue first for substantial branding, packaging, or public-interface changes.
 - Keep changes focused and easy to review.
 - Preserve clear attribution to the original `beamer-uu` work and do not remove or obscure license context unless maintainers explicitly direct otherwise.
+- Do not switch new public examples, quick starts, or screenshots back to `\usetheme{UU}`.
 - If you modify distributed theme components, record the change clearly in the file, pull request, or companion documentation.
 - Do not imply support, sponsorship, or endorsement from the original author, Utrecht University, the University of the Philippines System, or repository maintainers unless maintainers explicitly approve that wording.
 - If you add or replace logos, fonts, or institutional assets, make sure you have the right to use and redistribute them.
+- If you add, replace, remove, or repackage logo assets, include provenance, redistribution basis, and disclaimer impact in the same change.
 - Confirm your contribution aligns with `CODE_OF_CONDUCT.md` and `SECURITY.md`.
 
 ## Recommended Contribution Areas
 
-- Public-interface cleanup that reduces reliance on legacy upstream identifiers where it can be done safely.
+- Visual-system adaptation and cleanup that reduce remaining Utrecht-facing language or styling where it can be done safely.
 - Documentation and onboarding improvements for local TeX users.
 - Example slide decks and showcase content for common academic use cases.
 - Theme cleanup, macro polish, and compatibility fixes in the `.sty` files.
@@ -73,6 +85,7 @@ Open a pull request containing:
 - any risks, tradeoffs, or compatibility notes
 - attribution or licensing notes when assets, branding, or upstream-derived material changed
 - a short description of any modification notices or provenance cues needed for LPPL-compliant redistribution
+- any governance, inventory, or release-note updates required by the change
 
 ## Branch Naming
 

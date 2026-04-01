@@ -1,0 +1,93 @@
+% beamerouterthemeUU.sty - legacy-named outer-theme implementation file for the beamer-up derivative
+% Public project identity: beamer-up. Approved first-release public theme identifier: UP.
+% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
+% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerouterthemeUU}[2026/04/01 Legacy-named outer theme for the beamer-up derivative]
+
+\RequirePackage{tikz}
+\newcommand{\@upheaderlineshotpath}{logos/up-logo-lineshot.png}
+\newcommand{\@upheaderlineshotinclude}[1]{\includegraphics[height=#1]{\@upheaderlineshotpath}}
+\newcommand{\@upheaderlogolockupblack}[1]{%
+  \begin{tikzpicture}[baseline=(seal.center)]
+    \node[inner sep=0pt, anchor=center] (seal) {\@upheaderlineshotinclude{0.72cm}};
+    \node[inner sep=0pt, anchor=west] (wordmark)
+      at ([xshift=0.10cm]seal.east) {\@uulogoblackinclude{#1}};
+  \end{tikzpicture}%
+}
+
+% -- Frame Title -----------------------------------------------------------
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=3.2ex, dp=1.2ex, leftskip=0.6cm, rightskip=0.6cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle%
+    \ifx\insertframesubtitle\@empty\else
+      \quad{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}%
+    \fi
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \begin{tikzpicture}[overlay]
+    \draw[UPGold, line width=1.2pt] (-0.4cm,0) -- (\paperwidth,0);
+    \draw[UPForestGreen, line width=2.4pt] (-0.4cm,0) -- (2.7cm,0);
+  \end{tikzpicture}%
+  \vskip 4pt%
+}
+
+% -- Footline -----------------------------------------------------------
+\setbeamertemplate{footline}{%
+  \leavevmode%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.2ex,left,leftskip=.6cm]{footline}%
+        \usebeamerfont{footline}\insertshortauthor
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.8ex,dp=1.2ex,center]{footline}%
+        \usebeamerfont{footline}\insertshorttitle
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.2ex,right,rightskip=.6cm]{footline}%
+        \usebeamerfont{footline}\insertframenumber\,/\,\inserttotalframenumber
+      \end{beamercolorbox}%
+    }%
+  \if@UUshowlogo
+    \begin{tikzpicture}[overlay, remember picture]
+      \ifx\@uulogoblackpath\@empty\else
+        \if@UUnl
+          \node[anchor=north east, inner sep=0pt]
+            at ([xshift=-0.45cm, yshift=-0.12cm]current page.north east)
+            {\@uulogoblackinclude{1.4cm}};
+        \else
+          \node[anchor=north east, inner sep=0pt]
+            at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.06cm]current page.north east)
+            {\if@UUfilipino\@upheaderlogolockupblack{4.25cm}\else\@upheaderlogolockupblack{4.95cm}\fi};
+        \fi
+      \fi
+    \end{tikzpicture}%
+  \fi
+}
+
+% -- Thank-you / closing frame --------------------------------
+\newcommand{\thankframe}[2]{%
+  \begingroup
+  \setbeamercolor{background canvas}{bg=UPMaroon}
+  \begin{frame}[plain]
+    \vfill
+    \begin{center}
+      {\color{UPGold}\rule{2.8cm}{1pt}}\\[16pt]
+      {\color{UPWhite}\Huge\sffamily\bfseries #1}\\[16pt]
+      {\color{UPWhite}\normalsize\rmfamily #2}%
+      \vskip 26pt%
+      \ifx\@uulogowhitepath\@empty
+        \ifx\@uulogopath\@empty\else
+          \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
+            {\@uulogoinclude{1.5cm}};}
+        \fi
+      \else
+        \@uulogowhiteinclude{6.8cm}%
+      \fi
+    \end{center}
+    \vfill
+  \end{frame}
+  \endgroup
+}
+
+\endinput

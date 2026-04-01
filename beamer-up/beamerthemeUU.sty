@@ -1,0 +1,151 @@
+% beamerthemeUU.sty - legacy-named implementation file for the beamer-up derivative
+% Public project identity: beamer-up
+% Approved first-release public theme identifier: UP
+% Canonical public usage: \usetheme{UP}
+% Direct legacy usage retained as deprecated compatibility: \usetheme{UU}
+% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
+% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
+%
+% Transitional options:
+%   nl            - switch to the legacy Dutch-logo compatibility path
+%   english       - use the English UP logotype (default)
+%   filipino      - use the Unibersidad ng Pilipinas logotype
+%   showlogo      - show the approved corner logo on content slides
+%   nosectionpage - suppress automatic section divider slides
+%
+% Transitional helper commands:
+%   \standoutframe{Text}
+%   \thankframe{Title}{Contact}
+%   \venue{Conference, City}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeUU}[2026/04/01 Legacy-named theme package for the beamer-up derivative]
+
+\@ifundefined{beamerup@loadedfromupwrapper}{%
+  \PackageWarningNoLine{beamerthemeUU}{Direct legacy theme loading is deprecated.\MessageBreak
+    Load the theme with \string\usetheme{UP} instead of \string\usetheme{UU}.}%
+}{}
+
+% -- Options -----------------------------------------------------------
+\newif\if@UUnosection\@UUnosectionfalse
+\newif\if@UUnl\@UUnlfalse
+\newif\if@UUfilipino\@UUfilipinofalse
+\newif\if@UUshowlogo\@UUshowlogofalse
+
+\DeclareOption{nosectionpage}{\@UUnosectiontrue}
+\DeclareOption{nl}{\@UUnltrue}
+\DeclareOption{english}{\@UUfilipinofalse}
+\DeclareOption{filipino}{\@UUfilipinotrue}
+\DeclareOption{tagalog}{\@UUfilipinotrue}
+\DeclareOption{showlogo}{\@UUshowlogotrue}
+\ProcessOptions\relax
+
+% -- Sub-themes ----------------------------------------------------------
+\usecolortheme{UU}
+\useinnertheme{UU}
+\useoutertheme{UU}
+
+% -- Code listings --------------------------------------------------------
+\RequirePackage{listings}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\bfseries\color{UPMaroon},
+  stringstyle=\color{UPForestGreen},
+  commentstyle=\itshape\color{UPBlack80},
+  numberstyle=\tiny\color{UPBlack80},
+  backgroundcolor=\color{UPGoldTint},
+  frame=none,
+  numbers=left,
+  numbersep=8pt,
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=2,
+  xleftmargin=1.5em,
+}
+
+% -- bibliography -----------------------------------------------------------
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none
+]{biblatex}
+
+\addbibresource{references.bib}
+
+% -- Font setup -----------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+% Keep the supported pdfLaTeX baseline on widely available fonts.
+\IfFileExists{helvet.sty}{%
+  \usepackage[scaled=0.94]{helvet}%
+}{}
+\renewcommand{\familydefault}{\rmdefault}
+
+\usefonttheme{professionalfonts}
+\setbeamerfont{title}{family=\sffamily, series=\bfseries, size=\LARGE}
+\setbeamerfont{subtitle}{family=\sffamily, series=\mdseries, size=\normalsize}
+\setbeamerfont{frametitle}{family=\sffamily, series=\bfseries, size=\large}
+\setbeamerfont{author}{family=\rmfamily, size=\normalsize}
+\setbeamerfont{institute}{family=\rmfamily, size=\small}
+\setbeamerfont{date}{family=\rmfamily, size=\small}
+\setbeamerfont{block title}{family=\sffamily, series=\bfseries, size=\normalsize}
+\setbeamerfont{footline}{family=\sffamily, size=\scriptsize}
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamerfont{footnote}{size=\tiny}
+
+% -- Default logo paths (based on nl option) ---------------------------
+\if@UUnl
+  \renewcommand{\@uulogopath}{logos/UU_logo_NL_RGB}
+  \renewcommand{\@uulogoblackpath}{logos/UU_logo_NL_ZWART}
+  \renewcommand{\@uulogowhitepath}{}
+  \renewcommand{\@uulogoinclude}[1]{\includegraphics[height=#1]{\@uulogopath}}
+  \renewcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
+  \renewcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
+\else
+  % The UP logotype PNGs are re-cropped into runtime assets so the outer/inner
+  % themes can place them deterministically without large transparent padding.
+  \if@UUfilipino
+    \renewcommand{\@uulogopath}{logos/up-logotype-tag-runtime-black.png}
+    \renewcommand{\@uulogoblackpath}{logos/up-logotype-tag-runtime-black.png}
+    \renewcommand{\@uulogowhitepath}{logos/up-logotype-tag-runtime-white.png}
+    \renewcommand{\@uulogoinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogopath}}
+    \renewcommand{\@uulogoblackinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogoblackpath}}
+    \renewcommand{\@uulogowhiteinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogowhitepath}}
+  \else
+    \renewcommand{\@uulogopath}{logos/up-logotype-eng-runtime-black.png}
+    \renewcommand{\@uulogoblackpath}{logos/up-logotype-eng-runtime-black.png}
+    \renewcommand{\@uulogowhitepath}{logos/up-logotype-eng-runtime-white.png}
+    \renewcommand{\@uulogoinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogopath}}
+    \renewcommand{\@uulogoblackinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogoblackpath}}
+    \renewcommand{\@uulogowhiteinclude}[1]{%
+      \includegraphics[width=#1]{\@uulogowhitepath}}
+  \fi
+\fi
+
+% -- Numbered captions (Table 1, Figure 1, ...) ---------------------------
+\setbeamertemplate{caption}[numbered]
+
+% -- Bibliography font size ---------------------------------------------
+\setbeamerfont{bibliography item}{size=\small}
+\setbeamerfont{bibliography entry author}{size=\small}
+\setbeamerfont{bibliography entry title}{size=\small}
+\setbeamerfont{bibliography entry location}{size=\small}
+\setbeamerfont{bibliography entry note}{size=\small}
+
+% -- Navigation symbols off ---------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+
+% -- Hyperref colors ----------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=UPMaroon,
+  urlcolor=UPForestGreen,
+  citecolor=UPMaroon,
+}
+
+\endinput

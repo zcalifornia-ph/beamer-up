@@ -1,0 +1,272 @@
+% beamerinnerthemeUU.sty - legacy-named inner-theme implementation file for the beamer-up derivative
+% Public project identity: beamer-up. Approved first-release public theme identifier: UP.
+% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
+% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerinnerthemeUU}[2026/04/01 Legacy-named inner theme for the beamer-up derivative]
+
+\RequirePackage{tikz}
+\usetikzlibrary{positioning}
+\RequirePackage{calc}
+\RequirePackage{setspace}
+\RequirePackage{etoolbox}
+
+% -- Internal: logo path storage (set by beamerthemeUU.sty) -----------
+\newcommand{\@uulogopath}{}
+\newcommand{\@uulogoblackpath}{}
+\newcommand{\@uulogowhitepath}{}
+\newcommand{\@uulogoinclude}[1]{\includegraphics[height=#1]{\@uulogopath}}
+\newcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
+\newcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
+
+% -- Conference author switch -----------------------------------------
+% Enable conference-style multi-author formatting explicitly with:
+%   \multiauthor
+% Reset to single-author layout with:
+%   \singleauthor
+\newif\if@uumultiauthor
+\@uumultiauthorfalse
+\newcommand{\multiauthor}{\@uumultiauthortrue}
+\newcommand{\singleauthor}{\@uumultiauthorfalse}
+
+% -- Conference institute list ----------------------------------------
+\newcommand{\@uuconfinstitute}{}
+\newcommand{\confinstitute}[1]{\renewcommand{\@uuconfinstitute}{#1}}
+
+\newif\if@uufirstinstitute
+\@uufirstinstitutetrue
+
+\newcommand{\addinstitute}[2]{%
+  \if@uufirstinstitute
+    \gappto\@uuconfinstitute{{\scriptsize #1}\enspace #2}%
+    \global\@uufirstinstitutefalse
+  \else
+    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize #1}\enspace #2}%
+  \fi
+}
+
+\newcommand{\clearinstitutes}{%
+  \gdef\@uuconfinstitute{}%
+  \global\@uufirstinstitutetrue
+}
+
+% -- Venue metadata ----------------------------------------------------
+\newif\if@uuvenuepresent
+\@uuvenuepresentfalse
+\newcommand{\@uuvenue}{}
+\newcommand{\venue}[1]{%
+  \@uuvenuepresenttrue
+  \renewcommand{\@uuvenue}{#1}%
+}
+\newcommand{\uutitlemeta}{%
+  \if@uuvenuepresent
+    \vskip 2pt%
+    \@uuvenue
+    \ifx\insertdate\@empty\else
+      \enspace{\color{UPGold}$\cdot$}\enspace\insertdate
+    \fi
+  \else
+    \insertdate
+  \fi
+}
+
+% -- Itemize -----------------------------------------------------------
+\setbeamertemplate{itemize item}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 6pt height 6pt}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 5pt height 5pt}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 4pt height 4pt}}
+
+% -- Enumerate ---------------------------------------------------------
+\setbeamertemplate{enumerate item}{%
+  \tikz[baseline=(num.base)]{
+    \node[fill=UPGold, text=UPBlack, font=\footnotesize\bfseries,
+          minimum size=1.4em, inner sep=0pt] (num) {\insertenumlabel};
+  }%
+}
+\setbeamertemplate{enumerate subitem}{%
+  \tikz[baseline=(num.base)]{
+    \node[fill=UPGoldTint, text=UPMaroon, font=\footnotesize\bfseries,
+          minimum size=1.2em, inner sep=0pt] (num) {\insertenumlabel};
+  }%
+}
+
+% -- Blocks ------------------------------------------------------------
+\setbeamertemplate{block begin}{%
+  \vskip 6pt%
+  \begin{beamercolorbox}[ht=2.6ex, dp=1ex, leftskip=0.6em, rightskip=0.6em]{block title}%
+    \usebeamerfont{block title}\insertblocktitle%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \begin{beamercolorbox}[dp=1ex, leftskip=0.6em, rightskip=0.6em, vmode]{block body}%
+    \vskip 4pt%
+}
+\setbeamertemplate{block end}{%
+    \vskip 4pt%
+  \end{beamercolorbox}%
+  \vskip 4pt%
+}
+\setbeamertemplate{block alerted begin}{%
+  \vskip 6pt%
+  \begin{beamercolorbox}[ht=2.6ex, dp=1ex, leftskip=0.6em, rightskip=0.6em]{block title alerted}%
+    \usebeamerfont{block title}\insertblocktitle%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \begin{beamercolorbox}[dp=1ex, leftskip=0.6em, rightskip=0.6em, vmode]{block body alerted}%
+    \vskip 4pt%
+}
+\setbeamertemplate{block alerted end}{%
+    \vskip 4pt%
+  \end{beamercolorbox}%
+  \vskip 4pt%
+}
+\setbeamertemplate{block example begin}{%
+  \vskip 6pt%
+  \begin{beamercolorbox}[ht=2.6ex, dp=1ex, leftskip=0.6em, rightskip=0.6em]{block title example}%
+    \usebeamerfont{block title}\insertblocktitle%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \begin{beamercolorbox}[dp=1ex, leftskip=0.6em, rightskip=0.6em, vmode]{block body example}%
+    \vskip 4pt%
+}
+\setbeamertemplate{block example end}{%
+    \vskip 4pt%
+  \end{beamercolorbox}%
+  \vskip 4pt%
+}
+
+% ======================================================================
+%  TITLE PAGE
+% ======================================================================
+\setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[UPMaroon] (current page.north west) rectangle (current page.south east);
+    \fill[UPForestGreen]
+      ([yshift=-0.55cm]current page.north west) rectangle
+      ([yshift=-0.85cm]current page.north east);
+    \fill[UPGold]
+      ([xshift=1.45cm, yshift=-7.35cm]current page.north west) rectangle
+      ([xshift=7.25cm, yshift=-7.18cm]current page.north west);
+    \ifx\@uulogopath\@empty\else
+      \ifx\@uulogowhitepath\@empty
+        \node[anchor=north east, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
+          at ([xshift=-1.0cm, yshift=-1.0cm]current page.north east)
+          {\@uulogoinclude{1.65cm}};
+      \else
+        \node[anchor=north east, inner sep=0pt]
+          at ([xshift=-0.7cm, yshift=-0.8cm]current page.north east)
+          {\@uulogowhiteinclude{6.3cm}};
+      \fi
+    \fi
+  \end{tikzpicture}%
+  %
+  \vskip 2.3cm%
+  \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{title}
+    \usebeamerfont{title}\inserttitle\par%
+    \ifx\insertsubtitle\@empty\else
+      \vskip 6pt%
+      \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
+    \fi
+  \end{beamercolorbox}
+  \vskip 14pt%
+  %
+  \if@uumultiauthor
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
+      \usebeamerfont{author}%
+      \def\and{\unskip,\enspace}%
+      \def\inst##1{\textsuperscript{\footnotesize ##1}}%
+      \insertauthor%
+    \end{beamercolorbox}
+    \vskip 5pt%
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
+      \usebeamerfont{institute}\footnotesize%
+      \begin{tabular}[t]{@{}l@{}}
+        \@uuconfinstitute
+      \end{tabular}%
+    \end{beamercolorbox}
+    \vskip 3pt%
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
+      \usebeamerfont{date}\uutitlemeta%
+    \end{beamercolorbox}
+  \else
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+    \vskip 4pt%
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
+      \usebeamerfont{institute}\insertinstitute%
+    \end{beamercolorbox}
+    \vskip 4pt%
+    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
+      \usebeamerfont{date}\uutitlemeta%
+    \end{beamercolorbox}
+  \fi
+}
+
+% ======================================
+%  SECTION PAGE
+% ======================================
+\if@UUnosection\else
+\AtBeginSection[]{%
+  \begingroup
+  \setbeamercolor{background canvas}{bg=UPForestGreen}
+  \begin{frame}[plain]
+    \vfill
+    \hspace{0.08\paperwidth}%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
+    \hspace{0.08\paperwidth}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries\insertsection}%
+    \vfill
+  \end{frame}
+  \endgroup
+}
+\fi
+
+% ======================================
+%  STANDOUT FRAME
+% ======================================
+\newcommand{\standoutframe}[1]{%
+  \begingroup
+  \setbeamercolor{background canvas}{bg=UPMaroon}
+  \begin{frame}[plain]
+    \vfill
+    \begin{center}
+      {\color{UPGold}\rule{3cm}{1.5pt}}\\[14pt]
+      {\color{UPWhite}\LARGE\sffamily\bfseries #1\par}%
+      \vskip 14pt%
+      {\color{UPGold}\rule{3cm}{1.5pt}}%
+    \end{center}
+    \vfill
+  \end{frame}
+  \endgroup
+}
+
+% ======================================
+%  MANUAL SECTION PAGE
+% ======================================
+\newcommand{\sectionframe}[1]{%
+  \begingroup
+  \setbeamercolor{background canvas}{bg=UPForestGreen}
+  \begin{frame}[plain]
+    \vfill
+    \hspace{0.08\paperwidth}%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
+    \hspace{0.08\paperwidth}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries #1}%
+    \vfill
+  \end{frame}
+  \endgroup
+}
+
+% -- Table of contents styling -----------------------------------------
+\setbeamertemplate{section in toc}{%
+  \tikz[baseline=(num.base)]{
+    \node[fill=UPGold, text=UPBlack, font=\footnotesize\bfseries,
+          minimum size=1.4em, inner sep=0pt] (num) {\inserttocsectionnumber};
+  }\hspace{0.5em}\inserttocsection\par
+}
+\setbeamertemplate{subsection in toc}{%
+  \hspace{2em}{\color{UPGold}\rule{4pt}{4pt}}\hspace{0.5em}%
+  {\small\inserttocsubsection}\par
+}
+
+\endinput
