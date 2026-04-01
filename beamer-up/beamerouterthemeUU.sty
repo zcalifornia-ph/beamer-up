@@ -7,6 +7,15 @@
 \ProvidesPackage{beamerouterthemeUU}[2026/04/01 Legacy-named outer theme for the beamer-up derivative]
 
 \RequirePackage{tikz}
+\newcommand{\@upheaderlineshotpath}{logos/up-logo-lineshot.png}
+\newcommand{\@upheaderlineshotinclude}[1]{\includegraphics[height=#1]{\@upheaderlineshotpath}}
+\newcommand{\@upheaderlogolockupblack}[1]{%
+  \begin{tikzpicture}[baseline=(seal.center)]
+    \node[inner sep=0pt, anchor=center] (seal) {\@upheaderlineshotinclude{0.72cm}};
+    \node[inner sep=0pt, anchor=west] (wordmark)
+      at ([xshift=0.10cm]seal.east) {\@uulogoblackinclude{#1}};
+  \end{tikzpicture}%
+}
 
 % -- Frame Title -----------------------------------------------------------
 \setbeamertemplate{frametitle}{%
@@ -48,8 +57,8 @@
             {\@uulogoblackinclude{1.4cm}};
         \else
           \node[anchor=north east, inner sep=0pt]
-            at ([xshift=\dimexpr-\beamer@rightmargin+0.12cm\relax, yshift=-0.12cm]current page.north east)
-            {\@uulogoblackinclude{5.2cm}};
+            at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.06cm]current page.north east)
+            {\if@UUfilipino\@upheaderlogolockupblack{4.25cm}\else\@upheaderlogolockupblack{4.95cm}\fi};
         \fi
       \fi
     \end{tikzpicture}%

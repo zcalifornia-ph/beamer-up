@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.11`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide logo alignment, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
+Status: current repo milestone `v0.0.12`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,24 @@ Status: current repo milestone `v0.0.11`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.12
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` content-slide `showlogo` path now composes the UP lineshot seal beside the selected UP logotype instead of rendering only the standalone wordmark.
+- Scaled the UP header seal and tightened the lockup spacing so the composed English and Filipino content-slide lockups stay inside the header band and do not drop into the gold rule.
+- Added separate English and Filipino header wordmark widths so the visible text height reads more consistently against the seal while preserving the legacy `nl` Dutch-logo compatibility branch unchanged.
+- Revalidated the affected header surfaces on April 1, 2026 with `latexmk -pdf main.tex` and higher-resolution local PDF page renders from `beamer-up/` after the lockup-sizing change.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-12-docs.md` so the public docs reflect the current UP header-lockup behavior.
+
+### For Deletion
+- `beamer-up/logos/up-logo-lineshot-on-white-preview.png` (temporary local white-background preview used to inspect the lineshot seal before composing the header lockup).
+- `beamer-up/logos/up-logotype-eng-black-on-white-preview.png` (temporary local white-background preview used to inspect the English wordmark source before composing the header lockup).
+- `beamer-up/logos/up-logotype-tag-black-on-white-preview.png` (temporary local white-background preview used to inspect the Filipino wordmark source before composing the header lockup).
+- `beamer-up/preview-page-3-hi.png` (temporary high-resolution local PDF page render used to inspect the outline-slide header lockup).
+- `beamer-up/preview-page-3-hi-topright.png` (temporary cropped high-resolution local render used to inspect the outline-slide top-right header lockup).
+- `beamer-up/preview-page-6-hi.png` (temporary high-resolution local PDF page render used to inspect the content-slide header lockup).
+- `beamer-up/preview-page-6-hi-topright.png` (temporary cropped high-resolution local render used to inspect the content-slide top-right header lockup).
 
 ## v0.0.11
 
@@ -23,6 +41,7 @@ Status: current repo milestone `v0.0.11`; the supported `UP` loader, selectable 
 - `beamer-up/preview-page-5.png` (temporary local PDF page render used to inspect the usage slide during alignment checks).
 - `beamer-up/preview-page-6.png` (temporary local PDF page render used to inspect the content-slide wordmark alignment against the right content margin).
 - `beamer-up/preview-page-7.png` (temporary local PDF page render used to inspect the manual section-divider slide during alignment checks).
+
 
 ## v0.0.10
 
