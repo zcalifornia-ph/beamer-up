@@ -10,6 +10,18 @@ Status: independently maintained derivative baseline.
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
 
+## v0.0.4
+
+### Added or Changed
+- Closed the approved `B-UA-02` asset-governance review gate in `beamer-up/REQUIREMENTS.md`, `beamer-up/docs/traceability/U-A/b-ua-02-traceability.md`, and `beamer-up/ai-dlc-docs/design-artifacts/U-A/adr/b-ua-02-adr.md` so the `U-A` governance baseline is fully approved in repo state.
+- Extended `beamer-up/ai-dlc-docs/design-artifacts/U-B/static-model.md` with a `UU` migration-impact inventory and a feature-preservation baseline for the inherited theme implementation.
+- Added `U-B` / `B-UB-01` build-task artifacts: `domain-design.md`, `logical-design.md`, `adr/b-ub-01-adr.md`, and `docs/traceability/U-B/b-ub-01-traceability.md`.
+- Updated `README.md` to reflect `v0.0.4`, the fully approved `U-A` governance baseline, and the remaining `B-UB-01` review gate.
+- Added `docs/version-0-0-4-docs.md` for the `B-UA-02` approval plus `B-UB-01` static-model milestone.
+
+### For Deletion
+- None new from this task context beyond generated artifacts already recorded in `v0.0.2`.
+
 ## v0.0.3
 
 ### Added or Changed

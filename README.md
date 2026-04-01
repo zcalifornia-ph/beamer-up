@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial beamer theme for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.3
+    Version: v0.0.4
     <br />
-    Status: independently maintained derivative work with brownfield, naming, and asset-governance baselines established; <code>B-UA-02</code> review is pending before downstream packaging depends on it.
+    Status: independently maintained derivative work with brownfield, governance, and static-model baselines established; <code>B-UB-01</code> review is pending before downstream migration depends on it.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -85,7 +85,8 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Brownfield reverse-engineering artifacts for the inherited theme implementation now live under `beamer-up/ai-dlc-docs/design-artifacts/U-B/`.
 - The naming, attribution, and branding-governance source of truth for the upcoming `UP` migration now lives at `beamer-up/docs/identity-governance.md`.
 - The asset inventory, release-state rules, and GitHub/Overleaf package-surface baseline now live at `beamer-up/docs/asset-governance.md`.
-- `B-UA-01` naming/disclaimer review is closed; `B-UA-02` asset-governance review is the remaining open governance gate in `U-A`.
+- `U-A` governance baseline is now fully approved, including the asset-governance review for `B-UA-02`.
+- `B-UB-01` static-model baseline is implemented and is the remaining open brownfield modeling review gate before downstream migration work depends on it.
 - Some internal file names and implementation identifiers still reflect the historical source lineage; they remain compatibility details and attribution anchors rather than the current public branding of the project.
 - The theme files in this repository are distributed under `LPPL 1.3c`; logo and institutional-brand usage may still involve separate constraints outside the software license.
 
@@ -137,6 +138,7 @@ repo/images/
 docs/
   version-0-0-2-docs.md
   version-0-0-3-docs.md
+  version-0-0-4-docs.md
 ```
 
 The theme source currently remains in the `beamer-up/` subdirectory. The checked-in implementation still loads as `UU` because the public-interface migration has not yet been completed.
