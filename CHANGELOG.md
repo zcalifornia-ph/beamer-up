@@ -10,6 +10,18 @@ Status: independently maintained derivative baseline.
 ### For Deletion
 - None yet beyond items already recorded in the latest released entry.
 
+## v0.0.3
+
+### Added or Changed
+- Added `U-A` / `B-UA-02` asset-governance artifacts: updated domain and logical design, `beamer-up/docs/asset-governance.md`, ADR, and traceability for the current logo/package baseline.
+- Classified every current file under `beamer-up/logos/` as a brownfield runtime source, brownfield runtime path, generated compile output, or candidate future UP asset.
+- Closed the previously approved `B-UA-01` wording-review gate in `beamer-up/REQUIREMENTS.md`, `beamer-up/docs/traceability/U-A/b-ua-01-traceability.md`, and `beamer-up/ai-dlc-docs/design-artifacts/U-A/adr/b-ua-01-adr.md`.
+- Updated `README.md`, `CONTRIBUTING.md`, and release documentation to reflect the asset-governance baseline and the remaining `B-UA-02` review gate.
+- Added `docs/version-0-0-3-docs.md` for the current governance/packaging milestone and restored `docs/version-0-0-2-docs.md` to a version-accurate brownfield plus naming-baseline scope.
+
+### For Deletion
+- None new from this task context beyond generated artifacts already recorded in `v0.0.2`.
+
 ## v0.0.2
 
 ### Added or Changed
