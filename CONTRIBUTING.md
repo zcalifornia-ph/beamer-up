@@ -26,8 +26,16 @@ Contributions should support these working values:
 - Treat `beamer-up` as an independent derivative project; do not reintroduce Utrecht-branded positioning, logo policy claims, or statements that this repository follows Utrecht University branding guidance.
 - Institutional names, logos, and brand assets may require separate permission or policy compliance beyond the software license.
 
-## Before You Start
+## Naming and Branding Contract
 
+- Public project identity remains `beamer-up`.
+- Approved first-release public theme identifier is `UP`.
+- Current `UU` identifiers in checked-in sources are transitional brownfield details; do not introduce new public-facing `UU` expectations unless you label them explicitly as transitional and migration-sensitive.
+- When you document current inherited `UU` behavior before the migration lands, pair it with migration-note language toward `UP`.
+- GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must include the branding-guidelines/internal-use disclaimer and the non-endorsement posture defined for this derivative.
+- Use `beamer-up/docs/identity-governance.md` as the wording baseline for naming, attribution order, and disclaimer language.
+
+## Before You Start
 - Review open issues and pull requests to avoid duplicate work.
 - Open an issue first for substantial branding, packaging, or public-interface changes.
 - Keep changes focused and easy to review.
@@ -122,3 +130,4 @@ Follow `SECURITY.md` for coordinated disclosure.
 ## Community Conduct
 
 Participation requires compliance with `CODE_OF_CONDUCT.md`.
+
