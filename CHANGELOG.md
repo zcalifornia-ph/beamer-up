@@ -1,6 +1,6 @@
 # Changelog
 
-Status: independently maintained derivative work with approved brownfield baselines, an implemented public `UP` entry path, and a drafted guide-backed `U-D` visual-direction baseline pending review before template restyling.
+Status: current repo milestone `v0.0.9`; the supported `UP` loader and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
 
 ## Unreleased
 
@@ -8,15 +8,18 @@ Status: independently maintained derivative work with approved brownfield baseli
 - None yet.
 
 ### For Deletion
-- None yet beyond items already recorded in the latest released entry.
+- None yet.
 
-## v0.0.8
+## v0.0.9
 
 ### Added or Changed
-- Drafted the `U-D` visual-direction baseline for `beamer-up`, including a concrete UP palette, typography hierarchy, logo strategy, and decorative-rule set for title, section, content, standout, and closing-slide surfaces.
-- Recorded contrast and readability guidance for the mapped visual system, including the explicit rejection of white-on-gold text and the approval of high-contrast maroon, forest-green, gold, and dark-text pairings.
-- Updated `README.md` to move the public project state to `v0.0.8`, document that the visual-system mapping is drafted, and position the next bolt as template styling rather than interface migration.
-- Added `docs/version-0-0-8-docs.md` as the public narrative note for this visual-direction planning milestone.
+- Implemented the approved UP-directed slide styling across the checked-in theme by updating `beamer-up/beamercolorthemeUU.sty`, `beamer-up/beamerinnerthemeUU.sty`, `beamer-up/beamerouterthemeUU.sty`, and `beamer-up/beamerthemeUU.sty`.
+- Replaced the inherited Utrecht-led palette with UP maroon, forest green, gold, spot black, and compatible tint tokens while preserving legacy `UU*` color aliases only for controlled compatibility.
+- Shifted the supported typography baseline to Palatino body text plus a Helvetica-style sans hierarchy for titles, frame titles, subtitles, and footlines under the documented `pdfLaTeX` workflow.
+- Reworked title, section-divider, standout, thank-you, footline, and table-of-contents surfaces so the public `UP` loader now renders a coherent UP-directed visual system.
+- Updated the bundled showcase deck in `beamer-up/main.tex` to demonstrate the new palette, revised typography guidance, UP-context academic examples, and the current option/helper behavior.
+- Revalidated the supported compile path on April 1, 2026: `latexmk -pdf main.tex` succeeds from `beamer-up/` with the public `UP` loader.
+- Reconciled the root `README.md`, root `CHANGELOG.md`, and added `docs/version-0-0-9-docs.md` so the public repo docs now match the implemented styling milestone.
 
 ### For Deletion
 - `beamer-up/main.bcf` (generated bibliography control file from local showcase compilation).
@@ -27,8 +30,17 @@ Status: independently maintained derivative work with approved brownfield baseli
 - `beamer-up/main.synctex.gz` (generated editor sync artifact).
 - `beamer-up/main.toc` (generated table-of-contents artifact).
 - `beamer-up/main.vrb` (generated Beamer verbatim cache artifact).
-- `beamer-up/logos/UU_logo_EN_BLACK-eps-converted-to.pdf` (generated EPS-conversion artifact from local compile flow).
-- `beamer-up/logos/UU_logo_EN_RGB-eps-converted-to.pdf` (generated EPS-conversion artifact from local compile flow).
+
+## v0.0.8
+
+### Added or Changed
+- Drafted the `U-D` visual-direction baseline for `beamer-up`, including a concrete UP palette, typography hierarchy, logo strategy, and decorative-rule set for title, section, content, standout, and closing-slide surfaces.
+- Recorded contrast and readability guidance for the mapped visual system, including the explicit rejection of white-on-gold text and the approval of high-contrast maroon, forest-green, gold, and dark-text pairings.
+- Updated `README.md` to move the public project state to `v0.0.8`, document that the visual-system mapping is drafted, and position the next bolt as template styling rather than interface migration.
+- Added `docs/version-0-0-8-docs.md` as the public narrative note for this visual-direction planning milestone.
+
+### For Deletion
+- Generated LaTeX build artifacts and logo-conversion outputs from local showcase compilation were recorded for later cleanup rather than deleted in place.
 
 ## v0.0.7
 
@@ -51,7 +63,7 @@ Status: independently maintained derivative work with approved brownfield baseli
 - Added `docs/version-0-0-6-docs.md` as the public narrative note for this planning-and-docs milestone.
 
 ### For Deletion
-- `test.tmp` (temporary scratch file created during local editing workaround and not part of the project).
+- Temporary local scratch artifacts created during editing were intentionally left out of the public project surface.
 
 ## v0.0.5
 

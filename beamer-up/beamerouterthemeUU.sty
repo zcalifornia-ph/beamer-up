@@ -4,7 +4,7 @@
 % Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerouterthemeUU}[2026/03/17 Legacy-named outer theme for the beamer-up derivative]
+\ProvidesPackage{beamerouterthemeUU}[2026/04/01 Legacy-named outer theme for the beamer-up derivative]
 
 \RequirePackage{tikz}
 
@@ -19,7 +19,8 @@
   \end{beamercolorbox}%
   \nointerlineskip%
   \begin{tikzpicture}[overlay]
-    \draw[UUyellow, line width=1.5pt] (-0.4cm,0) -- (\paperwidth,0);
+    \draw[UPGold, line width=1.2pt] (-0.4cm,0) -- (\paperwidth,0);
+    \draw[UPForestGreen, line width=2.4pt] (-0.4cm,0) -- (2.7cm,0);
   \end{tikzpicture}%
   \vskip 4pt%
 }
@@ -27,7 +28,6 @@
 % -- Footline -----------------------------------------------------------
 \setbeamertemplate{footline}{%
   \leavevmode%
-
     \hbox{%
       \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.8ex,dp=1.2ex,left,leftskip=.6cm]{footline}%
         \usebeamerfont{footline}\insertshortauthor
@@ -39,13 +39,12 @@
         \usebeamerfont{footline}\insertframenumber\,/\,\inserttotalframenumber
       \end{beamercolorbox}%
     }%
-  % -- Optional logo on content slides (showlogo option) --
   \if@UUshowlogo
     \begin{tikzpicture}[overlay, remember picture]
       \ifx\@uulogoblackpath\@empty\else
         \node[anchor=north east, inner sep=0pt]
-          at ([xshift=0.3cm, yshift=0.2cm]current page.north east)
-          {\includegraphics[height=1.4cm]{\@uulogoblackpath}};
+          at ([xshift=-0.45cm, yshift=-0.55cm]current page.north east)
+          {\includegraphics[height=1.08cm]{\@uulogoblackpath}};
       \fi
     \end{tikzpicture}%
   \fi
@@ -54,17 +53,17 @@
 % -- Thank-you / closing frame --------------------------------
 \newcommand{\thankframe}[2]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=UPMaroon}
   \begin{frame}[plain]
     \vfill
     \begin{center}
-      \vspace{1cm}
-      {\color{UUblack}\Huge\rmfamily\bfseries #1}\\[14pt]
-      {\color{UUblack!35}\rule{2.4cm}{0.8pt}}\\[16pt]
-      {\color{UUblack!65}\normalsize\sffamily #2}%
-      \vskip 36pt%
-      \ifx\@uulogoblackpath\@empty\else
-        \hskip 25pt \includegraphics[height=1.6cm]{\@uulogoblackpath}%
+      {\color{UPGold}\rule{2.8cm}{1pt}}\\[16pt]
+      {\color{UPWhite}\Huge\sffamily\bfseries #1}\\[16pt]
+      {\color{UPWhite}\normalsize\rmfamily #2}%
+      \vskip 26pt%
+      \ifx\@uulogopath\@empty\else
+        \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
+          {\includegraphics[height=1.5cm]{\@uulogopath}};}
       \fi
     \end{center}
     \vfill
@@ -73,4 +72,3 @@
 }
 
 \endinput
-

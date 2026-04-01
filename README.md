@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.8
+    Version: v0.0.9
     <br />
-    Status: independently maintained derivative work with approved governance and brownfield baselines; the approved public <code>UP</code> entry path remains implemented and compile-validated, and a guide-backed <code>U-D</code> visual-direction mapping is now drafted pending review before template restyling.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme and showcase use the current UP-directed visual system, and release-ready packaging plus public validation notes remain in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -84,13 +84,14 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- Brownfield structural and compile-behavior baselines for the inherited theme are approved and now serve as downstream migration context.
-- The bundled demo compile was validated locally on April 1, 2026 through `latexmk`, `biber`, and `pdflatex`.
-- The public `UP` entry path is implemented, compile-validated, and approved as the supported public interface.
-- A guide-backed visual-system mapping is now drafted for palette, typography, logo handling, and decorative rules before the next styling bolt edits the templates.
-- The current checked-in implementation now loads through `UP`, and direct `UU` loading is retained only as explicit deprecated compatibility.
-- Legacy `\usetheme{UU}` loads now exist only as a transition bridge and should not appear in new public examples or user guidance.
-- Some file names, helper names, and color tokens still reflect historical `UU` lineage; they remain compatibility details and migration-sensitive implementation surfaces rather than the intended long-term public brand.
+- The bundled showcase deck was revalidated locally on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`.
+- The supported public loader is `\usetheme{UP}`.
+- Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
+- The checked-in theme now applies the UP-directed palette and slide treatments across title, section, content, standout, and closing-slide surfaces.
+- The supported compile baseline is `pdfLaTeX` with `biber`; `latexmk` is the recommended entry command.
+- The checked-in font stack uses Palatino for body copy and a Helvetica-style sans family for headings under the supported `pdfLaTeX` path.
+- The default `showlogo` path now uses the bundled UP PNG logos; the `nl` option remains a legacy Dutch-logo compatibility path.
+- Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
 ### Public Naming Contract
@@ -103,7 +104,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 ### Built With
 
 * [![LaTeX][LaTeX]][LaTeX-url]
-* [![XeLaTeX][XeLaTeX]][XeLaTeX-url]
+* [![pdfLaTeX][pdfLaTeX]][pdfLaTeX-url]
 * [![Beamer][Beamer]][Beamer-url]
 * [![BibLaTeX][BibLaTeX]][BibLaTeX-url]
 * [![TikZ / PGF][TikZ]][TikZ-url]
@@ -131,6 +132,7 @@ docs/
   version-0-0-6-docs.md
   version-0-0-7-docs.md
   version-0-0-8-docs.md
+  version-0-0-9-docs.md
 repo/images/
   project_screen.png
 ```
@@ -143,9 +145,9 @@ The checked-in implementation now loads through `UP`, while legacy `UU` loader s
 
 ### Prerequisites
 
-- A TeX distribution with Beamer, PGF/TikZ, BibLaTeX, and Biber available.
+- A TeX distribution with `pdfLaTeX`, Beamer, PGF/TikZ, BibLaTeX, and Biber available.
 - `latexmk` is recommended for local compilation.
-- Optional font packages `merriweather` and `opensans` for the intended typographic look. The theme falls back to Palatino and the default sans-serif family if they are unavailable.
+- No extra Optima-like package is required on the supported baseline; the checked-in theme uses Palatino for body copy and Helvetica-style sans support for headings under `pdfLaTeX`.
 
 ### Installation
 
@@ -158,6 +160,7 @@ The checked-in implementation now loads through `UP`, while legacy `UU` loader s
    ```sh
    latexmk -pdf main.tex
    ```
+   This is the preferred and currently revalidated command path for the bundled showcase deck.
 3. If `latexmk` is unavailable, run the manual sequence for the bundled bibliography example.
    ```sh
    pdflatex main.tex
@@ -188,7 +191,9 @@ Migration expectations now in effect:
 
 - `UP` is the supported public loader.
 - Existing options `showlogo`, `nl`, and `nosectionpage` are expected to carry forward unchanged.
-- Existing helper commands such as `\multiauthor`, `\addinstitute`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
+- Existing helper commands such as `\multiauthor`, `\singleauthor`, `\addinstitute`, `\clearinstitutes`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
+- `showlogo` currently renders the bundled UP logo assets by default; `nl` switches to the legacy Dutch-logo compatibility path.
+- The default visual system now uses UP maroon, forest green, gold, and spot black across the checked-in showcase and theme templates.
 - Any remaining `UU` compatibility path should be treated as a deprecated bridge rather than a coequal public alias.
 - Direct `UU` subtheme loading remains an internal compatibility detail, not part of the intended public first-release contract.
 
@@ -203,7 +208,7 @@ These inherited identifiers are implementation details, not statements of projec
 - [x] Draft the public `UP` entry-point design and migration policy.
 - [x] Implement the public `\usetheme{UP}` entry path and publish the user-facing migration notes.
 - [x] Draft the UP visual-system mapping for palette, typography, logo handling, and decorative rules.
-- [ ] Implement the approved UP-directed slide-surface styling across the theme and showcase deck.
+- [x] Implement the approved UP-directed slide-surface styling across the theme and showcase deck.
 - [ ] Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
 - [ ] Document release packaging and distribution guidance for broader reuse.
 - [ ] Preserve explicit attribution, release provenance, and legal clarity for the derivative foundation.
@@ -214,10 +219,9 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 
 ## Immediate Next Actions
 
-1. Approve the drafted `U-D` visual-direction baseline before slide-surface styling changes begin.
-2. Apply the approved palette, typography, logo, and decorative rules to title, section, content, and closing-slide surfaces.
-3. Replace remaining Utrecht-facing visual language in the showcase deck and default theme output.
-4. Prepare validation evidence and distribution-ready packaging notes once the visual adaptation settles.
+1. Prepare the validation evidence and distribution-ready packaging notes for the first release.
+2. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
+3. Reconcile the public release docs and packaging guidance around the updated visual system.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -266,8 +270,8 @@ Project Link: [https://github.com/zcalifornia-ph/beamer-up](https://github.com/z
 [issues-url]: https://github.com/zcalifornia-ph/beamer-up/issues
 [LaTeX]: https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white
 [LaTeX-url]: https://www.latex-project.org/
-[XeLaTeX]: https://img.shields.io/badge/XeLaTeX-0E7490?style=for-the-badge&logo=latex&logoColor=white
-[XeLaTeX-url]: https://www.overleaf.com/learn/latex/XeLaTeX
+[pdfLaTeX]: https://img.shields.io/badge/pdfLaTeX-0E7490?style=for-the-badge&logo=latex&logoColor=white
+[pdfLaTeX-url]: https://www.overleaf.com/learn/latex/PdfLaTeX
 [Beamer]: https://img.shields.io/badge/Beamer-1F2937?style=for-the-badge&logo=latex&logoColor=white
 [Beamer-url]: https://ctan.org/pkg/beamer
 [BibLaTeX]: https://img.shields.io/badge/BibLaTeX-2563EB?style=for-the-badge&logo=latex&logoColor=white

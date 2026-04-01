@@ -4,7 +4,7 @@
 % Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{beamerinnerthemeUU}[2026/03/17 Legacy-named inner theme for the beamer-up derivative]
+\ProvidesPackage{beamerinnerthemeUU}[2026/04/01 Legacy-named inner theme for the beamer-up derivative]
 
 \RequirePackage{tikz}
 \usetikzlibrary{positioning}
@@ -27,18 +27,6 @@
 \newcommand{\singleauthor}{\@uumultiauthorfalse}
 
 % -- Conference institute list ----------------------------------------
-% Two ways to set institutes for multi-author title pages:
-%
-% Option A — \addinstitute (recommended, no manual formatting needed):
-%   \addinstitute{1}{Dept.\ of ICS, Utrecht University}
-%   \addinstitute{2}{Faculty of EEMCS, Delft University of Technology}
-%   Call \clearinstitutes to reset between title pages.
-%
-% Option B — \confinstitute (manual, full control):
-%   \confinstitute{%
-%     {\scriptsize 1}\enspace Utrecht University \\[-1pt]
-%     {\scriptsize 2}\enspace Delft University%
-%   }
 \newcommand{\@uuconfinstitute}{}
 \newcommand{\confinstitute}[1]{\renewcommand{\@uuconfinstitute}{#1}}
 
@@ -72,7 +60,7 @@
     \vskip 2pt%
     \@uuvenue
     \ifx\insertdate\@empty\else
-      \enspace{\color{UUdarkgray}$\cdot$}\enspace\insertdate
+      \enspace{\color{UPGold}$\cdot$}\enspace\insertdate
     \fi
   \else
     \insertdate
@@ -80,20 +68,20 @@
 }
 
 % -- Itemize -----------------------------------------------------------
-\setbeamertemplate{itemize item}{\scriptsize\raise1.5pt\hbox{\color{UUyellow}\vrule width 6pt height 6pt}}
-\setbeamertemplate{itemize subitem}{\scriptsize\raise1.5pt\hbox{\color{UUorange}\vrule width 5pt height 5pt}}
-\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.5pt\hbox{\color{UUbrown}\vrule width 4pt height 4pt}}
+\setbeamertemplate{itemize item}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 6pt height 6pt}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 5pt height 5pt}}
+\setbeamertemplate{itemize subsubitem}{\scriptsize\raise1.5pt\hbox{\color{UPGold}\vrule width 4pt height 4pt}}
 
 % -- Enumerate ---------------------------------------------------------
 \setbeamertemplate{enumerate item}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUyellow, text=UUblack, font=\footnotesize\bfseries,
+    \node[fill=UPGold, text=UPBlack, font=\footnotesize\bfseries,
           minimum size=1.4em, inner sep=0pt] (num) {\insertenumlabel};
   }%
 }
 \setbeamertemplate{enumerate subitem}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUlightgray, text=UUdarkblue, font=\footnotesize\bfseries,
+    \node[fill=UPGoldTint, text=UPMaroon, font=\footnotesize\bfseries,
           minimum size=1.2em, inner sep=0pt] (num) {\insertenumlabel};
   }%
 }
@@ -145,36 +133,23 @@
 % ======================================================================
 %  TITLE PAGE
 % ======================================================================
-% Author layout is now controlled explicitly:
-%   - default: classic single-author layout
-%   - \multiauthor: multi-author conference layout
-%
-% Venue/date line is controlled independently through \venue{...}.
 \setbeamertemplate{title page}{%
   \begin{tikzpicture}[remember picture, overlay]
-    % -- Yellow accent bar on left edge --
-    \fill[UUyellow]
-      (current page.north west) rectangle
-      ([xshift=8mm]current page.south west);
-    % -- Warm gradient extending from the bar --
-    \shade[left color=UUyellow, right color=UUyellow!0!white, opacity=0.28]
-      ([xshift=8mm]current page.north west) rectangle
-      ([xshift=0.40\paperwidth]current page.south west);
-    % -- Radiating lines FROM the Sol logo centre --
-    \coordinate (solcentre) at ([xshift=1.37cm, yshift=-1.45cm]current page.north west);
-    \foreach \a in {-25,-17,-9,-1,7,15,23,31,39,47,55,63,71,79,87} {
-      \draw[UUyellow, opacity=0.2, line width=0.7pt]
-        (solcentre) -- ++(\a:16cm);
-    }
-    % -- Logo top-left — positioned so Sol is at the ray origin --
+    \fill[UPMaroon] (current page.north west) rectangle (current page.south east);
+    \fill[UPForestGreen]
+      ([yshift=-0.55cm]current page.north west) rectangle
+      ([yshift=-0.85cm]current page.north east);
+    \fill[UPGold]
+      ([xshift=1.45cm, yshift=-7.35cm]current page.north west) rectangle
+      ([xshift=7.25cm, yshift=-7.18cm]current page.north west);
     \ifx\@uulogopath\@empty\else
-      \node[anchor=north west, inner sep=0pt]
-        at ([xshift=0.4cm, yshift=-0.5cm]current page.north west)
-        {\includegraphics[height=2cm]{\@uulogopath}};
+      \node[anchor=north east, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
+        at ([xshift=-1.0cm, yshift=-1.0cm]current page.north east)
+        {\includegraphics[height=1.65cm]{\@uulogopath}};
     \fi
   \end{tikzpicture}%
   %
-  \vskip 2.8cm%
+  \vskip 2.3cm%
   \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{title}
     \usebeamerfont{title}\inserttitle\par%
     \ifx\insertsubtitle\@empty\else
@@ -182,12 +157,9 @@
       \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
     \fi
   \end{beamercolorbox}
-  \vskip 8pt%
-  {\color{UUyellow}\hspace{1.5cm}\rule{3cm}{1.5pt}}%
-  \vskip 12pt%
+  \vskip 14pt%
   %
   \if@uumultiauthor
-    % --- Conference multi-author layout ---
     \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
       \usebeamerfont{author}%
       \def\and{\unskip,\enspace}%
@@ -206,7 +178,6 @@
       \usebeamerfont{date}\uutitlemeta%
     \end{beamercolorbox}
   \else
-    % --- Classic single-author layout ---
     \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
       \usebeamerfont{author}\insertauthor%
     \end{beamercolorbox}
@@ -227,13 +198,13 @@
 \if@UUnosection\else
 \AtBeginSection[]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=UPForestGreen}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\rule{4cm}{2pt}}\\[8pt]%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\LARGE\rmfamily\bfseries\insertsection}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries\insertsection}%
     \vfill
   \end{frame}
   \endgroup
@@ -245,14 +216,14 @@
 % ======================================
 \newcommand{\standoutframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=UPMaroon}
   \begin{frame}[plain]
     \vfill
     \begin{center}
-      {\color{UUblack}\rule{3cm}{1.5pt}}\\[14pt]
-      {\color{UUblack}\LARGE\rmfamily\bfseries #1\par}%
+      {\color{UPGold}\rule{3cm}{1.5pt}}\\[14pt]
+      {\color{UPWhite}\LARGE\sffamily\bfseries #1\par}%
       \vskip 14pt%
-      {\color{UUblack}\rule{3cm}{1.5pt}}%
+      {\color{UPGold}\rule{3cm}{1.5pt}}%
     \end{center}
     \vfill
   \end{frame}
@@ -262,18 +233,15 @@
 % ======================================
 %  MANUAL SECTION PAGE
 % ======================================
-% \sectionframe{Title} produces the same yellow section-divider slide
-% as the automatic \AtBeginSection page, but on demand.
-% Useful with the nosectionpage option, or to insert a divider mid-section.
 \newcommand{\sectionframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UUyellow}
+  \setbeamercolor{background canvas}{bg=UPForestGreen}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\rule{4cm}{2pt}}\\[8pt]%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UUblack}\LARGE\rmfamily\bfseries #1}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries #1}%
     \vfill
   \end{frame}
   \endgroup
@@ -282,14 +250,13 @@
 % -- Table of contents styling -----------------------------------------
 \setbeamertemplate{section in toc}{%
   \tikz[baseline=(num.base)]{
-    \node[fill=UUyellow, text=UUblack, font=\footnotesize\bfseries,
+    \node[fill=UPGold, text=UPBlack, font=\footnotesize\bfseries,
           minimum size=1.4em, inner sep=0pt] (num) {\inserttocsectionnumber};
   }\hspace{0.5em}\inserttocsection\par
 }
 \setbeamertemplate{subsection in toc}{%
-  \hspace{2em}{\color{UUorange}\rule{4pt}{4pt}}\hspace{0.5em}%
+  \hspace{2em}{\color{UPGold}\rule{4pt}{4pt}}\hspace{0.5em}%
   {\small\inserttocsubsection}\par
 }
 
 \endinput
-

@@ -7,8 +7,8 @@
 % Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
 %
 % Transitional options:
-%   nl            - switch to the inherited Dutch-logo path
-%   showlogo      - show the inherited corner logo on content slides
+%   nl            - switch to the legacy Dutch-logo compatibility path
+%   showlogo      - show the approved corner logo on content slides
 %   nosectionpage - suppress automatic section divider slides
 %
 % Transitional helper commands:
@@ -43,11 +43,11 @@
 \RequirePackage{listings}
 \lstset{
   basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\bfseries\color{UUdarkblue},
-  stringstyle=\color{UUgreen},
-  commentstyle=\itshape\color{UUdarkgray},
-  numberstyle=\tiny\color{UUdarkgray},
-  backgroundcolor=\color{UUlightgray},
+  keywordstyle=\bfseries\color{UPMaroon},
+  stringstyle=\color{UPForestGreen},
+  commentstyle=\itshape\color{UPBlack80},
+  numberstyle=\tiny\color{UPBlack80},
+  backgroundcolor=\color{UPGoldTint},
   frame=none,
   numbers=left,
   numbersep=8pt,
@@ -68,24 +68,22 @@
 
 % -- Font setup -----------------------------------------------------------
 \usepackage[T1]{fontenc}
-
-\IfFileExists{merriweather.sty}{%
-  \usepackage{merriweather}%
-}{%
-  \usepackage{palatino}%
-}
-\IfFileExists{opensans.sty}{%
-  \usepackage[default]{opensans}%
+\usepackage{palatino}
+% Keep the supported pdfLaTeX baseline on widely available fonts.
+\IfFileExists{helvet.sty}{%
+  \usepackage[scaled=0.94]{helvet}%
 }{}
+\renewcommand{\familydefault}{\rmdefault}
 
 \usefonttheme{professionalfonts}
-\setbeamerfont{title}{family=\rmfamily, series=\bfseries, size=\LARGE}
-\setbeamerfont{subtitle}{family=\sffamily, size=\normalsize}
-\setbeamerfont{frametitle}{family=\rmfamily, series=\bfseries, size=\large}
-\setbeamerfont{author}{family=\sffamily, size=\normalsize}
-\setbeamerfont{institute}{family=\sffamily, size=\small}
-\setbeamerfont{date}{family=\sffamily, size=\small}
+\setbeamerfont{title}{family=\sffamily, series=\bfseries, size=\LARGE}
+\setbeamerfont{subtitle}{family=\sffamily, series=\mdseries, size=\normalsize}
+\setbeamerfont{frametitle}{family=\sffamily, series=\bfseries, size=\large}
+\setbeamerfont{author}{family=\rmfamily, size=\normalsize}
+\setbeamerfont{institute}{family=\rmfamily, size=\small}
+\setbeamerfont{date}{family=\rmfamily, size=\small}
 \setbeamerfont{block title}{family=\sffamily, series=\bfseries, size=\normalsize}
+\setbeamerfont{footline}{family=\sffamily, size=\scriptsize}
 \setbeamerfont{caption}{size=\footnotesize}
 \setbeamerfont{footnote}{size=\tiny}
 
@@ -94,11 +92,11 @@
   \renewcommand{\@uulogopath}{logos/UU_logo_NL_RGB}
   \renewcommand{\@uulogoblackpath}{logos/UU_logo_NL_ZWART}
 \else
-  \renewcommand{\@uulogopath}{logos/UU_logo_EN_RGB}
-  \renewcommand{\@uulogoblackpath}{logos/UU_logo_EN_BLACK}
+  \renewcommand{\@uulogopath}{logos/up-logo-color.png}
+  \renewcommand{\@uulogoblackpath}{logos/up-logo-lineshot.png}
 \fi
 
-% -- Numbered captions (Table 1, Figure 1, …) ---------------------------
+% -- Numbered captions (Table 1, Figure 1, ...) ---------------------------
 \setbeamertemplate{caption}[numbered]
 
 % -- Bibliography font size ---------------------------------------------
@@ -114,10 +112,9 @@
 % -- Hyperref colors ----------------------------------------------------
 \hypersetup{
   colorlinks=true,
-  linkcolor=UUdarkblue,
-  urlcolor=UUpurple,
-  citecolor=UUdarkblue,
+  linkcolor=UPMaroon,
+  urlcolor=UPForestGreen,
+  citecolor=UPMaroon,
 }
 
 \endinput
-

@@ -8,7 +8,7 @@
 \usetheme[showlogo]{UP}
 
 % -- Metadata -----------------------------------
-\title[UP Beamer Theme]{Beamer Theme for UP {\footnotesize \quad \textcolor{UUred}{v1.0.0}}}
+\title[UP Beamer Theme]{Beamer Theme for UP {\footnotesize \quad \textcolor{UPGold}{v1.0.0}}}
 \subtitle{A \LaTeX\ presentation template for the University of the Philippines System}
 \author[H. Doofenshmirtz]{Dr. Heinz Doofenshmirtz}
 \institute{Department of Information and Computing Sciences}
@@ -31,10 +31,10 @@
   Bob\inst{1} \and
   Eve\inst{2}%
 }
-\addinstitute{1}{Dept.\ of Information and Computing Sciences, Utrecht University}
-\addinstitute{2}{Faculty of EEMCS, Delft University of Technology}
+\addinstitute{1}{Institute of Computer Science, University of the Philippines Los Banos}
+\addinstitute{2}{Department of Computer Science, University of the Philippines Diliman}
 \multiauthor
-\venue{NeurIPS 2026}
+\venue{National Research Conference 2026}
 \begin{frame}[plain]
   \titlepage
 \end{frame}
@@ -62,7 +62,7 @@
   \begin{itemize}
     \item \texttt{\textbackslash usetheme\{UP\}} --- basic usage
     \item \texttt{\textbackslash usetheme[showlogo]\{UP\}} --- logo on every slide
-    \item \texttt{\textbackslash usetheme[nl]\{UP\}} --- inherited Dutch-logo variant
+    \item \texttt{\textbackslash usetheme[nl]\{UP\}} --- legacy Dutch-logo compatibility path
   \end{itemize}
 
   \vskip 6pt
@@ -72,7 +72,7 @@
   then activate with:
   \begin{itemize}
     \item \texttt{\textbackslash multiauthor}
-    \item \texttt{\textbackslash venue\{NeurIPS 2026, Quezon City\}} (optional)
+    \item \texttt{\textbackslash venue\{National Research Conference 2026\}} (optional)
   \end{itemize}
 
   \vskip 6pt
@@ -113,38 +113,31 @@
 \section{Colour Palette}
 % ===========================================
 
-\begin{frame}{UU Brand Colours}
+\begin{frame}{UP Institutional Colours}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
-      \begin{alertblock}{Primary Colours}
-        \textcolor{UUyellow}{\rule{1em}{1em}}~Yellow \texttt{\#FFCD00}\\[3pt]
-        \textcolor{UUred}{\rule{1em}{1em}}~Red \texttt{\#C00A35}\\[3pt]
-        {\rule{1em}{1em}}~Black \texttt{\#000000}\\[3pt]
+      \begin{alertblock}{Core Palette}
+        \textcolor{UPMaroon}{\rule{1em}{1em}}~Maroon \texttt{\#751518}\\[3pt]
+        \textcolor{UPForestGreen}{\rule{1em}{1em}}~Forest green \texttt{\#0A4424}\\[3pt]
+        \textcolor{UPGold}{\rule{1em}{1em}}~Gold \texttt{\#F5AB29}\\[3pt]
+        \textcolor{UPBlack}{\rule{1em}{1em}}~Spot black \texttt{\#231F20}\\[3pt]
         \textcolor{white}{\rule{1em}{1em}}~White \texttt{\#FFFFFF}
       \end{alertblock}
     \end{column}
     \begin{column}{0.48\textwidth}
-    \begin{exampleblock}{Secondary Colours}
-        \begin{tabular}{@{}l@{\hspace{0.25em}} l@{\hspace{2em}} l@{\hspace{0.25em}} l@{}}
-        \textcolor{UUcream}{\rule{1em}{1em}}   & Cream      &
-        \textcolor{UUorange}{\rule{1em}{1em}}  & Orange \\[3pt]
-
-        \textcolor{UUburgundy}{\rule{1em}{1em}} & Burgundy   &
-        \textcolor{UUbrown}{\rule{1em}{1em}}    & Brown \\[3pt]
-
-        \textcolor{UUgreen}{\rule{1em}{1em}}   & Green      &
-        \textcolor{UUblue}{\rule{1em}{1em}}    & Blue \\[3pt]
-
-        \textcolor{UUdarkblue}{\rule{1em}{1em}} & Dark blue  &
-        \textcolor{UUpurple}{\rule{1em}{1em}}   & Purple
-        \end{tabular}
+    \begin{exampleblock}{Usage Rules}
+        \begin{itemize}
+          \item Maroon carries hero surfaces and alerts.
+          \item Forest green supports section structure and examples.
+          \item Gold stays an accent for rules, bullets, and emphasis.
+          \item Spot black anchors body text and labels on gold.
+        \end{itemize}
     \end{exampleblock}
     \end{column}
   \end{columns}
 
   \vskip 8pt
-  Yellow is the primary colour. \alert{Red} is used sparingly as accent.
-  Secondary colours are for data visualisation and infographics only.
+  The public theme now stays inside the UP four-colour system rather than the inherited multi-hue palette.
 \end{frame}
 
 % ===========================================
@@ -153,34 +146,34 @@
 
 \begin{frame}{Typography}
   \begin{enumerate}
-    \item \textbf{Merriweather} (serif) for titles and headings
-    \item \textsf{Open Sans} (sans-serif) for body text
-    \item Fallback: Palatino + default sans if packages are not installed
+    \item Optima-directed headings interpreted through a restrained sans-serif treatment
+    \item \textbf{Palatino} body text for the core reading surface
+    \item The supported \texttt{pdfLaTeX} baseline keeps headings on a Helvetica-style sans family for reproducible builds
   \end{enumerate}
 
   \vskip 10pt
   \begin{exampleblock}{Tip}
-    Install \texttt{texlive-fonts-extra} for the authentic UU look.
+    The supported baseline is still \texttt{pdfLaTeX}; the theme now favors the approved UP hierarchy over the older Merriweather/Open Sans pairing.
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Lists}
-  Itemize uses yellow square markers at three levels:
+  Itemize now uses a single gold marker family across levels:
 
   \begin{itemize}
-    \item First-level items use \textcolor{UUyellow}{yellow} squares
+    \item First-level items use \textcolor{UPGold}{gold} squares
     \begin{itemize}
-      \item Second-level items use \textcolor{UUorange}{orange}
+      \item Second-level items stay gold and shrink with depth
       \begin{itemize}
-        \item Third-level items use \textcolor{UUbrown}{brown}
+        \item Third-level items keep the same accent hue for consistency
       \end{itemize}
     \end{itemize}
     \item Items can contain \textbf{bold}, \emph{italic}, or \alert{alerted} text
-    \item Keep bullets concise
+    \item Keep bullets concise and let spacing carry hierarchy
   \end{itemize}
 
   \vskip 8pt
-  Enumerate uses numbered yellow squares:
+  Enumerate uses dark labels on gold chips:
   \begin{enumerate}
     \item First item
     \item Second item
@@ -216,33 +209,33 @@ $$
       text centered, font=\sffamily\footnotesize,
       draw=none
     },
-    arr/.style={->, >=stealth, semithick, UUdarkgray},
+    arr/.style={->, >=stealth, semithick, UPBlack80},
     scale=0.95, transform shape
   ]
-    \node[box, fill=UUyellow, text=UUblack] (data) {Data};
-    \node[box, fill=UUorange!80, text=white, right=of data] (preprocess) {Pre-process};
-    \node[box, fill=UUgreen!90, text=white, right=of preprocess] (model) {Model};
-    \node[box, fill=UUblue!90, text=white, right=of model] (evaluate) {Evaluate};
-    \node[box, fill=UUburgundy!90, text=white, right=of evaluate] (deploy) {Deploy};
+    \node[box, fill=UPGold, text=UPBlack] (data) {Data};
+    \node[box, fill=UPForestGreen, text=white, right=of data] (preprocess) {Pre-process};
+    \node[box, fill=UPMaroon, text=white, right=of preprocess] (model) {Model};
+    \node[box, fill=UPForestGreen!85!UPBlack, text=white, right=of model] (evaluate) {Evaluate};
+    \node[box, fill=UPMaroon!85!UPBlack, text=white, right=of evaluate] (deploy) {Deploy};
 
     \draw[arr] (data) -- (preprocess);
     \draw[arr] (preprocess) -- (model);
     \draw[arr] (model) -- (evaluate);
     \draw[arr] (evaluate) -- (deploy);
 
-    \draw[arr, UUred, dashed]
-      (evaluate.south) -- ++(0,-0.7) -| node[below, pos=0.25, font=\tiny\sffamily, UUred] {iterate} (model.south);
+    \draw[arr, UPGold!85!UPBlack, dashed]
+      (evaluate.south) -- ++(0,-0.7) -| node[below, pos=0.25, font=\tiny\sffamily, UPMaroon] {iterate} (model.south);
   \end{tikzpicture}
   \caption{Example process diagram with a numbered figure caption.}
   \end{figure}
 
   \vskip 6pt
-  TikZ diagrams integrate naturally with the UU colour palette.
-  Use \texttt{UUyellow}, \texttt{UUgreen}, \texttt{UUblue}, etc.\ directly.
+  TikZ diagrams now stay inside the mapped UP token set.
+  Use \texttt{UPGold}, \texttt{UPForestGreen}, \texttt{UPMaroon}, and \texttt{UPBlack} directly.
 \end{frame}
 
 \begin{frame}[fragile]{Code Listing}
-The \texttt{listings} package is pre-configured with UU colours.
+The \texttt{listings} package is pre-configured with UP colours.
   Specify the language and write code verbatim:
 
   \begin{lstlisting}[language=Python]
@@ -273,7 +266,7 @@ print(fibonacci(10))  # 55
       \hline
       \texttt{beamerthemeUP.sty}       & Canonical public loader wrapper \\
       \texttt{beamerthemeUU.sty}       & Legacy implementation entry \\
-      \texttt{beamercolorthemeUU.sty}  & Current inherited colour theme \\
+      \texttt{beamercolorthemeUU.sty}  & Current UP-directed colour theme \\
       \texttt{beamerinnerthemeUU.sty}  & Title page, blocks, special frames \\
       \texttt{beamerouterthemeUU.sty}  & Frame title, footline, logo \\
       \hline
@@ -301,24 +294,24 @@ print(fibonacci(10))  # 55
         \begin{tikzpicture}[scale=0.82]
          % bars
           \foreach \x/\h/\col in {
-            0.4/1.2/UUblue,
-            1.1/2.4/UUblue,
-            1.8/1.8/UUblue,
-            2.5/2.9/UUyellow,
-            3.2/2.1/UUyellow,
-            3.9/3.0/UUyellow}{
+            0.4/1.2/UPMaroon,
+            1.1/2.4/UPMaroon,
+            1.8/1.8/UPMaroon,
+            2.5/2.9/UPForestGreen,
+            3.2/2.1/UPForestGreen,
+            3.9/3.0/UPForestGreen}{
             \fill[\col!80] (\x,0) rectangle (\x+0.55,\h);
           }
           % axes
-          \draw[UUdarkgray, thin] (0,0) -- (4.5,0) node[right,font=\tiny\sffamily]{$x$};
-          \draw[UUdarkgray, thin] (0,0) -- (0,3.2) node[above,font=\tiny\sffamily]{$y$};
+          \draw[UPBlack80, thin] (0,0) -- (4.5,0) node[right,font=\tiny\sffamily]{$x$};
+          \draw[UPBlack80, thin] (0,0) -- (0,3.2) node[above,font=\tiny\sffamily]{$y$};
           % legend
-          \fill[UUblue!80]  (0.3,3.05) rectangle (0.65,3.25);
+          \fill[UPMaroon!80]  (0.3,3.05) rectangle (0.65,3.25);
           \node[right,font=\tiny\sffamily] at (0.7,3.15) {Group A};
-          \fill[UUyellow!80] (2.0,3.05) rectangle (2.35,3.25);
+          \fill[UPForestGreen!80] (2.0,3.05) rectangle (2.35,3.25);
           \node[right,font=\tiny\sffamily] at (2.4,3.15) {Group B};
         \end{tikzpicture}
-        \caption{Sample bar chart with UU colours.}
+        \caption{Sample bar chart with UP colours.}
       \end{figure}
     \end{column}
   \end{columns}
@@ -334,7 +327,7 @@ print(fibonacci(10))  # 55
 \begin{frame}{Summary}
   \begin{enumerate}
     \item Supported public loader: \texttt{\textbackslash usetheme\{UP\}}
-    \item Merriweather + Open Sans
+    \item Palatino-led reading surface with a restrained sans heading hierarchy
     \item Special frames: \texttt{\textbackslash standoutframe}, \texttt{\textbackslash thankframe}, \texttt{\textbackslash sectionframe}
     \item Options: \texttt{nl}, \texttt{showlogo}, \texttt{nosectionpage}
     \item Multi-author slides: \texttt{\textbackslash addinstitute\{n\}\{Name\}} + \texttt{\textbackslash multiauthor}
@@ -351,7 +344,7 @@ print(fibonacci(10))  # 55
 % -- references -----------------------------
 \begin{frame}[allowframebreaks]{References}
   The Beamer class~\cite{tantau2004} provides the foundation.
-  UU brand guidelines~\cite{uubrand2025} define the colour palette,
+  The UP Visual Identity Guidebook~\cite{uubrand2025} defines the colour palette,
   typography, and logo usage rules.
 
   \vskip 6pt
@@ -359,4 +352,3 @@ print(fibonacci(10))  # 55
 \end{frame}
 
 \end{document}
-
