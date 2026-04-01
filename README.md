@@ -89,7 +89,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
 - The supported compile baseline is `pdfLaTeX` with `biber`; `latexmk` is the recommended entry command.
-- The checked-in font stack uses Palatino for body copy and a Helvetica-style sans family for headings under the supported `pdfLaTeX` path.
+- **Typography now implements a tiered fallback per UP typeface guidelines:** Palatino for body text, with Optima (preferred) → Avenir → Helvetica for headings depending on engine and availability. XeLaTeX or LuaLaTeX enables Optima on systems where it is installed; pdfLaTeX defaults to Helvetica.
 - The default `showlogo` path now uses a content-slide UP lineshot-seal plus logotype lockup, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the non-`nl` lockup is scaled to stay inside the header band and anchored to the right content margin, while the `nl` option remains a legacy Dutch-logo compatibility path.
 - Title and thank-you slides now reuse the selected UP logotype in a dark-surface white variant when that asset exists.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
@@ -149,9 +149,42 @@ The checked-in implementation now loads through `UP`, while legacy `UU` loader s
 
 ### Prerequisites
 
+**Required:**
 - A TeX distribution with `pdfLaTeX`, Beamer, PGF/TikZ, BibLaTeX, and Biber available.
 - `latexmk` is recommended for local compilation.
-- No extra Optima-like package is required on the supported baseline; the checked-in theme uses Palatino for body copy and Helvetica-style sans support for headings under `pdfLaTeX`.
+
+**Typography (tiered fallback):**
+The theme implements a tiered font strategy per UP typeface guidelines:
+
+| Priority | Font | Use | Availability |
+| --- | --- | --- | --- |
+| 1 (preferred) | Optima | Titles and headings | Proprietary; pre-installed on macOS; licensed on some Windows systems |
+| 2 (alternative) | Avenir | Titles and headings | Proprietary; common on macOS and some Windows systems |
+| 3 (fallback) | Helvetica | Titles and headings | Widely available across all platforms |
+| Body text | Palatino | Body copy | Included in all major TeX distributions |
+
+**For UP guidelines compliance (Optima headings):**
+- **macOS:** Optima is pre-installed. Use XeLaTeX or LuaLaTeX:
+  ```sh
+  latexmk -pdf -pdflatex="xelatex" main.tex
+  ```
+- **Windows:** Optima requires a commercial license from Monotype. If licensed and installed, use XeLaTeX or LuaLaTeX as above.
+- **Linux:** Optima is not freely available. Use the fallback (Helvetica) or purchase a license.
+- **All platforms (free baseline):** The default pdfLaTeX compilation uses Helvetica, which is fully functional and matches the UP guidelines for unofficial materials.
+
+**Recommended compilation for best typography:**
+```sh
+# XeLaTeX (Optima if available, otherwise Avenir, then Helvetica)
+latexmk -pdf -pdflatex="xelatex" main.tex
+
+# LuaLaTeX (same fallback chain)
+latexmk -pdf -pdflatex="lualatex" main.tex
+
+# pdfLaTeX (Helvetica fallback, works everywhere)
+latexmk -pdf main.tex
+```
+
+The theme automatically detects your engine and available fonts, logging which font is selected during compilation.
 
 ### Installation
 

@@ -148,15 +148,23 @@
 
 \begin{frame}{Typography}
   \begin{enumerate}
-    \item Optima-directed headings interpreted through a restrained sans-serif treatment
-    \item \textbf{Palatino} body text for the core reading surface
-    \item The supported \texttt{pdfLaTeX} baseline keeps headings on a Helvetica-style sans family for reproducible builds
+    \item \textbf{Optima} for titles and headings (UP guidelines preferred)
+    \item \textbf{Palatino} for body text (official documents)
+    \item \textbf{Avenir/Helvetica} for unofficial materials or fallback
   \end{enumerate}
 
   \vskip 10pt
-  \begin{exampleblock}{Tip}
-    The supported baseline is still \texttt{pdfLaTeX}; the theme now favors the approved UP hierarchy over the older Merriweather/Open Sans pairing.
+  \begin{exampleblock}{Tiered Font Fallback}
+    The theme automatically selects fonts based on engine and availability:
+    \begin{itemize}
+      \item \textbf{XeLaTeX/LuaLaTeX:} Optima → Avenir → Helvetica
+      \item \textbf{pdfLaTeX:} Helvetica (with log message)
+    \end{itemize}
   \end{exampleblock}
+
+  \vskip 6pt
+  \footnotesize
+  \textcolor{UPBlack80}{Compile with \texttt{xelatex} or \texttt{lualatex} for Optima when available on your system.}
 \end{frame}
 
 \begin{frame}{Lists}
@@ -320,7 +328,7 @@ print(fibonacci(10))  # 55
 \end{frame}
 
 % -- Standout --------------------------
-\standoutframe{Sharing science,\\[4pt]\textit{shaping tomorrow}.}
+\standoutframe{Honor. Excellence. Service.}
 
 % ===========================================
 \section{Closing}

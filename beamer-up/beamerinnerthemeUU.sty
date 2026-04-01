@@ -139,28 +139,33 @@
 % ======================================================================
 \setbeamertemplate{title page}{%
   \begin{tikzpicture}[remember picture, overlay]
-    \fill[UPMaroon] (current page.north west) rectangle (current page.south east);
+    % Vertical bar on left (like beamer-uu)
     \fill[UPForestGreen]
-      ([yshift=-0.55cm]current page.north west) rectangle
-      ([yshift=-0.85cm]current page.north east);
-    \fill[UPGold]
-      ([xshift=1.45cm, yshift=-7.35cm]current page.north west) rectangle
-      ([xshift=7.25cm, yshift=-7.18cm]current page.north west);
+      (current page.north west) rectangle
+      ([xshift=0.08\paperwidth]current page.south west);
+    
+    % Main content area background (light tint)
+    \fill[UPMaroonTint]
+      ([xshift=0.08\paperwidth]current page.north west) rectangle
+      (current page.south east);
+    
+    % Logo placement (top left, next to vertical bar)
     \ifx\@uulogopath\@empty\else
       \ifx\@uulogowhitepath\@empty
-        \node[anchor=north east, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
-          at ([xshift=-1.0cm, yshift=-1.0cm]current page.north east)
+        \node[anchor=north west, fill=UPWhite, rounded corners=3pt, inner sep=6pt]
+          at ([xshift=0.12\paperwidth, yshift=-0.8cm]current page.north west)
           {\@uulogoinclude{1.65cm}};
       \else
-        \node[anchor=north east, inner sep=0pt]
-          at ([xshift=-0.7cm, yshift=-0.8cm]current page.north east)
-          {\@uulogowhiteinclude{6.3cm}};
+        \node[anchor=north west, inner sep=0pt]
+          at ([xshift=0.12\paperwidth, yshift=-0.6cm]current page.north west)
+          {\@uulogowhiteinclude{5.5cm}};
       \fi
     \fi
   \end{tikzpicture}%
   %
-  \vskip 2.3cm%
-  \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{title}
+  % Content positioning
+  \vskip 3.2cm%
+  \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{title}
     \usebeamerfont{title}\inserttitle\par%
     \ifx\insertsubtitle\@empty\else
       \vskip 6pt%
@@ -170,33 +175,33 @@
   \vskip 14pt%
   %
   \if@uumultiauthor
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{author}
       \usebeamerfont{author}%
       \def\and{\unskip,\enspace}%
       \def\inst##1{\textsuperscript{\footnotesize ##1}}%
       \insertauthor%
     \end{beamercolorbox}
     \vskip 5pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{institute}
       \usebeamerfont{institute}\footnotesize%
       \begin{tabular}[t]{@{}l@{}}
         \@uuconfinstitute
       \end{tabular}%
     \end{beamercolorbox}
     \vskip 3pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{date}
       \usebeamerfont{date}\uutitlemeta%
     \end{beamercolorbox}
   \else
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{author}
       \usebeamerfont{author}\insertauthor%
     \end{beamercolorbox}
     \vskip 4pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{institute}
       \usebeamerfont{institute}\insertinstitute%
     \end{beamercolorbox}
     \vskip 4pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
+    \begin{beamercolorbox}[leftskip=0.15\paperwidth, rightskip=1cm]{date}
       \usebeamerfont{date}\uutitlemeta%
     \end{beamercolorbox}
   \fi
@@ -208,13 +213,13 @@
 \if@UUnosection\else
 \AtBeginSection[]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UPForestGreen}
+  \setbeamercolor{background canvas}{bg=UPGold}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
+    {\color{UPForestGreen}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UPWhite}\LARGE\sffamily\bfseries\insertsection}%
+    {\color{UPMaroon}\LARGE\sffamily\bfseries\insertsection}%
     \vfill
   \end{frame}
   \endgroup
@@ -245,13 +250,13 @@
 % ======================================
 \newcommand{\sectionframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UPForestGreen}
+  \setbeamercolor{background canvas}{bg=UPGold}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
+    {\color{UPForestGreen}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UPWhite}\LARGE\sffamily\bfseries #1}%
+    {\color{UPMaroon}\LARGE\sffamily\bfseries #1}%
     \vfill
   \end{frame}
   \endgroup
