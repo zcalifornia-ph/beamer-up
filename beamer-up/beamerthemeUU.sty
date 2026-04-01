@@ -73,23 +73,101 @@
 \addbibresource{references.bib}
 
 % -- Font setup -----------------------------------------------------------
+% UP Typeface Guidelines Hierarchy:
+%   - Optima: for titles and headings (official documents)
+%   - Palatino: for body text (official documents)
+%   - Avenir/Helvetica: for unofficial documents and materials
+%
+% This theme implements a tiered fallback strategy:
+%   1. Optima (preferred for headings per UP guidelines)
+%   2. Avenir (acceptable alternative for unofficial materials)
+%   3. Helvetica (widely available fallback)
+%
+% Engine detection: XeLaTeX/LuaLaTeX can access system fonts directly.
+% pdfLaTeX uses the fallback chain with TeX font packages.
+
 \usepackage[T1]{fontenc}
-\usepackage{palatino}
-% Keep the supported pdfLaTeX baseline on widely available fonts.
-\IfFileExists{helvet.sty}{%
-  \usepackage[scaled=0.94]{helvet}%
-}{}
+\usepackage{palatino} % Body text per UP guidelines
 \renewcommand{\familydefault}{\rmdefault}
 
+% Engine detection helper (works across LaTeX formats)
+\newcommand{\up@xetex@or@luatex@font@setup}{%
+  \typeout{beamerthemeUU: XeLaTeX/LuaLaTeX engine detected, attempting Optima...}%
+}%
+
+% Detect engine and load appropriate sans-serif for headings
+\ifxetex
+  % XeLaTeX: try Optima first, then Avenir, then Helvetica
+  \IfFontExistsTF{Optima}{%
+    \usepackage{fontspec}
+    \setmainfont{Palatino Linotype}
+    \setsansfont{Optima}
+    \newcommand{\upheadingfont}{\fontspec{Optima}}
+    \typeout{beamerthemeUU: Using Optima for headings (UP guidelines compliant)}
+  }{%
+    \IfFontExistsTF{Avenir}{%
+      \usepackage{fontspec}
+      \setmainfont{Palatino Linotype}
+      \setsansfont{Avenir}
+      \newcommand{\upheadingfont}{\fontspec{Avenir}}
+      \typeout{beamerthemeUU: Using Avenir for headings (Optima not available)}
+    }{%
+      \usepackage{fontspec}
+      \setmainfont{Palatino Linotype}
+      \setsansfont{Helvetica}
+      \newcommand{\upheadingfont}{\fontspec{Helvetica}}
+      \typeout{beamerthemeUU: Using Helvetica for headings (Optima/Avenir not available)}
+    }%
+  }%
+\else
+  \ifluatex
+    % LuaLaTeX: try Optima first, then Avenir, then Helvetica
+    \IfFontExistsTF{Optima}{%
+      \usepackage{fontspec}
+      \setmainfont{Palatino}
+      \setsansfont{Optima}
+      \newcommand{\upheadingfont}{\fontspec{Optima}}
+      \typeout{beamerthemeUU: Using Optima for headings (UP guidelines compliant)}
+    }{%
+      \IfFontExistsTF{Avenir}{%
+        \usepackage{fontspec}
+        \setmainfont{Palatino}
+        \setsansfont{Avenir}
+        \newcommand{\upheadingfont}{\fontspec{Avenir}}
+        \typeout{beamerthemeUU: Using Avenir for headings (Optima not available)}
+      }{%
+        \usepackage{fontspec}
+        \setmainfont{Palatino}
+        \setsansfont{Helvetica}
+        \newcommand{\upheadingfont}{\fontspec{Helvetica}}
+        \typeout{beamerthemeUU: Using Helvetica for headings (Optima/Avenir not available)}
+      }%
+    }%
+  \else
+    % pdfLaTeX fallback: use Helvetica (most widely available)
+    % Users wanting Optima should compile with XeLaTeX or LuaLaTeX
+    \IfFileExists{helvet.sty}{%
+      \usepackage[scaled=0.94]{helvet}%
+      \newcommand{\upheadingfont}{\sffamily}%
+      \typeout{beamerthemeUU: Using Helvetica for headings (pdfLaTeX engine; use XeLaTeX/LuaLaTeX for Optima)}%
+    }{%
+      \newcommand{\upheadingfont}{\sffamily}%
+      \typeout{beamerthemeUU: Using default sans-serif for headings (helvet.sty not found)}%
+    }%
+  \fi
+\fi
+
 \usefonttheme{professionalfonts}
-\setbeamerfont{title}{family=\sffamily, series=\bfseries, size=\LARGE}
-\setbeamerfont{subtitle}{family=\sffamily, series=\mdseries, size=\normalsize}
-\setbeamerfont{frametitle}{family=\sffamily, series=\bfseries, size=\large}
+
+% Apply heading font consistently across all title/heading elements
+\setbeamerfont{title}{family=\upheadingfont, series=\bfseries, size=\LARGE}
+\setbeamerfont{subtitle}{family=\upheadingfont, series=\mdseries, size=\normalsize}
+\setbeamerfont{frametitle}{family=\upheadingfont, series=\bfseries, size=\large}
 \setbeamerfont{author}{family=\rmfamily, size=\normalsize}
 \setbeamerfont{institute}{family=\rmfamily, size=\small}
 \setbeamerfont{date}{family=\rmfamily, size=\small}
-\setbeamerfont{block title}{family=\sffamily, series=\bfseries, size=\normalsize}
-\setbeamerfont{footline}{family=\sffamily, size=\scriptsize}
+\setbeamerfont{block title}{family=\upheadingfont, series=\bfseries, size=\normalsize}
+\setbeamerfont{footline}{family=\upheadingfont, size=\scriptsize}
 \setbeamerfont{caption}{size=\footnotesize}
 \setbeamerfont{footnote}{size=\tiny}
 
