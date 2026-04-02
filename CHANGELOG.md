@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.17`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the public root docs now match that checked-in baseline again, and release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.18`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, and the UP feedback-page footer logo now reads closer in perceived size to the inherited Utrecht footer mark while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.17`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.18
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` `\thankframe` footer logo now uses a dedicated `\@upclosinglogoheight` constant set to `1.10cm` instead of the earlier inline `0.74cm` include height.
+- Enlarged the exact horizontal white English and Filipino UP closing-slide footer logos so their perceived size reads closer to the inherited Utrecht University feedback-page footer mark while preserving the existing trim boxes, language selection, and legacy `nl` fallback path.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus rendered closing-slide inspection confirming that the larger UP footer mark still fits cleanly inside the page.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-18-docs.md` so the public docs reflect the larger feedback-page footer logo baseline.
+
+### For Deletion
+- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
+- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
 
 ## v0.0.17
 

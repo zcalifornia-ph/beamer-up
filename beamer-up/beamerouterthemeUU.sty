@@ -31,6 +31,7 @@
     \@upclosinglogoenginclude{#1}%
   \fi
 }
+\newcommand{\@upclosinglogoheight}{1.10cm}
 
 % -- Frame Title -----------------------------------------------------------
 \setbeamertemplate{frametitle}{%
@@ -104,7 +105,7 @@
                 {\@uulogoinclude{1.5cm}};}
             \fi
           \else
-            \@upclosinglogoinclude{0.74cm}%
+            \@upclosinglogoinclude{\@upclosinglogoheight}%
           \fi
         };
     \end{tikzpicture}%
