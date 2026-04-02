@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.29
+    Version: v0.0.30
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, light-surface title pages that now pair runtime-cropped inline black English/Filipino UP cover lockups with bold dark subtitles, a maroon title-page divider with a forest-green venue/date separator and forest-green conference affiliation markers, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, the corrected bundled bibliography example that cites the UP Visual Identity Guide 2017 directly on the references slide, and public changelog cleanup notes that remain generic instead of naming ignored local build outputs directly.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, light-surface title pages that now pair runtime-cropped inline black English/Filipino UP cover lockups with bold dark subtitles, a maroon title-page divider with a forest-green venue/date separator and forest-green conference affiliation markers, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, the bundled bibliography set that keeps the UP Visual Identity Guide 2017 as the UP branding source while now rendering Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing" as the first numeric bibliography item, and public changelog cleanup notes that remain generic instead of naming ignored local build outputs directly.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -84,13 +84,13 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- The bundled showcase deck was revalidated locally on April 3, 2026 with `pdflatex main.tex` from `beamer-up/` after the title-page venue/date separator follow-up; `latexmk -pdf main.tex` remains the recommended full build command.
+- The bundled showcase deck was revalidated locally on April 3, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/` after the bundled first bibliography-entry source swap; `latexmk -pdf main.tex` remains the recommended full build command.
 - The current root release notes now describe cleanup candidates generically instead of naming ignored local build-output paths directly in public changelog entries.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
 - The supported compile baseline is `pdfLaTeX` with `biber`; `latexmk` is the recommended entry command.
-- The bundled references slide now cites the UP Visual Identity Guide 2017 PDF directly from `references.bib`, replacing the earlier Utrecht corporate-identity metadata while preserving the numeric `biblatex` example flow.
+- The bundled references slide now keeps the UP Visual Identity Guide 2017 PDF as the UP branding reference, and the first numeric bibliography item now resolves to Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing" through the reused `tai1994mathematical` entry while preserving the numeric `biblatex` example flow.
 - **Typography now implements a tiered fallback per UP typeface guidelines:** Palatino for body text, with Optima (preferred) → Avenir → Helvetica for headings depending on engine and availability. XeLaTeX or LuaLaTeX enables Optima on systems where it is installed; pdfLaTeX defaults to Helvetica.
 - The default `showlogo` path now uses a content-slide UP lineshot-seal plus logotype lockup, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the non-`nl` lockup is scaled to stay inside the header band and anchored to the right content margin, while the `nl` option remains a legacy Dutch-logo compatibility path.
 - Automatic section-divider slides now render the active section title again as plain white divider text, and manual `\sectionframe` dividers continue to share that same UP maroon-and-gold surface treatment.
@@ -130,7 +130,7 @@ beamer-up/
   docs/
     version-0-0-2-docs.md
     ...
-    version-0-0-29-docs.md
+    version-0-0-30-docs.md
   repo/
     images/
       project_screen.png
@@ -239,7 +239,7 @@ Migration expectations now in effect:
 - `\thankframe{...}{...}` keeps the same interface, but the UP path now preserves a stable centered title/divider/body layout and swaps between the exact bundled horizontal white English and Filipino UP lockups at the larger perceived footer size established earlier, with the footer mark resting even lower through a smaller post-logo bottom offset so the space above it feels closer to the inherited Utrecht closing-slide balance; `nl` keeps its legacy compatibility fallback.
 - The current UP runtime uses runtime-cropped inline black UP cover lockups for title slides, cropped logo copies for content-slide header surfaces, and tighter language-specific trim-plus-height rules for the closing-slide horizontal logo files, with title pages now using dedicated `up-inline-logo-*-runtime-black.png` assets plus a generic title-logo size hook, a bold dark subtitle, a maroon divider with a forest-green venue/date separator, and forest-green conference affiliation markers while the footer block still stays anchored by a reduced trailing `\vspace*` after the closing-slide logo (`0.10cm` instead of `0.95cm`) so the selected footer mark sits farther below the contribution text while remaining fully visible.
 - The bundled `main.tex` showcase now illustrates that cover treatment with a forest-green `v1.0.0` badge and refreshed single-author and multi-author UP campus metadata on its first two frames.
-- The bundled bibliography example now cites the UP Visual Identity Guide 2017 directly through the `upvig2017` entry in `references.bib`, replacing the earlier inherited Utrecht branding citation while keeping the same references-slide structure.
+- The bundled bibliography example now keeps the UP Visual Identity Guide 2017 as the UP branding reference through `upvig2017`, while the reused `tai1994mathematical` entry renders Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing" as the first numeric bibliography item on the references slide.
 - On content slides, the English and Filipino UP header lockups now pair the lineshot seal with the selected wordmark, fit inside the header band, and align the overall lockup to the same right margin used by the main content blocks; the `nl` compatibility logo keeps its legacy corner placement.
 - The default visual system now uses UP maroon `#8E1537`, forest green `#005740`, yellow `#FFB81D`, and spot black `#231F20` across the checked-in showcase and theme templates.
 - Any remaining `UU` compatibility path should be treated as a deprecated bridge rather than a coequal public alias.

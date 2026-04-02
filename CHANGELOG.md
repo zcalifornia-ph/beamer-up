@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.29`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
+Status: current repo milestone `v0.0.30`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, the UP Visual Identity Guide 2017 still present as the UP branding reference, and the reused first bibliography item now rendering Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing", while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
 
 ## Unreleased
 
@@ -9,6 +9,16 @@ Status: current repo milestone `v0.0.29`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.30
+
+### Added or Changed
+- Updated `beamer-up/references.bib` so the reused `tai1994mathematical` entry now cites Zildjian E California's `"Paper-thin Threads: Stecker, Art, and Computing"` web article instead of the earlier diabetes paper, changing the first numeric bibliography item without altering cite order in the showcase deck.
+- Revalidated the bibliography output on April 3, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/`, plus page-24 text extraction confirming that rendered item `[1]` now begins with `Zildjian E California. "Paper-thin Threads: Stecker, Art, and Computing".`
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-30-docs.md` so the public docs reflect this staged bibliography-entry replacement.
+
+### For Deletion
+- Generated local showcase build outputs from the bibliography-entry verification remain cleanup candidates before release packaging.
 
 ## v0.0.29
 
