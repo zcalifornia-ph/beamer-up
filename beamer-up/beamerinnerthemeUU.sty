@@ -215,13 +215,14 @@
 \if@UUnosection\else
 \AtBeginSection[]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UPGold}
+  \setbeamercolor{background canvas}{bg=UPMaroon}
+  \setbeamercolor{normal text}{fg=UPWhite}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UPForestGreen}\rule{4cm}{2pt}}\\[10pt]%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UPMaroon}\LARGE\sffamily\bfseries\insertsection}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries\insertsectionhead}%
     \vfill
   \end{frame}
   \endgroup
@@ -252,13 +253,13 @@
 % ======================================
 \newcommand{\sectionframe}[1]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=UPGold}
+  \setbeamercolor{background canvas}{bg=UPMaroon}
   \begin{frame}[plain]
     \vfill
     \hspace{0.08\paperwidth}%
-    {\color{UPForestGreen}\rule{4cm}{2pt}}\\[10pt]%
+    {\color{UPGold}\rule{4cm}{2pt}}\\[10pt]%
     \hspace{0.08\paperwidth}%
-    {\color{UPMaroon}\LARGE\sffamily\bfseries #1}%
+    {\color{UPWhite}\LARGE\sffamily\bfseries #1}%
     \vfill
   \end{frame}
   \endgroup

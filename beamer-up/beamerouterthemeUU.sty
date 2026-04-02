@@ -16,6 +16,21 @@
       at ([xshift=0.10cm]seal.east) {\@uulogoblackinclude{#1}};
   \end{tikzpicture}%
 }
+\newcommand{\@upclosinglogoenginclude}[1]{%
+  \includegraphics[width=#1, trim=20bp 796bp 16bp 856bp, clip]%
+    {logos/up-horizontal-logo-with-white-engtype.png}%
+}
+\newcommand{\@upclosinglogotaginclude}[1]{%
+  \includegraphics[width=#1, trim=284bp 796bp 283bp 856bp, clip]%
+    {logos/up-horizontal-logo-with-white-tagtype.png}%
+}
+\newcommand{\@upclosinglogoinclude}[1]{%
+  \if@UUfilipino
+    \@upclosinglogotaginclude{#1}%
+  \else
+    \@upclosinglogoenginclude{#1}%
+  \fi
+}
 
 % -- Frame Title -----------------------------------------------------------
 \setbeamertemplate{frametitle}{%
@@ -68,23 +83,31 @@
 \newcommand{\thankframe}[2]{%
   \begingroup
   \setbeamercolor{background canvas}{bg=UPMaroon}
+  \setbeamercolor{normal text}{fg=UPWhite}
   \begin{frame}[plain]
-    \vfill
-    \begin{center}
-      {\color{UPGold}\rule{2.8cm}{1pt}}\\[16pt]
-      {\color{UPWhite}\Huge\sffamily\bfseries #1}\\[16pt]
-      {\color{UPWhite}\normalsize\rmfamily #2}%
-      \vskip 26pt%
-      \ifx\@uulogowhitepath\@empty
-        \ifx\@uulogopath\@empty\else
-          \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
-            {\@uulogoinclude{1.5cm}};}
-        \fi
-      \else
-        \@uulogowhiteinclude{6.8cm}%
-      \fi
-    \end{center}
-    \vfill
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=north, inner sep=0pt]
+        at ([yshift=-1.65cm]current page.north)
+        {\color{UPWhite}\Huge\upheadingfont\bfseries #1};
+      \draw[UPGold, line width=1pt]
+        ([xshift=-1.35cm, yshift=-3.10cm]current page.north) --
+        ([xshift=1.35cm, yshift=-3.10cm]current page.north);
+      \node[anchor=north, align=center, text width=0.74\paperwidth, inner sep=0pt]
+        at ([yshift=-3.85cm]current page.north)
+        {{\begingroup\hypersetup{urlcolor=UPGold}\color{UPWhite}\normalsize\rmfamily #2\endgroup}};
+      \node[anchor=south, inner sep=0pt]
+        at ([yshift=0.85cm]current page.south)
+        {%
+          \if@UUnl
+            \ifx\@uulogopath\@empty\else
+              \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
+                {\@uulogoinclude{1.5cm}};}
+            \fi
+          \else
+            \@upclosinglogoinclude{5.0cm}%
+          \fi
+        };
+    \end{tikzpicture}%
   \end{frame}
   \endgroup
 }

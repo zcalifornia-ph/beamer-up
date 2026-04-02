@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.12
+    Version: v0.0.13
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme now exposes selectable UP logotype variants on light and dark slide surfaces, applies the corrected official UP core palette, and composes a scaled content-slide UP lineshot-seal plus logotype lockup that stays inside the header band while still leaving release-ready packaging plus public validation notes in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme now restores visible automatic section-divider titles, keeps the UP divider surface aligned across manual and automatic section pages, and uses language-aware horizontal white UP closing-slide lockups on a beamer-uu-style feedback-page layout while still leaving release-ready packaging plus broader public validation notes in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -91,7 +91,8 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - The supported compile baseline is `pdfLaTeX` with `biber`; `latexmk` is the recommended entry command.
 - **Typography now implements a tiered fallback per UP typeface guidelines:** Palatino for body text, with Optima (preferred) → Avenir → Helvetica for headings depending on engine and availability. XeLaTeX or LuaLaTeX enables Optima on systems where it is installed; pdfLaTeX defaults to Helvetica.
 - The default `showlogo` path now uses a content-slide UP lineshot-seal plus logotype lockup, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the non-`nl` lockup is scaled to stay inside the header band and anchored to the right content margin, while the `nl` option remains a legacy Dutch-logo compatibility path.
-- Title and thank-you slides now reuse the selected UP logotype in a dark-surface white variant when that asset exists.
+- Automatic section-divider slides now render the active Beamer section title again, and manual `\sectionframe` dividers continue to share the same UP maroon-and-gold surface treatment.
+- Title slides keep the selected UP white wordmark variant, while `\thankframe` now follows the inherited beamer-uu closing-slide geometry more closely and switches between the bundled horizontal white English and Filipino UP lockups; the `nl` compatibility branch keeps its legacy fallback behavior.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
@@ -137,6 +138,7 @@ docs/
   version-0-0-10-docs.md
   version-0-0-11-docs.md
   version-0-0-12-docs.md
+  version-0-0-13-docs.md
 repo/images/
   project_screen.png
 ```
@@ -230,7 +232,9 @@ Migration expectations now in effect:
 - Existing options `showlogo`, `english`, `filipino`, `nl`, and `nosectionpage` are supported on the public loader.
 - Existing helper commands such as `\multiauthor`, `\singleauthor`, `\addinstitute`, `\clearinstitutes`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
 - `showlogo` renders the bundled UP content-slide header lockup by default; `english` selects `University of the Philippines`, `filipino` selects `Unibersidad ng Pilipinas`, and `nl` switches to the legacy Dutch-logo compatibility path.
-- The current UP runtime uses cropped logo copies inside `beamer-up/logos/` so the selected logotype can be positioned consistently on content, title, and closing slides without depending on oversized transparent source canvases.
+- Automatic section pages now render the active section title again, and manual `\sectionframe{...}` pages stay visually matched to that same rule-above-title divider treatment.
+- `\thankframe{...}{...}` keeps the same interface, but the UP path now follows the inherited beamer-uu feedback-page rhythm more closely and swaps between the bundled horizontal white English and Filipino UP lockups; `nl` keeps its legacy compatibility fallback.
+- The current UP runtime uses cropped logo copies inside `beamer-up/logos/` for header/title surfaces and trimmed horizontal source art for the closing-slide lockups so the selected branding can be positioned consistently without depending on oversized transparent source canvases.
 - On content slides, the English and Filipino UP header lockups now pair the lineshot seal with the selected wordmark, fit inside the header band, and align the overall lockup to the same right margin used by the main content blocks; the `nl` compatibility logo keeps its legacy corner placement.
 - The default visual system now uses UP maroon `#8E1537`, forest green `#005740`, yellow `#FFB81D`, and spot black `#231F20` across the checked-in showcase and theme templates.
 - Any remaining `UU` compatibility path should be treated as a deprecated bridge rather than a coequal public alias.

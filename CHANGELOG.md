@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.12`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
+Status: current repo milestone `v0.0.13`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style language-aware UP closing slide are checked in, while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,20 @@ Status: current repo milestone `v0.0.12`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.13
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so automatic section-divider slides now use Beamer's populated `\insertsectionhead` token, restoring visible section titles while preserving the current UP maroon-and-gold divider surface.
+- Updated `beamer-up/beamerouterthemeUU.sty` so `\thankframe` now follows the inherited beamer-uu feedback-page layout more closely, with the title first, the divider beneath it, centered contribution text below, and a bottom-centered logo slot.
+- Added and/or promoted horizontal and vertical UP source-logo variants under `beamer-up/logos/`, and wired the non-`nl` closing-slide path to the selected `up-horizontal-logo-with-white-engtype.png` or `up-horizontal-logo-with-white-tagtype.png`.
+- Revalidated the affected surfaces on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`, plus local text-extraction and page-render checks confirming the automatic section title is present again.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-13-docs.md` so the public docs reflect the restored divider behavior and the language-aware UP closing-slide lockup.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fdb_latexmk`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local verification of the divider and closing-slide changes).
+- `beamer-up/preview-page-4-04.png` (temporary local PDF page render used to confirm the automatic section-divider title was visible again).
+- `beamer-up/closing-filipino-test.log` (scratch local compile log generated while probing the Filipino closing-slide path).
 
 ## v0.0.12
 
