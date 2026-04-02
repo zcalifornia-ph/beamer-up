@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.30`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, the UP Visual Identity Guide 2017 still present as the UP branding reference, and the reused first bibliography item now rendering Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing", while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
+Status: current repo milestone `v0.0.31`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, content frames now rendering canonical runtime-cropped English/Filipino UP lineshot-with-logotype header assets with smaller vertically centered placement, the UP Visual Identity Guide 2017 still present as the UP branding reference, and the reused first bibliography item still rendering Zildjian E California's "Paper-thin Threads: Stecker, Art, and Computing", while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.30`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.31
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` content-slide `showlogo` path now uses runtime-cropped `up-inline-lineshot-eng-runtime-black.png` and `up-inline-lineshot-tag-runtime-black.png` header assets derived from the canonical prebuilt `up-inline-lineshot-*-black.png` source files instead of composing the lineshot seal and wordmark separately at render time.
+- Added `beamer-up/logos/up-inline-lineshot-eng-runtime-black.png` and `beamer-up/logos/up-inline-lineshot-tag-runtime-black.png` as stable header-band assets for the English and Filipino content-frame lockups.
+- Retuned the non-`nl` content-slide header anchor in `beamer-up/beamerouterthemeUU.sty` so the visible UP lockup now renders smaller and slightly lower in the header band, giving the mark more breathing room above and below while preserving the right-margin alignment.
+- Revalidated the affected showcase deck on April 3, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-3 render inspection confirming that the outline-slide header lockup stays visible after the runtime-asset and spacing follow-up.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-31-docs.md` so the public docs reflect this content-frame header lockup follow-up as the current checked-in baseline.
+
+### For Deletion
+- Generated local showcase build outputs from the content-frame header-lockup verification remain cleanup candidates before release packaging.
 
 ## v0.0.30
 

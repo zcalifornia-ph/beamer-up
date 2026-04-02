@@ -7,14 +7,18 @@
 \ProvidesPackage{beamerouterthemeUU}[2026/04/01 Legacy-named outer theme for the beamer-up derivative]
 
 \RequirePackage{tikz}
-\newcommand{\@upheaderlineshotpath}{logos/up-logo-lineshot.png}
-\newcommand{\@upheaderlineshotinclude}[1]{\includegraphics[height=#1]{\@upheaderlineshotpath}}
+\newcommand{\@upheaderlineshotenginclude}[1]{%
+  \includegraphics[width=#1]{logos/up-inline-lineshot-eng-runtime-black.png}%
+}
+\newcommand{\@upheaderlineshottaginclude}[1]{%
+  \includegraphics[width=#1]{logos/up-inline-lineshot-tag-runtime-black.png}%
+}
 \newcommand{\@upheaderlogolockupblack}[1]{%
-  \begin{tikzpicture}[baseline=(seal.center)]
-    \node[inner sep=0pt, anchor=center] (seal) {\@upheaderlineshotinclude{0.72cm}};
-    \node[inner sep=0pt, anchor=west] (wordmark)
-      at ([xshift=0.10cm]seal.east) {\@uulogoblackinclude{#1}};
-  \end{tikzpicture}%
+  \if@UUfilipino
+    \@upheaderlineshottaginclude{#1}%
+  \else
+    \@upheaderlineshotenginclude{#1}%
+  \fi
 }
 \newcommand{\@upclosinglogoenginclude}[1]{%
   \includegraphics[height=#1, trim=12bp 596bp 11bp 641bp, clip]%
@@ -72,8 +76,8 @@
             {\@uulogoblackinclude{1.4cm}};
         \else
           \node[anchor=north east, inner sep=0pt]
-            at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.06cm]current page.north east)
-            {\if@UUfilipino\@upheaderlogolockupblack{4.25cm}\else\@upheaderlogolockupblack{4.95cm}\fi};
+            at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.15cm]current page.north east)
+            {\if@UUfilipino\@upheaderlogolockupblack{3.45cm}\else\@upheaderlogolockupblack{3.85cm}\fi};
         \fi
       \fi
     \end{tikzpicture}%
