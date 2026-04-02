@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.29`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
+Status: current public documentation baseline `v0.1.0`; the supported public loader is `UP`, the root governance docs now align with `beamer-up/REQUIREMENTS.md`, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -10,367 +10,114 @@ Status: current repo milestone `v0.0.29`; the supported `UP` loader and checked-
 ### For Deletion
 - None yet.
 
+## v0.1.0
+
+### Added or Changed
+- Bumped the public root documentation baseline from `v0.0.31` to `v0.1.0`.
+- Reconciled `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, and `SECURITY.md` with the approved requirements baseline in `beamer-up/REQUIREMENTS.md`.
+- Removed stale cross-project changelog content so the root changelog now reflects `beamer-up` only.
+- Tightened public wording so `UP` is the supported public loader and any remaining `UU` names are described only as implementation or migration detail.
+- Added `docs/version-0-1-0-docs.md` to preserve the versioned public-docs trail for this release.
+
+### For Deletion
+- Generated local LaTeX build outputs remain cleanup candidates before release packaging.
+
+## v0.0.31
+
+### Added or Changed
+- Switched the non-`nl` content-frame header to canonical runtime-cropped English and Filipino lineshot lockups.
+- Rebalanced the visible content-frame header spacing so the lockup renders smaller and lower in the header band.
+- Updated the root docs to describe the refined content-frame header baseline.
+
+### For Deletion
+- Generated local showcase build outputs from header verification remained cleanup candidates.
+
+## v0.0.30
+
+### Added or Changed
+- Replaced the first numeric bibliography item in the showcase deck with the `Paper-thin Threads: Stecker, Art, and Computing` web citation.
+- Revalidated the bibliography flow with the documented `pdflatex -> biber -> pdflatex -> pdflatex` chain.
+- Updated the root docs to reflect the checked-in bibliography baseline.
+
+### For Deletion
+- Generated local showcase build outputs from bibliography verification remained cleanup candidates.
+
 ## v0.0.29
 
 ### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so `\uutitlemeta` now renders the light-surface title-page venue/date separator dot in `UPForestGreen` instead of `UPMaroon`, while keeping the divider rule maroon and the conference affiliation markers forest green.
-- Revalidated the affected showcase deck on April 3, 2026 with `pdflatex main.tex` from `beamer-up/`, confirming that the single-author and multi-author title slides still compile after the separator-color follow-up.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-29-docs.md` so the public docs reflect this narrow title-page accent follow-up as the current checked-in baseline.
+- Returned the light-surface title-page venue/date separator accent to forest green.
+- Revalidated the title-page follow-up on the documented compile path.
+- Updated the root docs to reflect the checked-in title-page accent baseline.
 
 ### For Deletion
-- Generated local showcase build outputs from the separator-color verification remain cleanup candidates before release packaging.
+- Generated local showcase build outputs from title-page verification remained cleanup candidates.
 
 ## v0.0.28
 
 ### Added or Changed
-- Updated `CHANGELOG.md` so the public `For Deletion` notes now describe ignored build-output cleanup candidates generically instead of naming ignored local artifact paths directly.
-- Updated `README.md` version markers and status notes to publish this as the `v0.0.28` docs-only reconciliation release for the current checked-in `beamer-up` baseline.
-- Added `docs/version-0-0-28-docs.md` as the detailed narrative note for this public-docs cleanup release.
+- Normalized public cleanup notes so ignored local build outputs were described generically instead of by specific ignored paths.
+- Published the root docs as a docs-only reconciliation release for the then-current checked-in `beamer-up` baseline.
 
 ### For Deletion
-- None from this docs-only release.
+- None from this docs-only reconciliation release.
 
 ## v0.0.27
 
 ### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so the light-surface title-page template now keeps the subtitle bold and dark, colors the divider rule and venue/date separator dot in `UPMaroon`, and renders conference affiliation superscripts plus numbered affiliation markers in `UPForestGreen` while keeping the cover author/date emphasis aligned to the lighter title-page palette.
-- Updated `beamer-up/main.tex` so the bundled showcase deck now uses a forest-green `v1.0.0` badge, a bolded subtitle line, and refreshed single-author / conference-style UP campus metadata on the first two title-page frames.
-- Revalidated the affected showcase deck on April 3, 2026 with `pdflatex main.tex` from `beamer-up/`, confirming that the single-author and multi-author title slides still compile after the title-page accent cleanup.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-27-docs.md` so the public docs reflect the title-page accent cleanup and the refreshed showcase metadata.
+- Strengthened the light-surface title-page typography, divider treatment, and metadata accents.
+- Refreshed the bundled showcase metadata on the first title frames.
+- Updated the root docs to describe the rebalanced title-page presentation surfaces.
 
 ### For Deletion
-- Generated local showcase build outputs from the title-page accent verification remain cleanup candidates before release packaging.
-- Extra local cover-check build outputs present in the theme workspace remain cleanup candidates because they are not part of the shipped source tree.
+- Generated local showcase build outputs from title-page verification remained cleanup candidates.
 
 ## v0.0.26
 
 ### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page template now inverts the cover surface to a white main field with a maroon left accent bar and applies local dark text colors suited to the lighter title-page background.
-- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path now uses runtime-cropped inline black English and Filipino UP cover lockups (`up-inline-logo-eng-runtime-black.png` and `up-inline-logo-tag-runtime-black.png`) while leaving the content-header and closing-slide logo systems on their existing separate paths.
-- Added `beamer-up/logos/up-inline-logo-eng-runtime-black.png` and `beamer-up/logos/up-inline-logo-tag-runtime-black.png` as stable light-surface title-page assets derived from the existing requested inline black source files.
-- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the white-surface title-page pass.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-26-docs.md` so the public docs reflect the title-page surface inversion and black cover-lockup path.
+- Inverted the title-page surface to white, retained the maroon accent bar, and moved the cover-page mark to runtime-cropped black UP lockups.
+- Added stable title-page runtime assets for the supported non-`nl` UP cover path.
+- Updated the root docs to describe the light-surface title-page baseline.
 
 ### For Deletion
-- Generated local showcase build outputs from the white-surface title-page verification remain cleanup candidates before release packaging.
-- `beamer-up/titlepage-white-preview.png` and `beamer-up/titlepage-white-preview-current.png` (temporary local page-1 preview exports used to inspect the inverted title-page surface and the black UP cover lockup placement).
+- Generated local showcase build outputs from title-page verification remained cleanup candidates.
 
-## v0.0.25
+## v0.0.23-v0.0.25
 
 ### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page logo slot now uses a generic `\@uutitlelogosize` hook instead of the earlier width-specific title-logo variable, allowing the requested inline cover assets to be sized by height without distorting the title-page template contract.
-- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path now uses `up-inline-logo-eng-runtime-white.png` and `up-inline-logo-tag-runtime-white.png`, which are runtime-cropped derivatives of the requested inline white UP source files, and renders them through a height-based include with the current title-page anchor tuning.
-- Added `beamer-up/logos/up-inline-logo-eng-runtime-white.png` and `beamer-up/logos/up-inline-logo-tag-runtime-white.png` as stable title-page assets derived from the requested inline white cover logos, avoiding the trim artifact and upside-down spill that appeared when clipping the raw source files directly inside TeX.
-- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the runtime-cropped inline-logo fix.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-25-docs.md` so the public docs reflect the final title-page inline-logo rendering fix.
+- Reworked the title-page logo path around trimmed and runtime-cropped inline UP lockups.
+- Rebalanced the title-page text block so single-author and multi-author covers shared a clearer layout rhythm.
+- Continued updating the root docs and per-version narratives as the cover-page implementation stabilized.
 
 ### For Deletion
-- Generated local showcase build outputs from the title-page inline-logo verification remain cleanup candidates before release packaging.
-- `beamer-up/titlepage-preview-v2.png` (temporary local page-1 preview exported to verify that the runtime-cropped title-page logo removed the visible spill artifact).
+- Generated local showcase build outputs from cover-page verification remained cleanup candidates.
 
-## v0.0.24
+## v0.0.20-v0.0.22
 
 ### Added or Changed
-- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path no longer uses the flatter trimmed inline UP cover mark and instead uses the trimmed `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files, correcting the squashed look on the cover pages.
-- Kept the `v0.0.23` title-page text-block rebalance intact while narrowing this follow-up specifically to the visible title-page logo source, width, and top-left anchor position.
-- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the title-page logo-path correction.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-24-docs.md` so the public docs reflect the final title-page logo correction.
+- Replaced the inherited Utrecht branding citation in the showcase deck with the UP Visual Identity Guide reference.
+- Repaired and rebalanced the UP thank-page footer treatment across several follow-up passes.
+- Updated the root docs to track the checked-in bibliography and closing-slide baselines.
 
 ### For Deletion
-- Generated local showcase build outputs from the title-page logo verification remain cleanup candidates before release packaging.
+- Generated local showcase build outputs from bibliography and closing-slide verification remained cleanup candidates.
 
-## v0.0.23
+## v0.0.10-v0.0.19
 
 ### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page template now renders the cover copy inside one controlled left-aligned content block instead of separate full-width color boxes, giving the title, subtitle, divider, author metadata, and multi-author conference metadata a cleaner shared rhythm.
-- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page mark now uses trimmed `up-inline-logo-eng-white.png` and `up-inline-logo-tag-white.png` cover-lockup assets with dedicated width and anchor tuning, while leaving the content-slide header lockup and the horizontal white closing-slide footer lockups on their existing separate paths.
-- Added the inline UP logo and lineshot source assets under `beamer-up/logos/` (`up-inline-logo-*.png` and `up-inline-lineshot-*.png`) to support the current cover-page implementation and future title-surface tuning without disturbing the established header/footer assets.
-- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/`, plus page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the cover-page rebalance.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-23-docs.md` so the public docs reflect the new title-page lockup path and layout tuning.
+- Added selectable UP logotype variants and runtime logo placement paths for the supported non-`nl` surfaces.
+- Refined section-divider rendering, closing-slide footer treatment, and content-frame header behavior across multiple narrow follow-up releases.
+- Reconciled the public root docs several times as the checked-in visual baseline changed.
 
 ### For Deletion
-- Generated local showcase build outputs from the title-page verification remain cleanup candidates before release packaging.
+- Generated local showcase build outputs from visual verification remained cleanup candidates.
 
-## v0.0.22
+## v0.0.2-v0.0.9
 
 ### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the repaired centered `\thankframe` stack now lowers the visible UP footer block by reducing the fixed post-logo bottom spacing from `0.95cm` to `0.10cm`, creating more separation between the GitHub link and the footer logo/logotype.
-- Kept the current UP thank-page title, divider, contribution block, exact horizontal white English/Filipino footer assets, `\raisebox{0cm}` logo wrapper, and existing trim-plus-height rules unchanged while narrowing this follow-up specifically to the footer slot's final resting position.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-23 text extraction confirming that the `Feedback?` slide still renders after the footer-slot lowering pass.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-22-docs.md` so the public docs reflect the final thank-page footer-position adjustment.
+- Established the brownfield baseline, naming/governance baseline, and asset-governance baseline for `beamer-up`.
+- Approved the reverse-engineered static and dynamic models of the inherited theme.
+- Implemented the public `UP` theme interface and the first UP-directed slide-system baseline.
+- Added the versioned public-docs trail under `docs/` to explain each step of the early migration and visual adaptation work.
 
 ### For Deletion
-- Generated local showcase build outputs from the thank-page footer-slot verification remain cleanup candidates before release packaging.
-- `beamer-up/thankpage-spacing-v021.svg` (temporary local SVG export still present from thank-page spacing review).
-
-## v0.0.21
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the repaired centered `\thankframe` stack keeps the footer logo at the same size but removes the extra `\raisebox{0.35cm}` lift, letting the UP closing mark sit slightly lower again and restoring a larger text-to-logo gap closer to the inherited Utrecht closing-slide rhythm.
-- Kept the current UP thank-page title, divider, contribution block, exact horizontal white English/Filipino footer assets, and existing trim-plus-height rules unchanged while narrowing this follow-up specifically to footer spacing harmony.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-23 text extraction and a page-23 SVG export confirming that the `Feedback?` slide still renders after the footer-spacing adjustment.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-21-docs.md` so the public docs reflect the lowered footer resting position.
-
-### For Deletion
-- Generated local showcase build outputs from the thank-page spacing verification remain cleanup candidates before release packaging.
-- `beamer-up/thankpage-spacing-v021.svg` (temporary local SVG export generated to review the adjusted thank-page footer spacing).
-
-## v0.0.20
-
-### Added or Changed
-- Updated `beamer-up/references.bib` so the bundled branding reference now cites `UP Visual Identity Guide 2017` from the UP-hosted PDF instead of the earlier Utrecht corporate-identity URL.
-- Updated `beamer-up/main.tex` so the references slide now cites `upvig2017`, keeping the showcase text and the rendered bibliography entry aligned with the UP guide rather than the inherited Utrecht metadata.
-- Revalidated the references slide on April 2, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/`, plus page-24 text extraction confirming that the rendered `[3]` entry now resolves to `University of the Philippines. UP Visual Identity Guide 2017.`
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-20-docs.md` so the public docs reflect the corrected bibliography source.
-
-### For Deletion
-- Generated local showcase build outputs from the bibliography-source verification remain cleanup candidates before release packaging.
-
-## v0.0.19
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so `\thankframe` now uses a stable centered frame stack instead of the earlier fragile overlay-only layout, restoring the visible title, divider, and contribution text on the thank page.
-- Kept the exact bundled horizontal white English and Filipino UP footer-logo assets, the existing language-specific trim boxes, and the dedicated `\@upclosinglogoheight` footer scale, while raising the rendered footer mark slightly with a small `\raisebox{0.35cm}` offset.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-23 text extraction and SVG inspection confirming that `Feedback?`, the contribution block, and the UP footer lockup now render together and that the footer mark sits higher than before.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-19-docs.md` so the public docs reflect the repaired thank-page layout and the raised footer-logo slot.
-
-### For Deletion
-- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
-- `beamer-up/preview-page-23-baseline-23.png` (temporary local raster render from baseline thank-page verification).
-- `beamer-up/preview-page-23-current-23.png` (temporary local raster render from the broken intermediate thank-page verification).
-- `beamer-up/thankpage-baseline.svg` (temporary local SVG export used to trace the pre-fix thank-page geometry).
-- `beamer-up/thankpage-fixed.svg` (temporary local SVG export used to confirm the repaired thank-page geometry).
-
-## v0.0.18
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` `\thankframe` footer logo now uses a dedicated `\@upclosinglogoheight` constant set to `1.10cm` instead of the earlier inline `0.74cm` include height.
-- Enlarged the exact horizontal white English and Filipino UP closing-slide footer logos so their perceived size reads closer to the inherited Utrecht University feedback-page footer mark while preserving the existing trim boxes, language selection, and legacy `nl` fallback path.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus rendered closing-slide inspection confirming that the larger UP footer mark still fits cleanly inside the page.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-18-docs.md` so the public docs reflect the larger feedback-page footer logo baseline.
-
-### For Deletion
-- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
-
-## v0.0.17
-
-### Added or Changed
-- Updated `README.md` version markers and status text to publish this as the `v0.0.17` documentation-reconciliation release for the current checked-in `beamer-up` baseline.
-- Corrected the `README.md` repository layout summary so it reflects the actual root structure (`docs/`, `repo/images/`, and the nested `beamer-up/` theme workspace) instead of the earlier mixed path listing.
-- Refreshed the `README.md` validation note to the latest recorded April 2, 2026 targeted divider-verification pass while keeping `latexmk -pdf main.tex` as the recommended full build command.
-- Added `docs/version-0-0-17-docs.md` as the detailed narrative note for this docs-only release.
-- Left `SECURITY.md`, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md` unchanged because their current governance language already matches repo reality.
-
-### For Deletion
-- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
-
-## v0.0.16
-
-### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so the automatic section-divider page now uses the plain current section title token `\secname` instead of the hyperlinked Beamer `\insertsectionhead` wrapper.
-- Corrected the remaining automatic section-divider visibility issue so the section title now renders as visible white text on the maroon divider surface, matching the manual `\sectionframe` treatment more closely.
-- Preserved the existing UP maroon-and-gold divider layout while narrowing this fix specifically to the automatic section-page text token and styling path.
-- Revalidated the affected section divider on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus local text extraction and rendered-page inspection confirming that `Getting Started` is visible again on the automatic divider slide.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-16-docs.md` so the public docs reflect the matched automatic/manual divider text treatment and the final verification state.
-
-### For Deletion
-- None from this task context.
-
-## v0.0.15
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer keeps the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files but now trims each one to tighter language-specific visible bounds.
-- Corrected the final footer-logo render by replacing the earlier still-imperfect crop with trim values derived from the actual nontransparent logo region and by retuning the closing-slide footer anchor plus rendered height.
-- Preserved the inherited beamer-uu-style closing-slide layout, the existing `english` / `filipino` selection rule, and the legacy `nl` fallback while narrowing this change specifically to the remaining footer-logo clipping defect.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus direct rendered-page inspection confirming that the full `University of the Philippines` footer wordmark is now visible.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-15-docs.md` so the public docs reflect the tighter visible-bounds footer crop and the final closing-slide verification state.
-
-### For Deletion
-- `beamer-up/preview-page-23-current-23.png` (temporary local PDF page render used to confirm the footer was still clipped before the final crop correction).
-- `beamer-up/preview-page-23-fixed-23.png` (temporary local PDF page render generated during an intermediate footer-offset and size adjustment that still did not fully solve the clipping).
-- `beamer-up/preview-page-23-seq-23.png` (temporary local PDF page render generated from a sequential rebuild while isolating whether the preview had been rendered from the latest PDF).
-- `beamer-up/preview-page-23-cropfix-23.png` (temporary local PDF page render used to confirm the final tighter footer crop shows the full visible UP wordmark).
-
-## v0.0.14
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer now uses the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files again rather than the temporary composed fallback.
-- Replaced the earlier overly tight closing-slide trim box with a safer crop and switched the footer logo sizing to a smaller `height`-based include so the full horizontal UP mark stays visible above the bottom edge.
-- Preserved the inherited beamer-uu-style closing-slide layout and the existing `english` / `filipino` selection rule while narrowing this fix specifically to footer-logo rendering.
-- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` and a local rendered page preview after the footer-logo sizing and crop adjustment.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-14-docs.md` so the public docs reflect that the footer now uses the exact horizontal white UP files without cropping out the visible lockup.
-
-### For Deletion
-- `beamer-up/preview-page-23-horizontal-23.png` (temporary local PDF page render used to confirm the horizontal white UP closing-slide logo stayed inside the footer area after the trim and height adjustment).
-
-## v0.0.13
-
-### Added or Changed
-- Updated `beamer-up/beamerinnerthemeUU.sty` so automatic section-divider slides now use Beamer's populated `\insertsectionhead` token, restoring visible section titles while preserving the current UP maroon-and-gold divider surface.
-- Updated `beamer-up/beamerouterthemeUU.sty` so `\thankframe` now follows the inherited beamer-uu feedback-page layout more closely, with the title first, the divider beneath it, centered contribution text below, and a bottom-centered logo slot.
-- Added and/or promoted horizontal and vertical UP source-logo variants under `beamer-up/logos/`, and wired the non-`nl` closing-slide path to the selected `up-horizontal-logo-with-white-engtype.png` or `up-horizontal-logo-with-white-tagtype.png`.
-- Revalidated the affected surfaces on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`, plus local text-extraction and page-render checks confirming the automatic section title is present again.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-13-docs.md` so the public docs reflect the restored divider behavior and the language-aware UP closing-slide lockup.
-
-### For Deletion
-- Generated local showcase build outputs from the divider and closing-slide verification remain cleanup candidates before release packaging.
-- `beamer-up/preview-page-4-04.png` (temporary local PDF page render used to confirm the automatic section-divider title was visible again).
-- Temporary scratch compile logs generated while probing the Filipino closing-slide path remain cleanup candidates after review.
-
-## v0.0.12
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` content-slide `showlogo` path now composes the UP lineshot seal beside the selected UP logotype instead of rendering only the standalone wordmark.
-- Scaled the UP header seal and tightened the lockup spacing so the composed English and Filipino content-slide lockups stay inside the header band and do not drop into the gold rule.
-- Added separate English and Filipino header wordmark widths so the visible text height reads more consistently against the seal while preserving the legacy `nl` Dutch-logo compatibility branch unchanged.
-- Revalidated the affected header surfaces on April 1, 2026 with `latexmk -pdf main.tex` and higher-resolution local PDF page renders from `beamer-up/` after the lockup-sizing change.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-12-docs.md` so the public docs reflect the current UP header-lockup behavior.
-
-### For Deletion
-- `beamer-up/logos/up-logo-lineshot-on-white-preview.png` (temporary local white-background preview used to inspect the lineshot seal before composing the header lockup).
-- `beamer-up/logos/up-logotype-eng-black-on-white-preview.png` (temporary local white-background preview used to inspect the English wordmark source before composing the header lockup).
-- `beamer-up/logos/up-logotype-tag-black-on-white-preview.png` (temporary local white-background preview used to inspect the Filipino wordmark source before composing the header lockup).
-- `beamer-up/preview-page-3-hi.png` (temporary high-resolution local PDF page render used to inspect the outline-slide header lockup).
-- `beamer-up/preview-page-3-hi-topright.png` (temporary cropped high-resolution local render used to inspect the outline-slide top-right header lockup).
-- `beamer-up/preview-page-6-hi.png` (temporary high-resolution local PDF page render used to inspect the content-slide header lockup).
-- `beamer-up/preview-page-6-hi-topright.png` (temporary cropped high-resolution local render used to inspect the content-slide top-right header lockup).
-
-## v0.0.11
-
-### Added or Changed
-- Updated `beamer-up/beamerouterthemeUU.sty` so the UP content-slide `showlogo` wordmark now anchors against Beamer's right content margin instead of a fixed page-edge offset.
-- Preserved the legacy `nl` Dutch-logo compatibility branch while tightening the English and Filipino UP logotype placement so the visible right edge matches the right-side block margin on content slides.
-- Revalidated the content-slide header placement on April 1, 2026 with `latexmk -pdf main.tex` and local PDF page renders from `beamer-up/` after the alignment change.
-- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-11-docs.md` so the public docs reflect the refined UP wordmark alignment behavior.
-
-### For Deletion
-- `beamer-up/preview-page-4.png` (temporary local PDF page render used to inspect the section divider during alignment checks).
-- `beamer-up/preview-page-5.png` (temporary local PDF page render used to inspect the usage slide during alignment checks).
-- `beamer-up/preview-page-6.png` (temporary local PDF page render used to inspect the content-slide wordmark alignment against the right content margin).
-- `beamer-up/preview-page-7.png` (temporary local PDF page render used to inspect the manual section-divider slide during alignment checks).
-
-
-## v0.0.10
-
-### Added or Changed
-- Added selectable UP logotype language variants in `beamer-up/beamerthemeUU.sty`, with `english` as the default and `filipino` as the `Unibersidad ng Pilipinas` switch while preserving `nl` as the Dutch compatibility path.
-- Updated `beamer-up/beamerinnerthemeUU.sty` and `beamer-up/beamerouterthemeUU.sty` so the selected UP logotype is reused on content, title, and thank-you slides with light-surface and dark-surface variants where available.
-- Added runtime-cropped UP logotype assets under `beamer-up/logos/` so the theme can place the new wordmarks consistently without depending on the large transparent source canvases.
-- Corrected the active UP palette in `beamer-up/beamercolorthemeUU.sty` to the official core values `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, promoted `UPYellow` as the canonical accent token, and kept `UPGold` only as a compatibility alias.
-- Updated `beamer-up/main.tex` and `README.md` usage notes to document the `english` / `filipino` theme options and the revised logo behavior.
-- Updated the root docs and `docs/version-0-0-10-docs.md` so the public release note set now reflects the current logo-source, runtime-asset, corrected-palette, and temporary inspection-artifact state alongside the root release notes.
-- Revalidated the supported compile path on April 1, 2026: `latexmk -pdf main.tex` succeeds from `beamer-up/` after the new logo-option work.
-
-### For Deletion
-- `beamer-up/logos/up-logotype-eng-black-preview.png` (temporary local inspection composite generated while checking logo visibility on a background).
-- `beamer-up/logos/up-logotype-eng-white-preview.png` (temporary local inspection composite generated while checking logo visibility on a background).
-- `beamer-up/logos/uu-logo-en-black-render.png` (temporary local rasterized comparison output for the inherited Utrecht logo).
-- `beamer-up/logos/uu-logo-en-rgb-render.png` (temporary local rasterized comparison output for the inherited Utrecht logo).
-- `beamer-up/preview-page-1.png` (temporary local PDF page render used to inspect the title slide).
-- `beamer-up/preview-page-3.png` (temporary local PDF page render used to inspect the outline slide).
-- `beamer-up/preview-page-23.png` (temporary local PDF page render used to inspect the thank-you slide).
-
-## v0.0.9
-
-### Added or Changed
-- Implemented the approved UP-directed slide styling across the checked-in theme by updating `beamer-up/beamercolorthemeUU.sty`, `beamer-up/beamerinnerthemeUU.sty`, `beamer-up/beamerouterthemeUU.sty`, and `beamer-up/beamerthemeUU.sty`.
-- Replaced the inherited Utrecht-led palette with UP maroon, forest green, gold, spot black, and compatible tint tokens while preserving legacy `UU*` color aliases only for controlled compatibility.
-- Shifted the supported typography baseline to Palatino body text plus a Helvetica-style sans hierarchy for titles, frame titles, subtitles, and footlines under the documented `pdfLaTeX` workflow.
-- Reworked title, section-divider, standout, thank-you, footline, and table-of-contents surfaces so the public `UP` loader now renders a coherent UP-directed visual system.
-- Updated the bundled showcase deck in `beamer-up/main.tex` to demonstrate the new palette, revised typography guidance, UP-context academic examples, and the current option/helper behavior.
-- Revalidated the supported compile path on April 1, 2026: `latexmk -pdf main.tex` succeeds from `beamer-up/` with the public `UP` loader.
-- Reconciled the root `README.md`, root `CHANGELOG.md`, and added `docs/version-0-0-9-docs.md` so the public repo docs now match the implemented styling milestone.
-
-### For Deletion
-- Generated local showcase build outputs from the v0.0.9 compile validation remain cleanup candidates before release packaging.
-
-## v0.0.8
-
-### Added or Changed
-- Drafted the `U-D` visual-direction baseline for `beamer-up`, including a concrete UP palette, typography hierarchy, logo strategy, and decorative-rule set for title, section, content, standout, and closing-slide surfaces.
-- Recorded contrast and readability guidance for the mapped visual system, including the explicit rejection of white-on-gold text and the approval of high-contrast maroon, forest-green, gold, and dark-text pairings.
-- Updated `README.md` to move the public project state to `v0.0.8`, document that the visual-system mapping is drafted, and position the next bolt as template styling rather than interface migration.
-- Added `docs/version-0-0-8-docs.md` as the public narrative note for this visual-direction planning milestone.
-
-### For Deletion
-- Generated LaTeX build artifacts and logo-conversion outputs from local showcase compilation were recorded for later cleanup rather than deleted in place.
-
-## v0.0.7
-
-### Added or Changed
-- Implemented and approved the public `UP` theme interface so the checked-in demo and public usage guidance now load through `\usetheme{UP}`.
-- Added `beamer-up/beamerthemeUP.sty` as the canonical public loader and updated `beamer-up/beamerthemeUU.sty` to treat direct `UU` loading as deprecated compatibility with warning guidance.
-- Updated the bundled showcase deck in `beamer-up/main.tex` to exercise the supported `UP` path, refresh usage messaging, and point users to the current repository instead of the upstream Utrecht project.
-- Reconciled `README.md`, `CHANGELOG.md`, and `CONTRIBUTING.md` so the public docs now describe `U-C` as complete and position `U-D` visual adaptation as the next major workstream.
-- Added `docs/version-0-0-7-docs.md` as the public milestone note for the implemented `UP` interface release.
-
-### For Deletion
-- None from this task context.
-
-## v0.0.6
-
-### Added or Changed
-- Approved the brownfield dynamic compile and usage baseline so downstream migration work can depend on one canonical runtime model.
-- Drafted the public `UP` entry-point migration policy: `UP` becomes the canonical loader, helper commands and options stay stable, and any remaining `UU` loader behavior is treated as deprecated compatibility rather than a coequal public contract.
-- Updated the root `README.md` from stale unrelated project content to the current `beamer-up` public state, including the approved brownfield baseline, the drafted `UP` migration plan, and the next implementation milestone.
-- Added `docs/version-0-0-6-docs.md` as the public narrative note for this planning-and-docs milestone.
-
-### For Deletion
-- Temporary local scratch artifacts created during editing were intentionally left out of the public project surface.
-
-## v0.0.5
-
-### Added or Changed
-- Approved the brownfield dynamic compile and usage baseline for the inherited theme and recorded that the current bundled demo still compiles successfully through the legacy `UU` interface.
-- Reconciled public root docs so they reflect the approved governance plus brownfield baseline without naming maintainer-only workflow artifacts or ignored internal paths.
-- Updated `README.md` to move the public docs to `v0.0.5`, mark the brownfield baseline as approved, and position the public `UP` interface migration as the next major milestone.
-- Updated `CONTRIBUTING.md` to replace maintainer-only path references with public contribution expectations around attribution, branding, assets, and release notes.
-- Added `docs/version-0-0-5-docs.md` as the public narrative note for this documentation reconciliation milestone.
-
-### For Deletion
-- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
-
-## v0.0.4
-
-### Added or Changed
-- Recorded final approval of the governance baseline and formalized the brownfield static theme model as a maintained migration baseline.
-- Added build-task-grade design, ADR, and traceability support around the static model so later interface work could depend on one canonical structural source.
-- Updated public docs to reflect the fully approved governance baseline and the then-open brownfield static-model review gate.
-- Added `docs/version-0-0-4-docs.md` for the public milestone note.
-
-### For Deletion
-- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
-
-## v0.0.3
-
-### Added or Changed
-- Added the asset-governance baseline for current logo and package-surface decisions.
-- Classified the current logo set by runtime source, generated output, and candidate future asset status.
-- Closed the earlier naming and disclaimer review gate and updated public docs to reflect the remaining asset-governance review.
-- Added `docs/version-0-0-3-docs.md` for the public milestone note.
-
-### For Deletion
-- None new from this task context beyond generated local build artifacts already recorded in earlier entries.
-
-## v0.0.2
-
-### Added or Changed
-- Completed brownfield reverse-engineering artifacts for the inherited theme implementation and established the first naming, attribution, and disclaimer baseline for the derivative.
-- Updated root docs and contributor guidance so the repository described the brownfield migration posture and approved `UP` naming contract more accurately.
-- Added `docs/version-0-0-2-docs.md` for the public milestone note.
-
-### For Deletion
-- Generated LaTeX showcase build artifacts and EPS-conversion outputs from local compilation were recorded for later cleanup rather than deleted in place.
-
-## v0.0.1
-
-### Added or Changed
-- Initialized `README.md` with project identity, derivative attribution, setup steps, usage notes, roadmap, and maintainer links.
-- Initialized `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, and `SECURITY.md` with project-specific governance and reporting details.
-- Added conservative ignore rules for local workspace files and generated LaTeX build artifacts for the bundled showcase deck.
-
-### For Deletion
-- None from this task context. Existing generated artifacts remain in place for user review because initialization does not delete files.
+- Generated local showcase build outputs from early migration and validation work remained cleanup candidates.
