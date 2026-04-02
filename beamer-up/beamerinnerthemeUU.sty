@@ -19,6 +19,12 @@
 \newcommand{\@uulogoinclude}[1]{\includegraphics[height=#1]{\@uulogopath}}
 \newcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
 \newcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
+\newcommand{\@uutitlelogoinclude}[1]{\@uulogowhiteinclude{#1}}
+\newcommand{\@uutitlelogosize}{5.5cm}
+\newcommand{\@uutitlelogoxshift}{1.2cm}
+\newcommand{\@uutitlelogoyshift}{-0.6cm}
+\newcommand{\@uutitlecontenttopskip}{2.8cm}
+\newcommand{\@uutitlecontentwidth}{12.6cm}
 
 % -- Conference author switch -----------------------------------------
 % Enable conference-style multi-author formatting explicitly with:
@@ -39,10 +45,10 @@
 
 \newcommand{\addinstitute}[2]{%
   \if@uufirstinstitute
-    \gappto\@uuconfinstitute{{\scriptsize #1}\enspace #2}%
+    \gappto\@uuconfinstitute{{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
     \global\@uufirstinstitutefalse
   \else
-    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize #1}\enspace #2}%
+    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
   \fi
 }
 
@@ -64,7 +70,7 @@
     \vskip 2pt%
     \@uuvenue
     \ifx\insertdate\@empty\else
-      \enspace{\color{UPGold}$\cdot$}\enspace\insertdate
+      \enspace{\color{UPForestGreen}$\cdot$}\enspace\insertdate
     \fi
   \else
     \insertdate
@@ -140,12 +146,12 @@
 \setbeamertemplate{title page}{%
   \begin{tikzpicture}[remember picture, overlay]
     % Vertical bar on left (like beamer-uu) - 8mm width
-    \fill[UPForestGreen]
+    \fill[UPMaroon]
       (current page.north west) rectangle
       ([xshift=8mm]current page.south west);
     
-    % Main content area background (UP Maroon)
-    \fill[UPMaroon]
+    % Main content area background
+    \fill[UPWhite]
       ([xshift=8mm]current page.north west) rectangle
       (current page.south east);
     
@@ -157,56 +163,51 @@
           {\@uulogoinclude{1.65cm}};
       \else
         \node[anchor=north west, inner sep=0pt]
-          at ([xshift=1.2cm, yshift=-0.6cm]current page.north west)
-          {\@uulogowhiteinclude{5.5cm}};
+          at ([xshift=\@uutitlelogoxshift, yshift=\@uutitlelogoyshift]current page.north west)
+          {\@uutitlelogoinclude{\@uutitlelogosize}};
       \fi
     \fi
   \end{tikzpicture}%
   %
   % Content positioning
-  \vskip 2.8cm%
-  \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{title}
-    \usebeamerfont{title}\inserttitle\par%
+  \vskip \@uutitlecontenttopskip%
+  \hspace*{1.5cm}%
+  \begingroup
+  \setbeamercolor{title}{fg=UPMaroon}%
+  \setbeamercolor{subtitle}{fg=UPBlack}%
+  \setbeamercolor{author}{fg=UPMaroon}%
+  \setbeamercolor{institute}{fg=UPBlack}%
+  \setbeamercolor{date}{fg=UPMaroon}%
+  \begin{minipage}[t]{\@uutitlecontentwidth}
+    \raggedright
+    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
     \ifx\insertsubtitle\@empty\else
       \vskip 6pt%
-      \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
+      {\usebeamerfont{subtitle}\bfseries\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
     \fi
-  \end{beamercolorbox}
-  \vskip 8pt%
-  {\color{UPGold}\hspace{1.5cm}\rule{3cm}{1.5pt}}%
-  \vskip 12pt%
-  %
-  \if@uumultiauthor
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
-      \usebeamerfont{author}%
-      \def\and{\unskip,\enspace}%
-      \def\inst##1{\textsuperscript{\footnotesize ##1}}%
-      \insertauthor%
-    \end{beamercolorbox}
-    \vskip 5pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
-      \usebeamerfont{institute}\footnotesize%
-      \begin{tabular}[t]{@{}l@{}}
-        \@uuconfinstitute
-      \end{tabular}%
-    \end{beamercolorbox}
-    \vskip 3pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
-      \usebeamerfont{date}\uutitlemeta%
-    \end{beamercolorbox}
-  \else
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{author}
-      \usebeamerfont{author}\insertauthor%
-    \end{beamercolorbox}
-    \vskip 4pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{institute}
-      \usebeamerfont{institute}\insertinstitute%
-    \end{beamercolorbox}
-    \vskip 4pt%
-    \begin{beamercolorbox}[leftskip=1.5cm, rightskip=1cm]{date}
-      \usebeamerfont{date}\uutitlemeta%
-    \end{beamercolorbox}
-  \fi
+    \vskip 10pt%
+    {\color{UPMaroon}\rule{3cm}{1.5pt}\par}%
+    \vskip 14pt%
+    \if@uumultiauthor
+      {\usebeamerfont{author}\color{UPMaroon}\bfseries%
+        \def\beamer@insttitle##1{\textsuperscript{{\footnotesize\color{UPForestGreen}##1}}}%
+        \insertauthor\par}%
+      \vskip 6pt%
+      {\usebeamerfont{institute}\color{UPBlack}\footnotesize%
+        \begin{tabular}[t]{@{}l@{}}
+          \@uuconfinstitute
+        \end{tabular}\par}%
+      \vskip 6pt%
+      {\usebeamerfont{date}\color{UPMaroon}\bfseries\uutitlemeta\par}%
+    \else
+      {\usebeamerfont{author}\color{UPMaroon}\bfseries\insertauthor\par}%
+      \vskip 4pt%
+      {\usebeamerfont{institute}\color{UPBlack}\insertinstitute\par}%
+      \vskip 4pt%
+      {\usebeamerfont{date}\color{UPBlack}\uutitlemeta\par}%
+    \fi
+  \end{minipage}%
+  \endgroup
 }
 
 % ======================================
