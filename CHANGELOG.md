@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.13`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style language-aware UP closing slide are checked in, while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.14`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style UP closing slide using the exact horizontal white language variants without footer cropping are checked in, while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.13`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.14
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer now uses the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files again rather than the temporary composed fallback.
+- Replaced the earlier overly tight closing-slide trim box with a safer crop and switched the footer logo sizing to a smaller `height`-based include so the full horizontal UP mark stays visible above the bottom edge.
+- Preserved the inherited beamer-uu-style closing-slide layout and the existing `english` / `filipino` selection rule while narrowing this fix specifically to footer-logo rendering.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` and a local rendered page preview after the footer-logo sizing and crop adjustment.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-14-docs.md` so the public docs reflect that the footer now uses the exact horizontal white UP files without cropping out the visible lockup.
+
+### For Deletion
+- `beamer-up/preview-page-23-horizontal-23.png` (temporary local PDF page render used to confirm the horizontal white UP closing-slide logo stayed inside the footer area after the trim and height adjustment).
 
 ## v0.0.13
 
