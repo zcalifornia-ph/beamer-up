@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.19`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, and the repaired thank-page stack plus slightly raised UP feedback-page footer mark now read more evenly while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.20`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the repaired thank-page stack plus slightly raised UP feedback-page footer mark still read more evenly, and the bundled references example now cites the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,17 @@ Status: current repo milestone `v0.0.19`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.20
+
+### Added or Changed
+- Updated `beamer-up/references.bib` so the bundled branding reference now cites `UP Visual Identity Guide 2017` from the UP-hosted PDF instead of the earlier Utrecht corporate-identity URL.
+- Updated `beamer-up/main.tex` so the references slide now cites `upvig2017`, keeping the showcase text and the rendered bibliography entry aligned with the UP guide rather than the inherited Utrecht metadata.
+- Revalidated the references slide on April 2, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/`, plus page-24 text extraction confirming that the rendered `[3]` entry now resolves to `University of the Philippines. UP Visual Identity Guide 2017.`
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-20-docs.md` so the public docs reflect the corrected bibliography source.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local bibliography-source verification).
 
 ## v0.0.19
 
