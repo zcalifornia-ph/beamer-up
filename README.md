@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.1.0
+    Version: v0.1.1
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, checked-in UP-directed theme surfaces, and root docs reconciled to the approved requirements baseline in <code>beamer-up/REQUIREMENTS.md</code>.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page, checked-in UP-directed theme surfaces, and root docs reconciled to the approved requirements baseline in <code>beamer-up/REQUIREMENTS.md</code>.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -81,11 +81,13 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.1.0` is the current public documentation baseline for this repository.
+- `v0.1.1` is the current public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
 - Remaining `UU`-named files or helper surfaces in the checked-in tree are brownfield implementation residue and migration detail, not the supported public interface.
 - The checked-in showcase deck under `beamer-up/` exercises the `UP` loader and demonstrates title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow.
+- The checked-in light-surface title page now adds a subtle `UPForestGreen` gradient wash while keeping the maroon accent bar and the simpler gradient-only cover treatment.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
+- The showcase deck metadata now publishes `v0.1.1` on the title slide instead of the inherited `v1.0.0` marker, and the subtitle copy is shortened to "A \LaTeX\ presentation template for the UP System."
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
 - The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
 - Public root docs now align with the approved requirements baseline in `beamer-up/REQUIREMENTS.md`, where Units `U-A` through `U-D` are completed and Unit `U-E` remains focused on showcase/distribution readiness.
@@ -123,7 +125,7 @@ beamer-up/
   docs/
     version-0-0-2-docs.md
     ...
-    version-0-1-0-docs.md
+    version-0-1-1-docs.md
   repo/
     images/
       project_screen.png

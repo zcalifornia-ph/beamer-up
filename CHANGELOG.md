@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.1.0`; the supported public loader is `UP`, the root governance docs now align with `beamer-up/REQUIREMENTS.md`, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.1.1`; the supported public loader is `UP`, the root governance docs now align with `beamer-up/REQUIREMENTS.md`, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,17 @@ Status: current public documentation baseline `v0.1.0`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.1.1
+
+### Added or Changed
+- Refined `beamer-up/beamerinnerthemeUU.sty` so the light-surface title page now carries a subtle `UPForestGreen` gradient wash.
+- Updated `beamer-up/main.tex` to replace the inherited title-slide `v1.0.0` marker with `v0.1.1` and shortened the subtitle copy to "A \LaTeX\ presentation template for the UP System."
+- Updated `README.md` and added `docs/version-0-1-1-docs.md` so the root documentation trail reflects the checked-in cover-page baseline and showcase metadata.
+
+### For Deletion
+- `beamer-up/cover-check.*` generated local verification outputs (`.bcf`, `.log`, `.pdf`, `.run.xml`, `.toc`, `.vrb`).
+- `beamer-up/main.*` generated local showcase build outputs (`.aux`, `.bcf`, `.fls`, `.log`, `.nav`, `.out`, `.pdf`, `.run.xml`, `.snm`, `.toc`, `.vrb`).
 
 ## v0.1.0
 
