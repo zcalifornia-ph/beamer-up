@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.27
+    Version: v0.0.28
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, light-surface title pages that now pair runtime-cropped inline black English/Filipino UP cover lockups with bold dark subtitles, maroon divider and conference-metadata accents, forest-green conference affiliation markers, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, and the corrected bundled bibliography example that cites the UP Visual Identity Guide 2017 directly on the references slide, while still leaving release-ready packaging plus broader public validation notes in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, light-surface title pages that now pair runtime-cropped inline black English/Filipino UP cover lockups with bold dark subtitles, maroon divider and conference-metadata accents, forest-green conference affiliation markers, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, the corrected bundled bibliography example that cites the UP Visual Identity Guide 2017 directly on the references slide, and a docs-only cleanup pass that now keeps public changelog cleanup notes generic instead of naming ignored local build outputs directly.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -85,6 +85,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
 - The bundled showcase deck was revalidated locally on April 3, 2026 with `pdflatex main.tex` from `beamer-up/` after the light-surface title-page accent pass; `latexmk -pdf main.tex` remains the recommended full build command.
+- The current root release notes now describe cleanup candidates generically instead of naming ignored local build-output paths directly in public changelog entries.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
@@ -129,7 +130,7 @@ beamer-up/
   docs/
     version-0-0-2-docs.md
     ...
-    version-0-0-27-docs.md
+    version-0-0-28-docs.md
   repo/
     images/
       project_screen.png

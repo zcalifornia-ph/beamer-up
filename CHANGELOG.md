@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages now pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, maroon divider and venue/date accents, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the repaired thank-page stack still keeps the lowered footer-slot separation beneath the contribution text and the bundled references example continues to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL.
+Status: current repo milestone `v0.0.28`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, maroon divider and venue/date accents, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the public root changelog now keeps cleanup notes generic instead of naming ignored local build-output paths directly.
 
 ## Unreleased
 
@@ -9,6 +9,16 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.28
+
+### Added or Changed
+- Updated `CHANGELOG.md` so the public `For Deletion` notes now describe ignored build-output cleanup candidates generically instead of naming ignored local artifact paths directly.
+- Updated `README.md` version markers and status notes to publish this as the `v0.0.28` docs-only reconciliation release for the current checked-in `beamer-up` baseline.
+- Added `docs/version-0-0-28-docs.md` as the detailed narrative note for this public-docs cleanup release.
+
+### For Deletion
+- None from this docs-only release.
 
 ## v0.0.27
 
@@ -19,8 +29,8 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-27-docs.md` so the public docs reflect the title-page accent cleanup and the refreshed showcase metadata.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bcf`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts currently present from local title-page accent verification).
-- `beamer-up/cover-check.bcf`, `beamer-up/cover-check.log`, `beamer-up/cover-check.pdf`, `beamer-up/cover-check.run.xml`, `beamer-up/cover-check.toc`, and `beamer-up/cover-check.vrb` (extra local cover-check build artifacts currently present in the theme workspace and not part of the shipped source tree).
+- Generated local showcase build outputs from the title-page accent verification remain cleanup candidates before release packaging.
+- Extra local cover-check build outputs present in the theme workspace remain cleanup candidates because they are not part of the shipped source tree.
 
 ## v0.0.26
 
@@ -32,7 +42,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-26-docs.md` so the public docs reflect the title-page surface inversion and black cover-lockup path.
 
 ### For Deletion
-- `beamer-up/main.bcf`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.synctex.gz`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts currently present from local white-surface title-page verification).
+- Generated local showcase build outputs from the white-surface title-page verification remain cleanup candidates before release packaging.
 - `beamer-up/titlepage-white-preview.png` and `beamer-up/titlepage-white-preview-current.png` (temporary local page-1 preview exports used to inspect the inverted title-page surface and the black UP cover lockup placement).
 
 ## v0.0.25
@@ -45,7 +55,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-25-docs.md` so the public docs reflect the final title-page inline-logo rendering fix.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page inline-logo verification).
+- Generated local showcase build outputs from the title-page inline-logo verification remain cleanup candidates before release packaging.
 - `beamer-up/titlepage-preview-v2.png` (temporary local page-1 preview exported to verify that the runtime-cropped title-page logo removed the visible spill artifact).
 
 ## v0.0.24
@@ -57,7 +67,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-24-docs.md` so the public docs reflect the final title-page logo correction.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page logo verification).
+- Generated local showcase build outputs from the title-page logo verification remain cleanup candidates before release packaging.
 
 ## v0.0.23
 
@@ -69,7 +79,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-23-docs.md` so the public docs reflect the new title-page lockup path and layout tuning.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page verification).
+- Generated local showcase build outputs from the title-page verification remain cleanup candidates before release packaging.
 
 ## v0.0.22
 
@@ -80,7 +90,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-22-docs.md` so the public docs reflect the final thank-page footer-position adjustment.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local thank-page footer-slot verification).
+- Generated local showcase build outputs from the thank-page footer-slot verification remain cleanup candidates before release packaging.
 - `beamer-up/thankpage-spacing-v021.svg` (temporary local SVG export still present from thank-page spacing review).
 
 ## v0.0.21
@@ -92,7 +102,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-21-docs.md` so the public docs reflect the lowered footer resting position.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local thank-page spacing verification).
+- Generated local showcase build outputs from the thank-page spacing verification remain cleanup candidates before release packaging.
 - `beamer-up/thankpage-spacing-v021.svg` (temporary local SVG export generated to review the adjusted thank-page footer spacing).
 
 ## v0.0.20
@@ -104,7 +114,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-20-docs.md` so the public docs reflect the corrected bibliography source.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local bibliography-source verification).
+- Generated local showcase build outputs from the bibliography-source verification remain cleanup candidates before release packaging.
 
 ## v0.0.19
 
@@ -116,7 +126,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 
 ### For Deletion
 - Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
+- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
 - `beamer-up/preview-page-23-baseline-23.png` (temporary local raster render from baseline thank-page verification).
 - `beamer-up/preview-page-23-current-23.png` (temporary local raster render from the broken intermediate thank-page verification).
 - `beamer-up/thankpage-baseline.svg` (temporary local SVG export used to trace the pre-fix thank-page geometry).
@@ -132,7 +142,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 
 ### For Deletion
 - Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
+- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
 
 ## v0.0.17
 
@@ -145,7 +155,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 
 ### For Deletion
 - Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
-- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
+- Temporary scratch compile logs from probing the Filipino closing-slide path remain cleanup candidates after review.
 
 ## v0.0.16
 
@@ -196,9 +206,9 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-13-docs.md` so the public docs reflect the restored divider behavior and the language-aware UP closing-slide lockup.
 
 ### For Deletion
-- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fdb_latexmk`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local verification of the divider and closing-slide changes).
+- Generated local showcase build outputs from the divider and closing-slide verification remain cleanup candidates before release packaging.
 - `beamer-up/preview-page-4-04.png` (temporary local PDF page render used to confirm the automatic section-divider title was visible again).
-- `beamer-up/closing-filipino-test.log` (scratch local compile log generated while probing the Filipino closing-slide path).
+- Temporary scratch compile logs generated while probing the Filipino closing-slide path remain cleanup candidates after review.
 
 ## v0.0.12
 
@@ -265,14 +275,7 @@ Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-
 - Reconciled the root `README.md`, root `CHANGELOG.md`, and added `docs/version-0-0-9-docs.md` so the public repo docs now match the implemented styling milestone.
 
 ### For Deletion
-- `beamer-up/main.bcf` (generated bibliography control file from local showcase compilation).
-- `beamer-up/main.fls` (generated `latexmk` file list from local showcase compilation).
-- `beamer-up/main.log` (generated TeX log from local showcase compilation).
-- `beamer-up/main.pdf` (generated showcase PDF build artifact).
-- `beamer-up/main.run.xml` (generated bibliography/runtime metadata artifact).
-- `beamer-up/main.synctex.gz` (generated editor sync artifact).
-- `beamer-up/main.toc` (generated table-of-contents artifact).
-- `beamer-up/main.vrb` (generated Beamer verbatim cache artifact).
+- Generated local showcase build outputs from the v0.0.9 compile validation remain cleanup candidates before release packaging.
 
 ## v0.0.8
 
