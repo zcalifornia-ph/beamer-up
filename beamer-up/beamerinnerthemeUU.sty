@@ -45,10 +45,10 @@
 
 \newcommand{\addinstitute}[2]{%
   \if@uufirstinstitute
-    \gappto\@uuconfinstitute{{\scriptsize #1}\enspace #2}%
+    \gappto\@uuconfinstitute{{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
     \global\@uufirstinstitutefalse
   \else
-    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize #1}\enspace #2}%
+    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
   \fi
 }
 
@@ -70,7 +70,7 @@
     \vskip 2pt%
     \@uuvenue
     \ifx\insertdate\@empty\else
-      \enspace{\color{UPGold}$\cdot$}\enspace\insertdate
+      \enspace{\color{UPMaroon}$\cdot$}\enspace\insertdate
     \fi
   \else
     \insertdate
@@ -174,38 +174,37 @@
   \hspace*{1.5cm}%
   \begingroup
   \setbeamercolor{title}{fg=UPMaroon}%
-  \setbeamercolor{subtitle}{fg=UPBlack80}%
+  \setbeamercolor{subtitle}{fg=UPBlack}%
   \setbeamercolor{author}{fg=UPMaroon}%
-  \setbeamercolor{institute}{fg=UPBlack80}%
-  \setbeamercolor{date}{fg=UPBlack80}%
+  \setbeamercolor{institute}{fg=UPBlack}%
+  \setbeamercolor{date}{fg=UPMaroon}%
   \begin{minipage}[t]{\@uutitlecontentwidth}
     \raggedright
     {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
     \ifx\insertsubtitle\@empty\else
       \vskip 6pt%
-      {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      {\usebeamerfont{subtitle}\bfseries\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
     \fi
     \vskip 10pt%
-    {\color{UPGold}\rule{3cm}{1.5pt}\par}%
+    {\color{UPMaroon}\rule{3cm}{1.5pt}\par}%
     \vskip 14pt%
     \if@uumultiauthor
-      {\usebeamerfont{author}\usebeamercolor[fg]{author}%
-        \def\and{\unskip,\enspace}%
-        \def\inst##1{\textsuperscript{\footnotesize ##1}}%
+      {\usebeamerfont{author}\color{UPMaroon}\bfseries%
+        \def\beamer@insttitle##1{\textsuperscript{{\footnotesize\color{UPForestGreen}##1}}}%
         \insertauthor\par}%
       \vskip 6pt%
-      {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\footnotesize%
+      {\usebeamerfont{institute}\color{UPBlack}\footnotesize%
         \begin{tabular}[t]{@{}l@{}}
           \@uuconfinstitute
         \end{tabular}\par}%
       \vskip 6pt%
-      {\usebeamerfont{date}\usebeamercolor[fg]{date}\uutitlemeta\par}%
+      {\usebeamerfont{date}\color{UPMaroon}\bfseries\uutitlemeta\par}%
     \else
-      {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}%
+      {\usebeamerfont{author}\color{UPMaroon}\bfseries\insertauthor\par}%
       \vskip 4pt%
-      {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute\par}%
+      {\usebeamerfont{institute}\color{UPBlack}\insertinstitute\par}%
       \vskip 4pt%
-      {\usebeamerfont{date}\usebeamercolor[fg]{date}\uutitlemeta\par}%
+      {\usebeamerfont{date}\color{UPBlack}\uutitlemeta\par}%
     \fi
   \end{minipage}%
   \endgroup

@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.26`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout while inverting to a white main field with a maroon left accent bar and runtime-cropped inline black UP cover lockups, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.27`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages now pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, maroon divider and venue/date accents, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the repaired thank-page stack still keeps the lowered footer-slot separation beneath the contribution text and the bundled references example continues to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.26`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.27
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the light-surface title-page template now keeps the subtitle bold and dark, colors the divider rule and venue/date separator dot in `UPMaroon`, and renders conference affiliation superscripts plus numbered affiliation markers in `UPForestGreen` while keeping the cover author/date emphasis aligned to the lighter title-page palette.
+- Updated `beamer-up/main.tex` so the bundled showcase deck now uses a forest-green `v1.0.0` badge, a bolded subtitle line, and refreshed single-author / conference-style UP campus metadata on the first two title-page frames.
+- Revalidated the affected showcase deck on April 3, 2026 with `pdflatex main.tex` from `beamer-up/`, confirming that the single-author and multi-author title slides still compile after the title-page accent cleanup.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-27-docs.md` so the public docs reflect the title-page accent cleanup and the refreshed showcase metadata.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bcf`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts currently present from local title-page accent verification).
+- `beamer-up/cover-check.bcf`, `beamer-up/cover-check.log`, `beamer-up/cover-check.pdf`, `beamer-up/cover-check.run.xml`, `beamer-up/cover-check.toc`, and `beamer-up/cover-check.vrb` (extra local cover-check build artifacts currently present in the theme workspace and not part of the shipped source tree).
 
 ## v0.0.26
 
