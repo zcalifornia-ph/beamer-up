@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.28`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, maroon divider and venue/date accents, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the public root changelog now keeps cleanup notes generic instead of naming ignored local build-output paths directly.
+Status: current repo milestone `v0.0.29`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the light-surface title pages still pairing runtime-cropped inline black UP cover lockups with a bold dark subtitle, a maroon divider with a forest-green venue/date separator, forest-green conference affiliation markers, and refreshed bundled single-author/multi-author showcase metadata, while the public root changelog keeps cleanup notes generic instead of naming ignored local build-output paths directly.
 
 ## Unreleased
 
@@ -9,6 +9,16 @@ Status: current repo milestone `v0.0.28`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.29
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so `\uutitlemeta` now renders the light-surface title-page venue/date separator dot in `UPForestGreen` instead of `UPMaroon`, while keeping the divider rule maroon and the conference affiliation markers forest green.
+- Revalidated the affected showcase deck on April 3, 2026 with `pdflatex main.tex` from `beamer-up/`, confirming that the single-author and multi-author title slides still compile after the separator-color follow-up.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-29-docs.md` so the public docs reflect this narrow title-page accent follow-up as the current checked-in baseline.
+
+### For Deletion
+- Generated local showcase build outputs from the separator-color verification remain cleanup candidates before release packaging.
 
 ## v0.0.28
 
