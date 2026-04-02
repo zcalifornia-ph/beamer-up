@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.14`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style UP closing slide using the exact horizontal white language variants without footer cropping are checked in, while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.15`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style UP closing slide using the exact horizontal white language variants with tighter visible-bounds footer crops are checked in, while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,21 @@ Status: current repo milestone `v0.0.14`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.15
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer keeps the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files but now trims each one to tighter language-specific visible bounds.
+- Corrected the final footer-logo render by replacing the earlier still-imperfect crop with trim values derived from the actual nontransparent logo region and by retuning the closing-slide footer anchor plus rendered height.
+- Preserved the inherited beamer-uu-style closing-slide layout, the existing `english` / `filipino` selection rule, and the legacy `nl` fallback while narrowing this change specifically to the remaining footer-logo clipping defect.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus direct rendered-page inspection confirming that the full `University of the Philippines` footer wordmark is now visible.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-15-docs.md` so the public docs reflect the tighter visible-bounds footer crop and the final closing-slide verification state.
+
+### For Deletion
+- `beamer-up/preview-page-23-current-23.png` (temporary local PDF page render used to confirm the footer was still clipped before the final crop correction).
+- `beamer-up/preview-page-23-fixed-23.png` (temporary local PDF page render generated during an intermediate footer-offset and size adjustment that still did not fully solve the clipping).
+- `beamer-up/preview-page-23-seq-23.png` (temporary local PDF page render generated from a sequential rebuild while isolating whether the preview had been rendered from the latest PDF).
+- `beamer-up/preview-page-23-cropfix-23.png` (temporary local PDF page render used to confirm the final tighter footer crop shows the full visible UP wordmark).
 
 ## v0.0.14
 

@@ -17,11 +17,11 @@
   \end{tikzpicture}%
 }
 \newcommand{\@upclosinglogoenginclude}[1]{%
-  \includegraphics[height=#1, trim=0bp 740bp 0bp 820bp, clip]%
+  \includegraphics[height=#1, trim=12bp 596bp 11bp 641bp, clip]%
     {logos/up-horizontal-logo-with-white-engtype.png}%
 }
 \newcommand{\@upclosinglogotaginclude}[1]{%
-  \includegraphics[height=#1, trim=0bp 740bp 0bp 820bp, clip]%
+  \includegraphics[height=#1, trim=212bp 596bp 211bp 641bp, clip]%
     {logos/up-horizontal-logo-with-white-tagtype.png}%
 }
 \newcommand{\@upclosinglogoinclude}[1]{%
@@ -96,7 +96,7 @@
         at ([yshift=-3.85cm]current page.north)
         {{\begingroup\hypersetup{urlcolor=UPGold}\color{UPWhite}\normalsize\rmfamily #2\endgroup}};
       \node[anchor=south, inner sep=0pt]
-        at ([yshift=0.85cm]current page.south)
+        at ([yshift=0.95cm]current page.south)
         {%
           \if@UUnl
             \ifx\@uulogopath\@empty\else
@@ -104,7 +104,7 @@
                 {\@uulogoinclude{1.5cm}};}
             \fi
           \else
-            \@upclosinglogoinclude{0.92cm}%
+            \@upclosinglogoinclude{0.74cm}%
           \fi
         };
     \end{tikzpicture}%
