@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.23`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now rebalanced around trimmed inline UP cover lockups, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.24`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout from the prior pass but using corrected trimmed horizontal white UP cover lockups instead of the flatter intermediate inline mark, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,17 @@ Status: current repo milestone `v0.0.23`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.24
+
+### Added or Changed
+- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path no longer uses the flatter trimmed inline UP cover mark and instead uses the trimmed `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files, correcting the squashed look on the cover pages.
+- Kept the `v0.0.23` title-page text-block rebalance intact while narrowing this follow-up specifically to the visible title-page logo source, width, and top-left anchor position.
+- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the title-page logo-path correction.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-24-docs.md` so the public docs reflect the final title-page logo correction.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page logo verification).
 
 ## v0.0.23
 
