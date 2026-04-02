@@ -20,7 +20,7 @@
 \newcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
 \newcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
 \newcommand{\@uutitlelogowhiteinclude}[1]{\@uulogowhiteinclude{#1}}
-\newcommand{\@uutitlelogowidth}{5.5cm}
+\newcommand{\@uutitlelogosize}{5.5cm}
 \newcommand{\@uutitlelogoxshift}{1.2cm}
 \newcommand{\@uutitlelogoyshift}{-0.6cm}
 \newcommand{\@uutitlecontenttopskip}{2.8cm}
@@ -164,7 +164,7 @@
       \else
         \node[anchor=north west, inner sep=0pt]
           at ([xshift=\@uutitlelogoxshift, yshift=\@uutitlelogoyshift]current page.north west)
-          {\@uutitlelogowhiteinclude{\@uutitlelogowidth}};
+          {\@uutitlelogowhiteinclude{\@uutitlelogosize}};
       \fi
     \fi
   \end{tikzpicture}%

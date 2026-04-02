@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.24`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout from the prior pass but using corrected trimmed horizontal white UP cover lockups instead of the flatter intermediate inline mark, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.25`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout from the prior pass while rendering runtime-cropped inline white UP cover lockups derived from the requested source files without the earlier trim artifact or upside-down spill, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,19 @@ Status: current repo milestone `v0.0.24`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.25
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page logo slot now uses a generic `\@uutitlelogosize` hook instead of the earlier width-specific title-logo variable, allowing the requested inline cover assets to be sized by height without distorting the title-page template contract.
+- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path now uses `up-inline-logo-eng-runtime-white.png` and `up-inline-logo-tag-runtime-white.png`, which are runtime-cropped derivatives of the requested inline white UP source files, and renders them through a height-based include with the current title-page anchor tuning.
+- Added `beamer-up/logos/up-inline-logo-eng-runtime-white.png` and `beamer-up/logos/up-inline-logo-tag-runtime-white.png` as stable title-page assets derived from the requested inline white cover logos, avoiding the trim artifact and upside-down spill that appeared when clipping the raw source files directly inside TeX.
+- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the runtime-cropped inline-logo fix.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-25-docs.md` so the public docs reflect the final title-page inline-logo rendering fix.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page inline-logo verification).
+- `beamer-up/titlepage-preview-v2.png` (temporary local page-1 preview exported to verify that the runtime-cropped title-page logo removed the visible spill artifact).
 
 ## v0.0.24
 
