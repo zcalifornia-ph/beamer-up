@@ -186,6 +186,10 @@
     \renewcommand{\@uulogopath}{logos/up-logotype-tag-runtime-black.png}
     \renewcommand{\@uulogoblackpath}{logos/up-logotype-tag-runtime-black.png}
     \renewcommand{\@uulogowhitepath}{logos/up-logotype-tag-runtime-white.png}
+    \renewcommand{\@uutitlelogowhiteinclude}[1]{%
+      \includegraphics[width=#1, trim=0bp 1105bp 24bp 1105bp, clip]%
+        {logos/up-inline-logo-tag-white.png}}
+    \renewcommand{\@uutitlelogowidth}{4.85cm}
     \renewcommand{\@uulogoinclude}[1]{%
       \includegraphics[width=#1]{\@uulogopath}}
     \renewcommand{\@uulogoblackinclude}[1]{%
@@ -196,6 +200,10 @@
     \renewcommand{\@uulogopath}{logos/up-logotype-eng-runtime-black.png}
     \renewcommand{\@uulogoblackpath}{logos/up-logotype-eng-runtime-black.png}
     \renewcommand{\@uulogowhitepath}{logos/up-logotype-eng-runtime-white.png}
+    \renewcommand{\@uutitlelogowhiteinclude}[1]{%
+      \includegraphics[width=#1, trim=0bp 1145bp 31bp 1144bp, clip]%
+        {logos/up-inline-logo-eng-white.png}}
+    \renewcommand{\@uutitlelogowidth}{4.55cm}
     \renewcommand{\@uulogoinclude}[1]{%
       \includegraphics[width=#1]{\@uulogopath}}
     \renewcommand{\@uulogoblackinclude}[1]{%
@@ -203,6 +211,10 @@
     \renewcommand{\@uulogowhiteinclude}[1]{%
       \includegraphics[width=#1]{\@uulogowhitepath}}
   \fi
+  \renewcommand{\@uutitlelogoxshift}{1.22cm}
+  \renewcommand{\@uutitlelogoyshift}{-0.72cm}
+  \renewcommand{\@uutitlecontenttopskip}{2.55cm}
+  \renewcommand{\@uutitlecontentwidth}{12.2cm}
 \fi
 
 % -- Numbered captions (Table 1, Figure 1, ...) ---------------------------

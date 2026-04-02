@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.22`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the repaired thank-page stack now lowers the UP footer slot further to create a more clearly separated Utrecht-like gap beneath the contribution text, and the bundled references example continues to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.23`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now rebalanced around trimmed inline UP cover lockups, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.22`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.23
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page template now renders the cover copy inside one controlled left-aligned content block instead of separate full-width color boxes, giving the title, subtitle, divider, author metadata, and multi-author conference metadata a cleaner shared rhythm.
+- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page mark now uses trimmed `up-inline-logo-eng-white.png` and `up-inline-logo-tag-white.png` cover-lockup assets with dedicated width and anchor tuning, while leaving the content-slide header lockup and the horizontal white closing-slide footer lockups on their existing separate paths.
+- Added the inline UP logo and lineshot source assets under `beamer-up/logos/` (`up-inline-logo-*.png` and `up-inline-lineshot-*.png`) to support the current cover-page implementation and future title-surface tuning without disturbing the established header/footer assets.
+- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex`, `biber main`, and two additional `pdflatex main.tex` passes from `beamer-up/`, plus page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the cover-page rebalance.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-23-docs.md` so the public docs reflect the new title-page lockup path and layout tuning.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local title-page verification).
 
 ## v0.0.22
 
