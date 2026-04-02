@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.25`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout from the prior pass while rendering runtime-cropped inline white UP cover lockups derived from the requested source files without the earlier trim artifact or upside-down spill, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.26`; the supported `UP` loader and checked-in UP-directed divider, header, title-page, and closing-slide treatments remain compile-validated, with the title pages now keeping the rebalanced layout while inverting to a white main field with a maroon left accent bar and runtime-cropped inline black UP cover lockups, the repaired thank-page stack still keeping the lowered footer-slot separation beneath the contribution text, and the bundled references example continuing to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,19 @@ Status: current repo milestone `v0.0.25`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.26
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the title-page template now inverts the cover surface to a white main field with a maroon left accent bar and applies local dark text colors suited to the lighter title-page background.
+- Updated `beamer-up/beamerthemeUU.sty` so the non-`nl` title-page logo path now uses runtime-cropped inline black English and Filipino UP cover lockups (`up-inline-logo-eng-runtime-black.png` and `up-inline-logo-tag-runtime-black.png`) while leaving the content-header and closing-slide logo systems on their existing separate paths.
+- Added `beamer-up/logos/up-inline-logo-eng-runtime-black.png` and `beamer-up/logos/up-inline-logo-tag-runtime-black.png` as stable light-surface title-page assets derived from the existing requested inline black source files.
+- Revalidated the affected showcase deck on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction confirming that the single-author and multi-author title slides still render their expected text after the white-surface title-page pass.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-26-docs.md` so the public docs reflect the title-page surface inversion and black cover-lockup path.
+
+### For Deletion
+- `beamer-up/main.bcf`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.synctex.gz`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts currently present from local white-surface title-page verification).
+- `beamer-up/titlepage-white-preview.png` and `beamer-up/titlepage-white-preview-current.png` (temporary local page-1 preview exports used to inspect the inverted title-page surface and the black UP cover lockup placement).
 
 ## v0.0.25
 

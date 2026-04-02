@@ -19,7 +19,7 @@
 \newcommand{\@uulogoinclude}[1]{\includegraphics[height=#1]{\@uulogopath}}
 \newcommand{\@uulogoblackinclude}[1]{\includegraphics[height=#1]{\@uulogoblackpath}}
 \newcommand{\@uulogowhiteinclude}[1]{\includegraphics[height=#1]{\@uulogowhitepath}}
-\newcommand{\@uutitlelogowhiteinclude}[1]{\@uulogowhiteinclude{#1}}
+\newcommand{\@uutitlelogoinclude}[1]{\@uulogowhiteinclude{#1}}
 \newcommand{\@uutitlelogosize}{5.5cm}
 \newcommand{\@uutitlelogoxshift}{1.2cm}
 \newcommand{\@uutitlelogoyshift}{-0.6cm}
@@ -146,12 +146,12 @@
 \setbeamertemplate{title page}{%
   \begin{tikzpicture}[remember picture, overlay]
     % Vertical bar on left (like beamer-uu) - 8mm width
-    \fill[UPForestGreen]
+    \fill[UPMaroon]
       (current page.north west) rectangle
       ([xshift=8mm]current page.south west);
     
-    % Main content area background (UP Maroon)
-    \fill[UPMaroon]
+    % Main content area background
+    \fill[UPWhite]
       ([xshift=8mm]current page.north west) rectangle
       (current page.south east);
     
@@ -164,7 +164,7 @@
       \else
         \node[anchor=north west, inner sep=0pt]
           at ([xshift=\@uutitlelogoxshift, yshift=\@uutitlelogoyshift]current page.north west)
-          {\@uutitlelogowhiteinclude{\@uutitlelogosize}};
+          {\@uutitlelogoinclude{\@uutitlelogosize}};
       \fi
     \fi
   \end{tikzpicture}%
@@ -172,6 +172,12 @@
   % Content positioning
   \vskip \@uutitlecontenttopskip%
   \hspace*{1.5cm}%
+  \begingroup
+  \setbeamercolor{title}{fg=UPMaroon}%
+  \setbeamercolor{subtitle}{fg=UPBlack80}%
+  \setbeamercolor{author}{fg=UPMaroon}%
+  \setbeamercolor{institute}{fg=UPBlack80}%
+  \setbeamercolor{date}{fg=UPBlack80}%
   \begin{minipage}[t]{\@uutitlecontentwidth}
     \raggedright
     {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
@@ -202,6 +208,7 @@
       {\usebeamerfont{date}\usebeamercolor[fg]{date}\uutitlemeta\par}%
     \fi
   \end{minipage}%
+  \endgroup
 }
 
 % ======================================

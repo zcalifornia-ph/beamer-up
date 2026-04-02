@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.25
+    Version: v0.0.26
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, rebalanced title pages that now render runtime-cropped inline English/Filipino UP cover lockups derived from the requested source files without the earlier trim artifact or upside-down spill, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, and the corrected bundled bibliography example that cites the UP Visual Identity Guide 2017 directly on the references slide, while still leaving release-ready packaging plus broader public validation notes in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, rebalanced title pages that now invert to a white main field with a maroon left accent bar and runtime-cropped inline black English/Filipino UP cover lockups matched to that light surface, the exact horizontal white English/Filipino closing-slide logos on the repaired <code>\thankframe</code>, and the corrected bundled bibliography example that cites the UP Visual Identity Guide 2017 directly on the references slide, while still leaving release-ready packaging plus broader public validation notes in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -84,7 +84,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- The bundled showcase deck was revalidated locally on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction after the runtime-cropped title-page inline-logo pass; `latexmk -pdf main.tex` remains the recommended full build command.
+- The bundled showcase deck was revalidated locally on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus a fresh page-1 PNG export and page-1/page-2 text extraction after the white-surface title-page pass; `latexmk -pdf main.tex` remains the recommended full build command.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
@@ -93,7 +93,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - **Typography now implements a tiered fallback per UP typeface guidelines:** Palatino for body text, with Optima (preferred) → Avenir → Helvetica for headings depending on engine and availability. XeLaTeX or LuaLaTeX enables Optima on systems where it is installed; pdfLaTeX defaults to Helvetica.
 - The default `showlogo` path now uses a content-slide UP lineshot-seal plus logotype lockup, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the non-`nl` lockup is scaled to stay inside the header band and anchored to the right content margin, while the `nl` option remains a legacy Dutch-logo compatibility path.
 - Automatic section-divider slides now render the active section title again as plain white divider text, and manual `\sectionframe` dividers continue to share that same UP maroon-and-gold surface treatment.
-- Title slides now keep the rebalanced single left-aligned text block introduced earlier, but the visible UP mark is rendered from runtime-cropped inline white English/Filipino cover lockups derived from the requested source files through a title-page-specific height-based include, so the front-page logo no longer produces trim artifacts or upside-down spill; `\thankframe` keeps its stable centered title/divider/body stack on a separate horizontal white closing-slide path, and the `nl` compatibility branch keeps its legacy fallback behavior.
+- Title slides now keep the rebalanced single left-aligned text block introduced earlier, but the surface is inverted to a white main field with a maroon left accent bar; the visible non-`nl` UP mark is rendered from runtime-cropped inline black English/Filipino cover lockups through a title-page-specific include hook with local dark text colors, so the front-page logo stays readable on the lighter surface without reintroducing the earlier trim artifact or upside-down spill; `\thankframe` keeps its stable centered title/divider/body stack on a separate horizontal white closing-slide path, and the `nl` compatibility branch keeps its legacy fallback behavior.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
@@ -128,7 +128,7 @@ beamer-up/
   docs/
     version-0-0-2-docs.md
     ...
-    version-0-0-25-docs.md
+    version-0-0-26-docs.md
   repo/
     images/
       project_screen.png
