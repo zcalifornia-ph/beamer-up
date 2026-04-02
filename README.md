@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.16
+    Version: v0.0.17
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader is implemented and compile-validated, the checked-in theme now restores visible automatic section-divider titles, keeps the UP divider surface aligned across manual and automatic section pages, matches the automatic divider text treatment to the manual <code>\sectionframe</code> white-title rendering, and uses the exact horizontal white English/Filipino UP closing-slide logo files with language-specific footer crops derived from the visible logo bounds so the full mark stays visible on the beamer-uu-style feedback-page layout while still leaving release-ready packaging plus broader public validation notes in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles and the exact horizontal white English/Filipino closing-slide logos, while this version reconciles the public docs to that checked-in baseline and leaves release-ready packaging plus broader public validation notes in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -84,7 +84,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- The bundled showcase deck was revalidated locally on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`.
+- The bundled showcase deck was revalidated locally on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` as a targeted divider-verification pass; `latexmk -pdf main.tex` remains the recommended full build command.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
@@ -118,32 +118,28 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ```text
 beamer-up/
-  beamerthemeUP.sty
-  beamerthemeUU.sty
-  beamercolorthemeUU.sty
-  beamerinnerthemeUU.sty
-  beamerouterthemeUU.sty
-  logos/
-  main.tex
-  references.bib
-docs/
-  version-0-0-2-docs.md
-  version-0-0-3-docs.md
-  version-0-0-4-docs.md
-  version-0-0-5-docs.md
-  version-0-0-6-docs.md
-  version-0-0-7-docs.md
-  version-0-0-8-docs.md
-  version-0-0-9-docs.md
-  version-0-0-10-docs.md
-  version-0-0-11-docs.md
-  version-0-0-12-docs.md
-  version-0-0-13-docs.md
-  version-0-0-14-docs.md
-  version-0-0-15-docs.md
-  version-0-0-16-docs.md
-  repo/images/
-  project_screen.png
+  README.md
+  CHANGELOG.md
+  CODE_OF_CONDUCT.md
+  CONTRIBUTING.md
+  SECURITY.md
+  LICENSE.txt
+  docs/
+    version-0-0-2-docs.md
+    ...
+    version-0-0-17-docs.md
+  repo/
+    images/
+      project_screen.png
+  beamer-up/
+    beamerthemeUP.sty
+    beamerthemeUU.sty
+    beamercolorthemeUU.sty
+    beamerinnerthemeUU.sty
+    beamerouterthemeUU.sty
+    logos/
+    main.tex
+    references.bib
 ```
 
 The checked-in implementation now loads through `UP`, while legacy `UU` loader support remains only as explicit deprecated compatibility. Maintainer-only workflow artifacts are intentionally omitted from this public layout summary.
@@ -267,7 +263,7 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 
 1. Prepare the validation evidence and distribution-ready packaging notes for the first release.
 2. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
-3. Reconcile the public release docs and packaging guidance around the updated visual system.
+3. Run broader public compile validation across common TeX environments and document the results.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

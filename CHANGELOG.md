@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.16`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, the matched manual-and-automatic white divider text treatment, and the beamer-uu-style UP closing slide using the exact horizontal white language variants with tighter visible-bounds footer crops are checked in, while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.17`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the public root docs now match that checked-in baseline again, and release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,19 @@ Status: current repo milestone `v0.0.16`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.17
+
+### Added or Changed
+- Updated `README.md` version markers and status text to publish this as the `v0.0.17` documentation-reconciliation release for the current checked-in `beamer-up` baseline.
+- Corrected the `README.md` repository layout summary so it reflects the actual root structure (`docs/`, `repo/images/`, and the nested `beamer-up/` theme workspace) instead of the earlier mixed path listing.
+- Refreshed the `README.md` validation note to the latest recorded April 2, 2026 targeted divider-verification pass while keeping `latexmk -pdf main.tex` as the recommended full build command.
+- Added `docs/version-0-0-17-docs.md` as the detailed narrative note for this docs-only release.
+- Left `SECURITY.md`, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md` unchanged because their current governance language already matches repo reality.
+
+### For Deletion
+- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
+- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
 
 ## v0.0.16
 
