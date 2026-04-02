@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.0.18
+    Version: v0.0.19
     <br />
-    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles and the exact horizontal white English/Filipino closing-slide logos, and this version enlarges the UP feedback-page footer mark so it reads closer to the inherited Utrecht footer logo while still leaving release-ready packaging plus broader public validation notes in progress.
+    Status: independently maintained derivative work; the supported public <code>UP</code> loader and current UP-directed theme surfaces remain compile-validated, including the restored visible automatic section-divider titles, the exact horizontal white English/Filipino closing-slide logos, and a repaired <code>\thankframe</code> stack with a slightly raised UP footer mark so the thank page reads with better perceived top/bottom balance, while still leaving release-ready packaging plus broader public validation notes in progress.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -84,7 +84,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - `beamer-up` is maintained as its own derivative distribution by Zildjian E. California.
 - Public documentation, issue handling, and repository governance apply to `beamer-up`, not to the original `beamer-uu` project.
 - `beamer-up` does not claim Utrecht University affiliation, Utrecht branding compliance, or official UP System endorsement as part of its public project identity.
-- The bundled showcase deck was revalidated locally on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus rendered closing-slide inspection after the footer-logo sizing adjustment; `latexmk -pdf main.tex` remains the recommended full build command.
+- The bundled showcase deck was revalidated locally on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus closing-slide text extraction and SVG inspection after the thank-page layout repair and footer-logo raise; `latexmk -pdf main.tex` remains the recommended full build command.
 - The supported public loader is `\usetheme{UP}`.
 - Direct `\usetheme{UU}` loading is retained only as deprecated compatibility while internal legacy names are phased down carefully.
 - The checked-in theme now applies the corrected official UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, and the corresponding slide treatments across title, section, content, standout, and closing-slide surfaces.
@@ -92,7 +92,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - **Typography now implements a tiered fallback per UP typeface guidelines:** Palatino for body text, with Optima (preferred) → Avenir → Helvetica for headings depending on engine and availability. XeLaTeX or LuaLaTeX enables Optima on systems where it is installed; pdfLaTeX defaults to Helvetica.
 - The default `showlogo` path now uses a content-slide UP lineshot-seal plus logotype lockup, with `english` as the default language variant and `filipino` available for `Unibersidad ng Pilipinas`; the non-`nl` lockup is scaled to stay inside the header band and anchored to the right content margin, while the `nl` option remains a legacy Dutch-logo compatibility path.
 - Automatic section-divider slides now render the active section title again as plain white divider text, and manual `\sectionframe` dividers continue to share that same UP maroon-and-gold surface treatment.
-- Title slides keep the selected UP white wordmark variant, while `\thankframe` now follows the inherited beamer-uu closing-slide geometry more closely and switches between the exact bundled horizontal white English and Filipino UP lockups using tighter language-specific trims plus a larger footer scale so the full footer mark stays inside the page while reading closer to the inherited Utrecht footer weight; the `nl` compatibility branch keeps its legacy fallback behavior.
+- Title slides keep the selected UP white wordmark variant, while `\thankframe` now keeps a stable centered title/divider/body stack and switches between the exact bundled horizontal white English and Filipino UP lockups using tighter language-specific trims, the larger footer scale introduced earlier, and a slightly raised footer slot so the thank page reads more evenly; the `nl` compatibility branch keeps its legacy fallback behavior.
 - Some file names, helper names, and color tokens still reflect historical `UU` lineage; they are compatibility details rather than the intended long-term public brand.
 - The theme files in this repository are distributed under `LPPL 1.3c`; institutional names, logos, and other brand assets may still involve separate usage constraints outside the software license.
 
@@ -127,7 +127,7 @@ beamer-up/
   docs/
     version-0-0-2-docs.md
     ...
-    version-0-0-18-docs.md
+    version-0-0-19-docs.md
   repo/
     images/
       project_screen.png
@@ -232,8 +232,8 @@ Migration expectations now in effect:
 - Existing helper commands such as `\multiauthor`, `\singleauthor`, `\addinstitute`, `\clearinstitutes`, `\venue`, `\sectionframe`, `\standoutframe`, and `\thankframe` are expected to remain available.
 - `showlogo` renders the bundled UP content-slide header lockup by default; `english` selects `University of the Philippines`, `filipino` selects `Unibersidad ng Pilipinas`, and `nl` switches to the legacy Dutch-logo compatibility path.
 - Automatic section pages now render the active section title again using the same visible plain-white title treatment as manual `\sectionframe{...}` pages, and both stay visually matched to that same rule-above-title divider treatment.
-- `\thankframe{...}{...}` keeps the same interface, but the UP path now follows the inherited beamer-uu feedback-page rhythm more closely and swaps between the exact bundled horizontal white English and Filipino UP lockups at a larger perceived footer size; `nl` keeps its legacy compatibility fallback.
-- The current UP runtime uses cropped logo copies inside `beamer-up/logos/` for header/title surfaces and tighter language-specific trim-plus-height rules for the closing-slide horizontal logo files so the selected footer mark stays fully visible instead of dropping below the page edge while reading closer to the inherited Utrecht footer mark.
+- `\thankframe{...}{...}` keeps the same interface, but the UP path now preserves a stable centered title/divider/body layout and swaps between the exact bundled horizontal white English and Filipino UP lockups at the larger perceived footer size established in the previous release; `nl` keeps its legacy compatibility fallback.
+- The current UP runtime uses cropped logo copies inside `beamer-up/logos/` for header/title surfaces and tighter language-specific trim-plus-height rules for the closing-slide horizontal logo files, with a slightly raised footer slot so the selected footer mark stays fully visible and reads more evenly against the rest of the thank page.
 - On content slides, the English and Filipino UP header lockups now pair the lineshot seal with the selected wordmark, fit inside the header band, and align the overall lockup to the same right margin used by the main content blocks; the `nl` compatibility logo keeps its legacy corner placement.
 - The default visual system now uses UP maroon `#8E1537`, forest green `#005740`, yellow `#FFB81D`, and spot black `#231F20` across the checked-in showcase and theme templates.
 - Any remaining `UU` compatibility path should be treated as a deprecated bridge rather than a coequal public alias.

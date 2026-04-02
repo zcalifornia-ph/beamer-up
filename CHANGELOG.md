@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.18`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, and the UP feedback-page footer logo now reads closer in perceived size to the inherited Utrecht footer mark while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.19`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, and the repaired thank-page stack plus slightly raised UP feedback-page footer mark now read more evenly while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,22 @@ Status: current repo milestone `v0.0.18`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.19
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so `\thankframe` now uses a stable centered frame stack instead of the earlier fragile overlay-only layout, restoring the visible title, divider, and contribution text on the thank page.
+- Kept the exact bundled horizontal white English and Filipino UP footer-logo assets, the existing language-specific trim boxes, and the dedicated `\@upclosinglogoheight` footer scale, while raising the rendered footer mark slightly with a small `\raisebox{0.35cm}` offset.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-23 text extraction and SVG inspection confirming that `Feedback?`, the contribution block, and the UP footer lockup now render together and that the footer mark sits higher than before.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-19-docs.md` so the public docs reflect the repaired thank-page layout and the raised footer-logo slot.
+
+### For Deletion
+- Generated local LaTeX build outputs currently present in `beamer-up/` remain cleanup candidates before release packaging.
+- `beamer-up/closing-filipino-test.log` remains a scratch compile log that can be removed after review.
+- `beamer-up/preview-page-23-baseline-23.png` (temporary local raster render from baseline thank-page verification).
+- `beamer-up/preview-page-23-current-23.png` (temporary local raster render from the broken intermediate thank-page verification).
+- `beamer-up/thankpage-baseline.svg` (temporary local SVG export used to trace the pre-fix thank-page geometry).
+- `beamer-up/thankpage-fixed.svg` (temporary local SVG export used to confirm the repaired thank-page geometry).
 
 ## v0.0.18
 

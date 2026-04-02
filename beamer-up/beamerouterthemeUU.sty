@@ -86,29 +86,28 @@
   \setbeamercolor{background canvas}{bg=UPMaroon}
   \setbeamercolor{normal text}{fg=UPWhite}
   \begin{frame}[plain]
-    \begin{tikzpicture}[remember picture, overlay]
-      \node[anchor=north, inner sep=0pt]
-        at ([yshift=-1.65cm]current page.north)
-        {\color{UPWhite}\Huge\upheadingfont\bfseries #1};
-      \draw[UPGold, line width=1pt]
-        ([xshift=-1.35cm, yshift=-3.10cm]current page.north) --
-        ([xshift=1.35cm, yshift=-3.10cm]current page.north);
-      \node[anchor=north, align=center, text width=0.74\paperwidth, inner sep=0pt]
-        at ([yshift=-3.85cm]current page.north)
-        {{\begingroup\hypersetup{urlcolor=UPGold}\color{UPWhite}\normalsize\rmfamily #2\endgroup}};
-      \node[anchor=south, inner sep=0pt]
-        at ([yshift=0.95cm]current page.south)
-        {%
-          \if@UUnl
-            \ifx\@uulogopath\@empty\else
-              \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
-                {\@uulogoinclude{1.5cm}};}
-            \fi
-          \else
-            \@upclosinglogoinclude{\@upclosinglogoheight}%
-          \fi
-        };
-    \end{tikzpicture}%
+    \centering
+    \vspace*{1.45cm}
+    {\color{UPWhite}\Huge\upheadingfont\bfseries #1\par}
+    \vspace{0.55cm}
+    {\color{UPGold}\rule{2.7cm}{1pt}\par}
+    \vspace{0.95cm}
+    \parbox{0.74\paperwidth}{%
+      \centering
+      {\begingroup\hypersetup{urlcolor=UPGold}\color{UPWhite}\normalsize\rmfamily #2\par\endgroup}%
+    }\par
+    \vfill
+    \raisebox{0.35cm}{%
+      \if@UUnl
+        \ifx\@uulogopath\@empty\else
+          \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
+            {\@uulogoinclude{1.5cm}};}
+        \fi
+      \else
+        \@upclosinglogoinclude{\@upclosinglogoheight}%
+      \fi
+    }\par
+    \vspace*{0.95cm}
   \end{frame}
   \endgroup
 }
