@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.1.0`; the supported public loader is `UP`, the root governance docs now align with `beamer-up/REQUIREMENTS.md`, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.1.2`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -10,11 +10,31 @@ Status: current public documentation baseline `v0.1.0`; the supported public loa
 ### For Deletion
 - None yet.
 
+## v0.1.2
+
+### Added or Changed
+- Sanitized the root public docs so they no longer reference ignored internal planning paths or specific ignored local LaTeX artifact names.
+- Refreshed `repo/images/project_screen.png` to reflect the current public showcase surface used by the repository front page.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-1-2-docs.md` so the public version trail reflects the screenshot refresh and docs sanitization pass.
+
+### For Deletion
+- Generated local LaTeX build outputs for the bundled showcase deck remained cleanup candidates before release packaging.
+
+## v0.1.1
+
+### Added or Changed
+- Refined `beamer-up/beamerinnerthemeUU.sty` so the light-surface title page now carries a subtle `UPForestGreen` gradient wash.
+- Updated `beamer-up/main.tex` to replace the inherited title-slide `v1.0.0` marker with `v0.1.1` and shortened the subtitle copy to "A \LaTeX\ presentation template for the UP System."
+- Updated `README.md` and added `docs/version-0-1-1-docs.md` so the root documentation trail reflects the checked-in cover-page baseline and showcase metadata.
+
+### For Deletion
+- Generated local LaTeX verification outputs for the bundled showcase deck remained cleanup candidates before release packaging.
+
 ## v0.1.0
 
 ### Added or Changed
 - Bumped the public root documentation baseline from `v0.0.31` to `v0.1.0`.
-- Reconciled `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, and `SECURITY.md` with the approved requirements baseline in `beamer-up/REQUIREMENTS.md`.
+- Reconciled `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, and `SECURITY.md` with the approved planning and requirements baseline.
 - Removed stale cross-project changelog content so the root changelog now reflects `beamer-up` only.
 - Tightened public wording so `UP` is the supported public loader and any remaining `UU` names are described only as implementation or migration detail.
 - Added `docs/version-0-1-0-docs.md` to preserve the versioned public-docs trail for this release.
