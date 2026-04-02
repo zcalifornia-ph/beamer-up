@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.20`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the repaired thank-page stack plus slightly raised UP feedback-page footer mark still read more evenly, and the bundled references example now cites the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.21`; the supported `UP` loader and checked-in UP-directed divider, header, and closing-slide treatments remain compile-validated, the repaired thank-page stack now keeps a larger Utrecht-like gap between the contribution text and the UP footer mark, and the bundled references example continues to cite the UP Visual Identity Guide 2017 directly instead of the inherited Utrecht branding URL while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.20`; the supported `UP` loader and checked-
 
 ### For Deletion
 - None yet.
+
+## v0.0.21
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the repaired centered `\thankframe` stack keeps the footer logo at the same size but removes the extra `\raisebox{0.35cm}` lift, letting the UP closing mark sit slightly lower again and restoring a larger text-to-logo gap closer to the inherited Utrecht closing-slide rhythm.
+- Kept the current UP thank-page title, divider, contribution block, exact horizontal white English/Filipino footer assets, and existing trim-plus-height rules unchanged while narrowing this follow-up specifically to footer spacing harmony.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/`, plus page-23 text extraction and a page-23 SVG export confirming that the `Feedback?` slide still renders after the footer-spacing adjustment.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-21-docs.md` so the public docs reflect the lowered footer resting position.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local thank-page spacing verification).
+- `beamer-up/thankpage-spacing-v021.svg` (temporary local SVG export generated to review the adjusted thank-page footer spacing).
 
 ## v0.0.20
 
