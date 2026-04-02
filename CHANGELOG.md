@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.12`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, and the current UP-directed slide system are checked in, and release-ready packaging plus public validation notes remain open work.
+Status: current repo milestone `v0.0.16`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, the matched manual-and-automatic white divider text treatment, and the beamer-uu-style UP closing slide using the exact horizontal white language variants with tighter visible-bounds footer crops are checked in, while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,59 @@ Status: current repo milestone `v0.0.12`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.16
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the automatic section-divider page now uses the plain current section title token `\secname` instead of the hyperlinked Beamer `\insertsectionhead` wrapper.
+- Corrected the remaining automatic section-divider visibility issue so the section title now renders as visible white text on the maroon divider surface, matching the manual `\sectionframe` treatment more closely.
+- Preserved the existing UP maroon-and-gold divider layout while narrowing this fix specifically to the automatic section-page text token and styling path.
+- Revalidated the affected section divider on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus local text extraction and rendered-page inspection confirming that `Getting Started` is visible again on the automatic divider slide.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-16-docs.md` so the public docs reflect the matched automatic/manual divider text treatment and the final verification state.
+
+### For Deletion
+- None from this task context.
+
+## v0.0.15
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer keeps the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files but now trims each one to tighter language-specific visible bounds.
+- Corrected the final footer-logo render by replacing the earlier still-imperfect crop with trim values derived from the actual nontransparent logo region and by retuning the closing-slide footer anchor plus rendered height.
+- Preserved the inherited beamer-uu-style closing-slide layout, the existing `english` / `filipino` selection rule, and the legacy `nl` fallback while narrowing this change specifically to the remaining footer-logo clipping defect.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus direct rendered-page inspection confirming that the full `University of the Philippines` footer wordmark is now visible.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-15-docs.md` so the public docs reflect the tighter visible-bounds footer crop and the final closing-slide verification state.
+
+### For Deletion
+- `beamer-up/preview-page-23-current-23.png` (temporary local PDF page render used to confirm the footer was still clipped before the final crop correction).
+- `beamer-up/preview-page-23-fixed-23.png` (temporary local PDF page render generated during an intermediate footer-offset and size adjustment that still did not fully solve the clipping).
+- `beamer-up/preview-page-23-seq-23.png` (temporary local PDF page render generated from a sequential rebuild while isolating whether the preview had been rendered from the latest PDF).
+- `beamer-up/preview-page-23-cropfix-23.png` (temporary local PDF page render used to confirm the final tighter footer crop shows the full visible UP wordmark).
+
+## v0.0.14
+
+### Added or Changed
+- Updated `beamer-up/beamerouterthemeUU.sty` so the non-`nl` closing-slide footer now uses the exact `up-horizontal-logo-with-white-engtype.png` and `up-horizontal-logo-with-white-tagtype.png` files again rather than the temporary composed fallback.
+- Replaced the earlier overly tight closing-slide trim box with a safer crop and switched the footer logo sizing to a smaller `height`-based include so the full horizontal UP mark stays visible above the bottom edge.
+- Preserved the inherited beamer-uu-style closing-slide layout and the existing `english` / `filipino` selection rule while narrowing this fix specifically to footer-logo rendering.
+- Revalidated the affected closing slide on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` and a local rendered page preview after the footer-logo sizing and crop adjustment.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-14-docs.md` so the public docs reflect that the footer now uses the exact horizontal white UP files without cropping out the visible lockup.
+
+### For Deletion
+- `beamer-up/preview-page-23-horizontal-23.png` (temporary local PDF page render used to confirm the horizontal white UP closing-slide logo stayed inside the footer area after the trim and height adjustment).
+
+## v0.0.13
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so automatic section-divider slides now use Beamer's populated `\insertsectionhead` token, restoring visible section titles while preserving the current UP maroon-and-gold divider surface.
+- Updated `beamer-up/beamerouterthemeUU.sty` so `\thankframe` now follows the inherited beamer-uu feedback-page layout more closely, with the title first, the divider beneath it, centered contribution text below, and a bottom-centered logo slot.
+- Added and/or promoted horizontal and vertical UP source-logo variants under `beamer-up/logos/`, and wired the non-`nl` closing-slide path to the selected `up-horizontal-logo-with-white-engtype.png` or `up-horizontal-logo-with-white-tagtype.png`.
+- Revalidated the affected surfaces on April 1, 2026 with `latexmk -pdf main.tex` from `beamer-up/`, plus local text-extraction and page-render checks confirming the automatic section title is present again.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-13-docs.md` so the public docs reflect the restored divider behavior and the language-aware UP closing-slide lockup.
+
+### For Deletion
+- `beamer-up/main.aux`, `beamer-up/main.bbl`, `beamer-up/main.bcf`, `beamer-up/main.blg`, `beamer-up/main.fdb_latexmk`, `beamer-up/main.fls`, `beamer-up/main.log`, `beamer-up/main.nav`, `beamer-up/main.out`, `beamer-up/main.pdf`, `beamer-up/main.run.xml`, `beamer-up/main.snm`, `beamer-up/main.toc`, and `beamer-up/main.vrb` (generated showcase build artifacts from local verification of the divider and closing-slide changes).
+- `beamer-up/preview-page-4-04.png` (temporary local PDF page render used to confirm the automatic section-divider title was visible again).
+- `beamer-up/closing-filipino-test.log` (scratch local compile log generated while probing the Filipino closing-slide path).
 
 ## v0.0.12
 
