@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current repo milestone `v0.0.15`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, and the beamer-uu-style UP closing slide using the exact horizontal white language variants with tighter visible-bounds footer crops are checked in, while release-ready packaging plus broader public validation notes remain open work.
+Status: current repo milestone `v0.0.16`; the supported `UP` loader, selectable UP logotype variants, the corrected official UP core palette, the refined content-slide header lockup, the restored visible automatic section-divider titles, the matched manual-and-automatic white divider text treatment, and the beamer-uu-style UP closing slide using the exact horizontal white language variants with tighter visible-bounds footer crops are checked in, while release-ready packaging plus broader public validation notes remain open work.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current repo milestone `v0.0.15`; the supported `UP` loader, selectable 
 
 ### For Deletion
 - None yet.
+
+## v0.0.16
+
+### Added or Changed
+- Updated `beamer-up/beamerinnerthemeUU.sty` so the automatic section-divider page now uses the plain current section title token `\secname` instead of the hyperlinked Beamer `\insertsectionhead` wrapper.
+- Corrected the remaining automatic section-divider visibility issue so the section title now renders as visible white text on the maroon divider surface, matching the manual `\sectionframe` treatment more closely.
+- Preserved the existing UP maroon-and-gold divider layout while narrowing this fix specifically to the automatic section-page text token and styling path.
+- Revalidated the affected section divider on April 2, 2026 with `pdflatex main.tex` from `beamer-up/` plus local text extraction and rendered-page inspection confirming that `Getting Started` is visible again on the automatic divider slide.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-0-16-docs.md` so the public docs reflect the matched automatic/manual divider text treatment and the final verification state.
+
+### For Deletion
+- None from this task context.
 
 ## v0.0.15
 
