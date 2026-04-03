@@ -77,10 +77,10 @@ The supported first-release English runtime path currently observes these UP ass
 
 | Asset path | Role in the supported path | Evidence |
 | --- | --- | --- |
-| `beamer-up/logos/up-logotype-eng-runtime-black.png` | content-slide/header logotype path | referenced in `beamerthemeUU.sty`; observed in `main.fls` |
-| `beamer-up/logos/up-inline-logo-eng-runtime-black.png` | title-page runtime lockup | referenced in `beamerthemeUU.sty`; observed in `main.log` and `main.fls` |
-| `beamer-up/logos/up-inline-lineshot-eng-runtime-black.png` | section/header lineshot lockup | referenced in `beamerouterthemeUU.sty`; observed in `main.log` and `main.fls` |
-| `beamer-up/logos/up-horizontal-logo-with-white-engtype.png` | closing-slide lockup | referenced in `beamerouterthemeUU.sty`; observed in `main.log` and `main.fls` |
+| `beamer-up/logos/up-logotype-eng-runtime-black.png` | content-slide/header logotype path | referenced in `beamerthemeUP.sty`; observed in `main.fls` |
+| `beamer-up/logos/up-inline-logo-eng-runtime-black.png` | title-page runtime lockup | referenced in `beamerthemeUP.sty`; observed in `main.log` and `main.fls` |
+| `beamer-up/logos/up-inline-lineshot-eng-runtime-black.png` | section/header lineshot lockup | referenced in `beamerouterthemeUP.sty`; observed in `main.log` and `main.fls` |
+| `beamer-up/logos/up-horizontal-logo-with-white-engtype.png` | closing-slide lockup | referenced in `beamerouterthemeUP.sty`; observed in `main.log` and `main.fls` |
 
 Additional notes:
 

@@ -1,6 +1,20 @@
 # Changelog
 
-Status: current approved public documentation baseline `v0.3.3`; the supported public loader is `UP`, `beamerthemeUP.sty` is now the canonical implementation entry, `beamerthemeUU.sty` remains only as deprecated compatibility, the checked-in starter-template and usage guide define the published baseline, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+Status: current approved public documentation baseline `v0.3.4`; the supported public loader is `UP`, `beamerthemeUP.sty` is the canonical implementation entry, the active color/inner/outer subthemes now also use `UP` filenames, `beamerthemeUU.sty` remains only as deprecated compatibility, the checked-in starter-template and usage guide define the published baseline, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+
+## v0.3.4
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.3` to `v0.3.4`.
+- Renamed the active color, inner, and outer subtheme files to `beamercolorthemeUP.sty`, `beamerinnerthemeUP.sty`, and `beamerouterthemeUP.sty`.
+- Updated `beamer-up/beamerthemeUP.sty` so the canonical public loader now requests the `UP`-named subthemes directly.
+- Updated the renamed subtheme package declarations and source headers so they identify themselves as `beamercolorthemeUP`, `beamerinnerthemeUP`, and `beamerouterthemeUP`.
+- Updated `README.md`, `docs/usage-guide.md`, `docs/release-readiness.md`, and the file-overview table in `beamer-up/main.tex` so the live docs and starter template now point at the `UP`-named subtheme files and current runtime references.
+- Updated `SECURITY.md` so the supported-version matrix follows the new `v0.3.4` public baseline.
+- Added `docs/version-0-3-4-docs.md` to capture the active subtheme filename migration, rationale, and compile-validation notes for this patch-level release.
+
+### For Deletion
+- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.bcf`, `main.fls`, `main.log`, `main.pdf`, `main.run.xml`, `main.synctex.gz`, `main.toc`, `main.vrb`, and the `main.*-SAVE-ERROR` byproducts, remained cleanup candidates before release packaging.
 
 ## v0.3.3
 

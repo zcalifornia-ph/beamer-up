@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.3.3
+    Version: v0.3.4
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a canonical <code>beamerthemeUP.sty</code> implementation entry, a legacy <code>beamerthemeUU.sty</code> compatibility wrapper, a checked-in showcase that doubles as a starter template, and a tracked release-readiness plus version-history trail under <code>docs/</code>.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a canonical <code>beamerthemeUP.sty</code> implementation entry backed by active <code>UP</code>-named subthemes, a legacy <code>beamerthemeUU.sty</code> compatibility wrapper, a checked-in showcase that doubles as a starter template, and a tracked release-readiness plus version-history trail under <code>docs/</code>.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -82,15 +82,15 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.3.3` is the current approved public documentation baseline for this repository.
+- `v0.3.4` is the current approved public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
-- `beamerthemeUP.sty` now owns the canonical theme implementation directly, while `beamerthemeUU.sty` is retained only as a deprecated compatibility wrapper for older `\usetheme{UU}` material.
+- `beamerthemeUP.sty` now owns the canonical theme implementation directly and loads the active `beamercolor`, `beamerinner`, and `beamerouter` `UP` subtheme files, while `beamerthemeUU.sty` is retained only as a deprecated compatibility wrapper for older `\usetheme{UU}` material.
 - The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
 - The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
 - `docs/usage-guide.md` is the tracked public quick-start and migration guide for the current public baseline.
 - `docs/release-readiness.md` is a tracked follow-up evidence artifact for compile, screenshot, validation, and GitHub/Overleaf distribution wording; it remains human-gated rather than the approved version baseline.
 - Historical version narratives for `v0.0.x`, `v0.1.x`, and `v0.2.x` now live under `docs/version-0-0-x/`, `docs/version-0-1-x/`, and `docs/version-0-2-x/` so the root `docs/` directory stays focused on the current `v0.3.x` baseline and follow-up materials.
-- `docs/version-0-3-1-docs.md` remains the pending readiness follow-up narrative, `docs/version-0-3-2-docs.md` records the docs-archive reorganization, and `docs/version-0-3-3-docs.md` records the theme-file consolidation that made `beamerthemeUP.sty` the real canonical implementation surface.
+- `docs/version-0-3-1-docs.md` remains the pending readiness follow-up narrative, `docs/version-0-3-2-docs.md` records the docs-archive reorganization, `docs/version-0-3-3-docs.md` records the theme-file consolidation that made `beamerthemeUP.sty` the real canonical implementation surface, and `docs/version-0-3-4-docs.md` records the active subtheme filename migration to the `UP` namespace.
 - The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
@@ -105,7 +105,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Canonical project identity: `beamer-up`
 - Supported public theme identifier: `UP`
 - Public docs and examples should point users to `UP`, not `UU`
-- Any remaining `UU` names in the repository are implementation details, migration residue, or historical provenance markers
+- Any remaining `UU` names in the repository are limited to the deprecated `beamerthemeUU.sty` wrapper, legacy compatibility internals, or historical provenance markers
 
 ### Supported First-Release Scope
 
@@ -154,15 +154,16 @@ beamer-up/
     version-0-3-1-docs.md
     version-0-3-2-docs.md
     version-0-3-3-docs.md
+    version-0-3-4-docs.md
   repo/
     images/
       project_screen.png
   beamer-up/
     beamerthemeUP.sty
     beamerthemeUU.sty
-    beamercolorthemeUU.sty
-    beamerinnerthemeUU.sty
-    beamerouterthemeUU.sty
+    beamercolorthemeUP.sty
+    beamerinnerthemeUP.sty
+    beamerouterthemeUP.sty
     main.tex
     references.bib
     logos/

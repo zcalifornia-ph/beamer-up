@@ -195,5 +195,5 @@ If those answers are obvious from the tracked repository surfaces, the ownership
 ## Next 24-72 Hours
 
 1. Review whether any remaining public docs still describe `beamerthemeUP.sty` as a wrapper.
-2. Decide whether future work should keep the `UU`-named subthemes indefinitely or begin a broader internal rename only when the migration value clearly outweighs the churn.
-3. If broader release packaging proceeds, keep the public contract centered on `UP` and keep `UU` framed only as legacy compatibility.
+2. Review whether any remaining active docs or file tables still point at the deleted `UU`-named subtheme files.
+3. If broader release packaging proceeds, keep the public contract centered on `UP` and keep `beamerthemeUU.sty` framed only as legacy compatibility.

@@ -104,7 +104,7 @@ If you care about exact heading appearance and your local system has the license
 
 - Replace `\usetheme{UU}` with `\usetheme{UP}` in older documents.
 - Keep any remaining `UU` mentions in docs strictly migration-focused or provenance-focused.
-- Treat `beamerthemeUP.sty` as the public theme entry file and the remaining `UU`-named theme files as compatibility or implementation detail.
+- Treat `beamerthemeUP.sty` as the public theme entry file, `beamercolorthemeUP.sty` / `beamerinnerthemeUP.sty` / `beamerouterthemeUP.sty` as the active implementation surface, and `beamerthemeUU.sty` as legacy compatibility only.
 
 ## GitHub and Overleaf Guidance
 
