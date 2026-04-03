@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.2.0
+    Version: v0.3.2
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page with multiline-safe metadata layout, explicit-linebreak-safe conference affiliations, refreshed public screenshot assets, checked-in UP-directed theme surfaces, and public docs aligned to the current planning baseline for the next release cycle.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a checked-in showcase that now doubles as a starter template for thesis defenses, class reports, and research talks, a tracked follow-up release-readiness artifact, and a grouped historical public-docs archive for earlier version narratives.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -52,6 +52,7 @@
       <ul>
         <li><a href="#current-status">Current Status</a></li>
         <li><a href="#public-naming-contract">Public Naming Contract</a></li>
+        <li><a href="#supported-first-release-scope">Supported First-Release Scope</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -81,19 +82,21 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.2.0` is the current public documentation baseline for this repository.
+- `v0.3.2` is the current approved public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
 - Remaining `UU`-named files or helper surfaces in the checked-in tree are brownfield implementation residue and migration detail, not the supported public interface.
-- The checked-in showcase deck under `beamer-up/` exercises the `UP` loader and demonstrates title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow.
-- The checked-in light-surface title page now adds a subtle `UPForestGreen` gradient wash while keeping the maroon accent bar and the simpler gradient-only cover treatment.
-- The checked-in title-page layout now keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
+- The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
+- The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
+- `docs/usage-guide.md` is the tracked public quick-start and migration guide for the current public baseline.
+- `docs/release-readiness.md` is a tracked follow-up evidence artifact for compile, screenshot, validation, and GitHub/Overleaf distribution wording; it remains human-gated rather than the approved version baseline.
+- Historical version narratives for `v0.0.x`, `v0.1.x`, and `v0.2.x` now live under `docs/version-0-0-x/`, `docs/version-0-1-x/`, and `docs/version-0-2-x/` so the root `docs/` directory stays focused on the current `v0.3.x` baseline and follow-up materials.
+- `docs/version-0-3-1-docs.md` remains the pending readiness follow-up narrative, while `docs/version-0-3-2-docs.md` records the docs-archive reorganization that made the historical version trail easier to navigate.
+- The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
-- The showcase deck metadata now publishes `v0.1.1` on the title slide instead of the inherited `v1.0.0` marker, and the checked-in subtitle now demonstrates the multiline title-page path with a two-line "University of the Philippines System" wording.
-- The repository screenshot asset under `repo/images/project_screen.png` has been refreshed to match the current public showcase baseline.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
 - The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
-- The current planning baseline treats identity/governance, brownfield understanding, public `UP` interface migration, and UP-directed visual adaptation as complete enough for the present public baseline.
-- The remaining public-release focus is showcase expansion, validation evidence, and distribution-ready packaging notes for GitHub and Overleaf rather than another naming or visual-system reset.
+- The current planning baseline treats identity/governance, brownfield understanding, public `UP` interface migration, UP-directed visual adaptation, and showcase/docs integration as complete enough for the present public baseline.
+- Validation evidence, refreshed screenshot proof, and GitHub/Overleaf distribution-ready packaging notes are now recorded in `docs/release-readiness.md`; human approval still gates bolt closure and any deploy/ops handoff.
 - `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
 - UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 
@@ -103,6 +106,14 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Supported public theme identifier: `UP`
 - Public docs and examples should point users to `UP`, not `UU`
 - Any remaining `UU` names in the repository are implementation details, migration residue, or historical provenance markers
+
+### Supported First-Release Scope
+
+- checked-in theme source under `beamer-up/`
+- checked-in showcase and starter deck at `beamer-up/main.tex`
+- root `README.md`, `docs/usage-guide.md`, and `docs/release-readiness.md` as the public quick-start, migration, validation, and distribution-scope surfaces
+- supported GitHub and Overleaf wording for the `UP` entry path and branding disclaimer posture
+- validation evidence and distribution-ready packaging notes are now captured in `docs/release-readiness.md`, with final human approval still required before broader release handoff
 
 ### Built With
 
@@ -126,9 +137,22 @@ beamer-up/
   SECURITY.md
   LICENSE.txt
   docs/
-    version-0-0-2-docs.md
-    ...
-    version-0-1-2-docs.md
+    usage-guide.md
+    release-readiness.md
+    version-0-0-x/
+      version-0-0-2-docs.md
+      ...
+      version-0-0-31-docs.md
+    version-0-1-x/
+      version-0-1-0-docs.md
+      ...
+      version-0-1-4-docs.md
+    version-0-2-x/
+      version-0-2-0-docs.md
+    version-0-3-0-docs.md
+    version-0-3-0-reconciliation-docs.md
+    version-0-3-1-docs.md
+    version-0-3-2-docs.md
   repo/
     images/
       project_screen.png
@@ -194,7 +218,7 @@ latexmk -pdf main.tex
    pdflatex main.tex
    pdflatex main.tex
    ```
-4. Reuse the theme files and `logos/` directory in your own presentation project, or install them into a local TeX tree as needed. If you redistribute a modified version, keep attribution, derivative provenance, license context, and non-endorsement wording intact.
+4. Reuse the theme files and `logos/` directory in your own presentation project, or install them into a local TeX tree as needed. See `docs/usage-guide.md` for starter patterns, migration notes, and supported GitHub/Overleaf wording, and see `docs/release-readiness.md` for the current compile, screenshot, and packaging evidence. If you redistribute a modified version, keep attribution, derivative provenance, license context, and non-endorsement wording intact.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -213,6 +237,14 @@ The supported public loader is `UP`:
 \date{\today}
 ```
 
+For a fuller walkthrough, see `docs/usage-guide.md` and the checked-in starter deck at `beamer-up/main.tex`. For the current compile evidence, refreshed screenshot, and distribution-readiness notes, see `docs/release-readiness.md`.
+
+Supported public use cases currently covered by the tracked docs and showcase include:
+
+- thesis defenses
+- class reports
+- research talks and colloquia
+
 Supported user-facing options and helpers currently exercised by the checked-in showcase include:
 
 - Options: `showlogo`, `english`, `filipino`, `nl`, `nosectionpage`
@@ -221,7 +253,7 @@ Supported user-facing options and helpers currently exercised by the checked-in 
 
 Title-page behavior note:
 
-- Long `\institute{...}` values and long `\addinstitute{n}{...}` conference affiliations now wrap inside the title-page content block instead of overrunning the slide.
+- Long `\institute{...}` values and long `\addinstitute{n}{...}` conference affiliations wrap inside the title-page content block instead of overrunning the slide.
 - Multi-line conference affiliations continue after the affiliation number with a hanging indent whether the second line is created by automatic wrapping or by an explicit `\\` inside the affiliation text.
 
 Migration note:
@@ -229,6 +261,13 @@ Migration note:
 - If you have older material that still uses `\usetheme{UU}`, update it to `\usetheme{UP}`.
 - Do not document or recommend `UU` as a supported public loader.
 - Remaining `UU` filenames in the repository exist for brownfield continuity and should be treated as internal implementation detail.
+
+Compile and distribution note:
+
+- Recommended compile command: `latexmk -pdf main.tex` from `beamer-up/`.
+- Documented fallback command chain: `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
+- GitHub and Overleaf surfaces should describe the same supported `UP` entry path, derivative provenance, and branding-use disclaimer posture.
+- Current validation evidence, refreshed screenshot proof, and distribution-readiness notes live in `docs/release-readiness.md`.
 
 Branding note:
 
@@ -245,8 +284,9 @@ Branding note:
 - [x] Implement the public `\usetheme{UP}` entry path and update the public usage contract.
 - [x] Define the UP visual-system mapping for palette, typography, logo handling, and decorative rules.
 - [x] Apply the approved UP-directed slide-surface styling across the theme and showcase deck.
-- [ ] Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
-- [ ] Finalize validation evidence and distribution-ready packaging notes for GitHub and Overleaf.
+- [x] Expand the showcase deck into a starter template for thesis defenses, class reports, and research talks.
+- [x] Consolidate public usage, migration, and distribution-scope guidance in `README.md` and `docs/usage-guide.md`.
+- [x] Finalize validation evidence and distribution-ready packaging notes for GitHub and Overleaf.
 - [ ] Preserve explicit attribution, release provenance, and legal clarity for the first broader public release cycle.
 
 See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for proposed improvements and open questions.
@@ -254,10 +294,9 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Immediate Next Actions
-
-1. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
-2. Prepare the validation evidence and distribution-ready packaging notes for the first broader release cycle.
-3. Run broader compile validation across common TeX environments and document the results for GitHub and Overleaf distribution surfaces.
+1. Review `docs/release-readiness.md` and decide whether the recorded evidence is sufficient to close `B-UE-02` and hand off to deploy/ops work.
+2. Decide whether the broader public package should remain pdfLaTeX-first only or add wider engine validation evidence.
+3. If publishing to GitHub releases or Overleaf, carry forward the same provenance, disclaimer, and asset-governance notes captured in the readiness artifact.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -316,3 +355,4 @@ Project Link: [https://github.com/zcalifornia-ph/beamer-up](https://github.com/z
 [Biber]: https://img.shields.io/badge/Biber-7C3AED?style=for-the-badge&logo=latex&logoColor=white
 [Biber-url]: https://ctan.org/pkg/biber
 [product-screenshot]: repo/images/project_screen.png
+
