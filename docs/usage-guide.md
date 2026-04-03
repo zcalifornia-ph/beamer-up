@@ -98,7 +98,7 @@ Font behavior is intentionally documented as a fallback chain:
 - headings fall back through `Avenir` to `Helvetica` when needed
 - body text uses `Palatino` on the supported baseline
 
-If you care about exact heading appearance and your local system has the licensed fonts installed, use XeLaTeX or LuaLaTeX. If you need the most reproducible baseline, use `latexmk -pdf main.tex`.
+If you care about exact heading appearance and your local system has the licensed fonts installed, use XeLaTeX or LuaLaTeX. If you need the most reproducible baseline, use `latexmk -pdf main.tex`. The current acceptance evidence for that baseline, including the refreshed screenshot surface, is recorded in `docs/release-readiness.md`.
 
 ## Migration from `UU` to `UP`
 
@@ -114,11 +114,13 @@ The intended first-release public scope is the same across GitHub and Overleaf:
 - the bundled showcase deck is the starter template and validation surface
 - the documented compile path is `latexmk -pdf main.tex` with the `pdflatex -> biber -> pdflatex -> pdflatex` fallback
 - the derivative, attribution, non-endorsement, and branding-use wording should remain aligned with the root README and contributor docs
+- the current compile, screenshot, and packaging evidence set is tracked in `docs/release-readiness.md`
 
-This guide documents the supported scope and wording only. Validation evidence, screenshots, and final readiness proof belong to the later release-readiness work.
+This guide remains the supported scope and wording surface. `docs/release-readiness.md` is the maintainer handoff artifact for validation evidence and distribution notes, and broader release approval is still human-gated.
 
 ## Provenance and Branding Notes
 
 `beamer-up` is an independently maintained derivative project based on the original `beamer-uu` work by A.J.H. (Jos) Zuijderwijk and maintained here by Zildjian E. California under `LPPL 1.3c`.
 
 UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly. The repository and the default slide output must not imply endorsement by the University of the Philippines System, Utrecht University, or the original upstream author.
+

@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.3.0`; the supported public loader is `UP`, the checked-in starter-template and usage-guide baseline are now published, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.3.1`; the supported public loader is `UP`, the checked-in starter-template, usage guide, and release-readiness evidence baseline are now published, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,20 @@ Status: current public documentation baseline `v0.3.0`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.3.1
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.0` to `v0.3.1`.
+- Added `docs/release-readiness.md` as the tracked compile, screenshot, packaging, and human-review handoff artifact for Unit `U-E` / Bolt `B-UE-02`.
+- Refreshed `repo/images/project_screen.png` from the final accepted `beamer-up/main.pdf` so the repository front-page screenshot matches the current starter-template title slide.
+- Updated `README.md` and `docs/usage-guide.md` so the public quick-start, compile, migration, and GitHub/Overleaf wording now point to the same release-readiness evidence surface.
+- Updated `CONTRIBUTING.md` so contributor guidance now keeps `docs/release-readiness.md` aligned whenever public compile-validation or distribution wording changes.
+- Removed the last Utrecht-named presentation phrase from `beamer-up/main.tex` while preserving the same supported `UP` slide behavior.
+- Added `docs/version-0-3-1-docs.md` so the public version trail records the release-readiness evidence pass and its remaining human approval gate.
+
+### For Deletion
+- Generated local LaTeX build outputs under `beamer-up/`, including `main.*` and `cover-check.*` compile byproducts, remained cleanup candidates before release packaging.
 
 ## v0.3.0
 
