@@ -39,7 +39,7 @@ Use the supported public loader only:
 \date{\today}
 ```
 
-Do not document or recommend `\usetheme{UU}` as a supported public path. Any remaining `UU` names in checked-in sources are brownfield implementation residue, compatibility detail, or provenance history.
+Do not document or recommend `\usetheme{UU}` as a supported public path. Any remaining `UU` names in checked-in sources are brownfield implementation residue, inherited asset naming, or provenance history.
 
 ## Common Starting Patterns
 
@@ -104,7 +104,8 @@ If you care about exact heading appearance and your local system has the license
 
 - Replace `\usetheme{UU}` with `\usetheme{UP}` in older documents.
 - Keep any remaining `UU` mentions in docs strictly migration-focused or provenance-focused.
-- Treat `beamerthemeUP.sty` as the public loader wrapper and the remaining `UU`-named theme files as implementation detail.
+- Treat `beamerthemeUP.sty` as the public theme entry file and `beamercolorthemeUP.sty` / `beamerinnerthemeUP.sty` / `beamerouterthemeUP.sty` as the active implementation surface.
+- Do not assume a legacy `UU` wrapper or loader is part of the maintained public distribution surface.
 
 ## GitHub and Overleaf Guidance
 

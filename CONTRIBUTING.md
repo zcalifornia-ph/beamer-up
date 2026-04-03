@@ -2,7 +2,7 @@
 
 Thanks for contributing to `beamer-up`.
 This repository is an unofficial University of the Philippines System Beamer theme initiative, independently maintained by Zildjian E. California, and derived from the `beamer-uu` baseline under `LPPL 1.3c`.
-The supported public theme loader is `UP`; any remaining `UU` naming in the tree is brownfield implementation residue or migration detail rather than the intended public contract.
+The supported public theme loader is `UP`; any remaining `UU` naming in the tree is brownfield implementation residue or historical/internal detail rather than the intended public contract.
 Contributions should improve `beamer-up` as its own maintained project while preserving attribution clarity, clear modification history, and defensible branding decisions.
 
 ## Values Framework
@@ -32,7 +32,7 @@ Contributions should support these working values:
 - Public project identity remains `beamer-up`.
 - Approved first-release public theme identifier is `UP`.
 - Current `UU` identifiers in checked-in sources are brownfield implementation residue; do not introduce new public-facing `UU` expectations unless you are documenting migration history explicitly.
-- When you mention inherited `UU` behavior, direct readers to `UP` as the supported loader and do not present `UU` as a supported public interface.
+- When you mention inherited `UU` behavior, direct readers to `UP` as the supported loader and do not present a legacy `UU` wrapper or loader path as part of the maintained public interface.
 - GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must preserve derivative provenance, non-endorsement wording, and the internal-use branding disclaimer when applicable.
 - If your change affects branding, attribution, or packaged assets, keep the corresponding governance or inventory notes in sync as part of the same change set.
 
