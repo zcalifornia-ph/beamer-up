@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.1.2`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.1.3`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,17 @@ Status: current public documentation baseline `v0.1.2`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.1.3
+
+### Added or Changed
+- Reworked `beamer-up/beamerinnerthemeUU.sty` so the title-page content stack grows within a bounded vertical region, preserving the cover composition when multiline metadata is added.
+- Added a one-line lower buffer to the title-page content region so the single-author and multi-author covers no longer hug the bottom edge after the multiline layout fix.
+- Replaced the multi-author affiliation `tabular` path with hanging-indent paragraph rows so long conference affiliations wrap inside the slide and continuation lines align after the affiliation number.
+- Updated `beamer-up/main.tex`, `README.md`, `CHANGELOG.md`, and added `docs/version-0-1-3-docs.md` so the showcase and public docs reflect the multiline subtitle/institute stress cases and the title-page metadata-flow repair.
+
+### For Deletion
+- Generated local LaTeX build outputs and local title-page verification preview PNGs remained cleanup candidates before release packaging.
 
 ## v0.1.2
 

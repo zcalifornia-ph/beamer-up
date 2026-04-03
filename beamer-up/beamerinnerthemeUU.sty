@@ -23,7 +23,10 @@
 \newcommand{\@uutitlelogosize}{5.5cm}
 \newcommand{\@uutitlelogoxshift}{1.2cm}
 \newcommand{\@uutitlelogoyshift}{-0.6cm}
+\newcommand{\@uutitlecontentleftskip}{1.5cm}
 \newcommand{\@uutitlecontenttopskip}{2.8cm}
+\newcommand{\@uutitlecontentbottomskip}{1.15cm}
+\newcommand{\@uutitlecontentlinebuffer}{14pt}
 \newcommand{\@uutitlecontentwidth}{12.6cm}
 
 % -- Conference author switch -----------------------------------------
@@ -38,17 +41,27 @@
 
 % -- Conference institute list ----------------------------------------
 \newcommand{\@uuconfinstitute}{}
+\newcommand{\@uuconfinstitutehangindent}{1.7em}
 \newcommand{\confinstitute}[1]{\renewcommand{\@uuconfinstitute}{#1}}
+
+\newcommand{\uuconfinstituterow}[2]{%
+  \par
+  \noindent
+  \hangindent=\@uuconfinstitutehangindent\relax
+  \hangafter=1
+  \makebox[\@uuconfinstitutehangindent][l]{{\scriptsize\color{UPForestGreen}#1}}%
+  #2\par
+}
 
 \newif\if@uufirstinstitute
 \@uufirstinstitutetrue
 
 \newcommand{\addinstitute}[2]{%
   \if@uufirstinstitute
-    \gappto\@uuconfinstitute{{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
+    \gappto\@uuconfinstitute{\uuconfinstituterow{#1}{#2}}%
     \global\@uufirstinstitutefalse
   \else
-    \gappto\@uuconfinstitute{\\[-1pt]{\scriptsize\color{UPForestGreen}#1}\enspace #2}%
+    \gappto\@uuconfinstitute{\uuconfinstituterow{#1}{#2}}%
   \fi
 }
 
@@ -176,14 +189,14 @@
   %
   % Content positioning
   \vskip \@uutitlecontenttopskip%
-  \hspace*{1.5cm}%
+  \hspace*{\@uutitlecontentleftskip}%
   \begingroup
   \setbeamercolor{title}{fg=UPMaroon}%
   \setbeamercolor{subtitle}{fg=UPBlack}%
   \setbeamercolor{author}{fg=UPMaroon}%
   \setbeamercolor{institute}{fg=UPBlack}%
   \setbeamercolor{date}{fg=UPMaroon}%
-  \begin{minipage}[t]{\@uutitlecontentwidth}
+  \begin{minipage}[t][\dimexpr\paperheight-\@uutitlecontenttopskip-\@uutitlecontentbottomskip-\@uutitlecontentlinebuffer\relax][b]{\@uutitlecontentwidth}
     \raggedright
     {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
     \ifx\insertsubtitle\@empty\else
@@ -199,9 +212,9 @@
         \insertauthor\par}%
       \vskip 6pt%
       {\usebeamerfont{institute}\color{UPBlack}\footnotesize%
-        \begin{tabular}[t]{@{}l@{}}
-          \@uuconfinstitute
-        \end{tabular}\par}%
+        \parindent=0pt\relax
+        \parskip=0pt\relax
+        \@uuconfinstitute\par}%
       \vskip 6pt%
       {\usebeamerfont{date}\color{UPMaroon}\bfseries\uutitlemeta\par}%
     \else
