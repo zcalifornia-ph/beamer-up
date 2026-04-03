@@ -20,14 +20,14 @@
 
 | ID | Result | Evidence |
 | --- | --- | --- |
-| `T-01` | pass | `latexmk -pdf main.tex` succeeded from `beamer-up/` with exit code `0`; `main.log` records `Output written on main.pdf (28 pages, 1157911 bytes).` and `main.pdf` exists at 1,157,911 bytes. |
+| `T-01` | pass | `latexmk -pdf main.tex` succeeded from `beamer-up/` with exit code `0`; `main.log` records `Output written on main.pdf (28 pages, 1157875 bytes).` and `main.pdf` exists at 1,157,875 bytes. |
 | `T-02` | pass | the documented fallback chain `pdflatex -> biber -> pdflatex -> pdflatex` succeeded from `beamer-up/` with exit code `0`; the final `main.log` and `main.pdf` remain in sync after the acceptance run. |
 | `T-04` | pass | the compiled deck still exercises the supported feature surfaces present in `main.tex`: `\usetheme[showlogo,english]{UP}`, `\multiauthor`, `\singleauthor`, `\sectionframe`, `\standoutframe`, `\thankframe`, and `\printbibliography`; the final PDF remains 28 pages. |
 | `T-05` | pass | `project_screen.png` was refreshed from the final `main.pdf`; the supported English path uses UP runtime assets observed in `main.log`/`main.fls`, and `main.tex` no longer contains visible Utrecht-branded presentation copy. |
 | `T-06` | pass | `B-UE-02` did not change the theme source; the current screenshot and unchanged UP-directed slide system remain consistent with the readability and contrast decisions already approved in `U-D`, while the remaining `Underfull \hbox` warnings are confined to documentation-heavy slides and remain non-blocking. |
 | `T-07` | pass | `README.md`, `docs/usage-guide.md`, `docs/release-readiness.md`, `CONTRIBUTING.md`, and `beamer-up/main.tex` preserve derivative attribution, non-endorsement wording, and the UP branding-use disclaimer posture. |
 | `T-08` | pass | the supported English runtime path now has observed asset evidence for `logos/up-logotype-eng-runtime-black.png`, `logos/up-inline-logo-eng-runtime-black.png`, `logos/up-inline-lineshot-eng-runtime-black.png`, and `logos/up-horizontal-logo-with-white-engtype.png`; the readiness notes below tie those assets back to the governance disclaimer baseline. |
-| `T-09` | pass | user-facing docs still direct older users from `\usetheme{UU}` to `\usetheme{UP}` and treat remaining `UU` names as migration or implementation detail only. |
+| `T-09` | pass | user-facing docs treat `\usetheme{UP}` as the only supported public loader, direct older users to update `\usetheme{UU}` material, and keep remaining `UU` names historical or internal only. |
 | `T-10` | pass | `README.md`, `docs/usage-guide.md`, and this readiness artifact now describe the same supported `UP` entry path, compile posture, provenance wording, and GitHub/Overleaf distribution notes. |
 
 ## Compile Evidence
@@ -43,10 +43,10 @@ latexmk -pdf main.tex
 Observed outcome:
 
 - exit code `0`
-- `main.log` records `Output written on main.pdf (28 pages, 1157911 bytes).`
+- `main.log` records `Output written on main.pdf (28 pages, 1157875 bytes).`
 - final artifact timestamps after the acceptance run:
-  - `beamer-up/main.pdf`: `2026-04-03 16:08:07`
-  - `beamer-up/main.log`: `2026-04-03 16:08:07`
+  - `beamer-up/main.pdf`: `2026-04-03 17:54:35`
+  - `beamer-up/main.log`: `2026-04-03 17:54:35`
 
 ### Documented fallback path
 
@@ -113,4 +113,4 @@ The final acceptance run still reports these non-blocking warnings:
 - `DCHK-01`: ready for human review because source, docs, screenshot, disclaimers, and validation evidence are now packaged together.
 - `DCHK-02`: ready for human review because the documented GitHub and Overleaf wording now points to the same supported `UP` path and compile baseline.
 - `DCHK-03`: ready for human review because the supported-path UP runtime assets and disclaimer posture are now recorded in one readiness surface.
-- `DCHK-04`: ready for human review because the public docs still point users from `UU` to `UP` and keep remaining `UU` names migration- or implementation-scoped.
+- `DCHK-04`: ready for human review because the public docs point users from `UU` to `UP` and keep remaining `UU` names historical- or internal-scoped.

@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.3.4
+    Version: v0.4.0
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a canonical <code>beamerthemeUP.sty</code> implementation entry backed by active <code>UP</code>-named subthemes, a legacy <code>beamerthemeUU.sty</code> compatibility wrapper, a checked-in showcase that doubles as a starter template, and a tracked release-readiness plus version-history trail under <code>docs/</code>.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a canonical <code>beamerthemeUP.sty</code> implementation entry backed by active <code>UP</code>-named subthemes, a checked-in showcase that doubles as a starter template, a requirements-aligned <code>v0.4.0</code> public documentation baseline, and a tracked release-readiness plus version-history trail under <code>docs/</code>.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -82,20 +82,20 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.3.4` is the current approved public documentation baseline for this repository.
+- `v0.4.0` is the current approved public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
-- `beamerthemeUP.sty` now owns the canonical theme implementation directly and loads the active `beamercolor`, `beamerinner`, and `beamerouter` `UP` subtheme files, while `beamerthemeUU.sty` is retained only as a deprecated compatibility wrapper for older `\usetheme{UU}` material.
+- `beamerthemeUP.sty` owns the canonical theme implementation directly and loads the active `beamercolor`, `beamerinner`, and `beamerouter` `UP` subtheme files.
 - The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
 - The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
 - `docs/usage-guide.md` is the tracked public quick-start and migration guide for the current public baseline.
 - `docs/release-readiness.md` is a tracked follow-up evidence artifact for compile, screenshot, validation, and GitHub/Overleaf distribution wording; it remains human-gated rather than the approved version baseline.
-- Historical version narratives for `v0.0.x`, `v0.1.x`, and `v0.2.x` now live under `docs/version-0-0-x/`, `docs/version-0-1-x/`, and `docs/version-0-2-x/` so the root `docs/` directory stays focused on the current `v0.3.x` baseline and follow-up materials.
-- `docs/version-0-3-1-docs.md` remains the pending readiness follow-up narrative, `docs/version-0-3-2-docs.md` records the docs-archive reorganization, `docs/version-0-3-3-docs.md` records the theme-file consolidation that made `beamerthemeUP.sty` the real canonical implementation surface, and `docs/version-0-3-4-docs.md` records the active subtheme filename migration to the `UP` namespace.
+- Historical version narratives for `v0.0.x`, `v0.1.x`, and `v0.2.x` now live under `docs/version-0-0-x/`, `docs/version-0-1-x/`, and `docs/version-0-2-x/` so the root `docs/` directory stays focused on the current `v0.4.x` baseline and follow-up materials.
+- `docs/version-0-3-1-docs.md` remains the pending readiness follow-up narrative, `docs/version-0-3-2-docs.md` records the docs-archive reorganization, `docs/version-0-3-3-docs.md` records the theme-file consolidation that made `beamerthemeUP.sty` the real canonical implementation surface, `docs/version-0-3-4-docs.md` records the active subtheme filename migration to the `UP` namespace, `docs/version-0-3-5-docs.md` records the current-contract cleanup around inherited `UU` wrapper guidance, and `docs/version-0-4-0-docs.md` records the requirements-alignment reconciliation for the new public baseline.
 - The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
 - The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
-- The current planning baseline treats identity/governance, brownfield understanding, public `UP` interface migration, UP-directed visual adaptation, and showcase/docs integration as complete enough for the present public baseline.
+- The approved requirements baseline now records Units `U-A` through `U-E` as implemented, while the human approval gate for `B-UE-02` remains the only open pre-deploy or pre-ops follow-up.
 - Validation evidence, refreshed screenshot proof, and GitHub/Overleaf distribution-ready packaging notes are now recorded in `docs/release-readiness.md`; human approval still gates bolt closure and any deploy/ops handoff.
 - `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
 - UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
@@ -105,7 +105,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - Canonical project identity: `beamer-up`
 - Supported public theme identifier: `UP`
 - Public docs and examples should point users to `UP`, not `UU`
-- Any remaining `UU` names in the repository are limited to the deprecated `beamerthemeUU.sty` wrapper, legacy compatibility internals, or historical provenance markers
+- Any remaining `UU` names in the repository are limited to legacy implementation residue, inherited asset basenames, or historical provenance markers
 
 ### Supported First-Release Scope
 
@@ -155,12 +155,13 @@ beamer-up/
     version-0-3-2-docs.md
     version-0-3-3-docs.md
     version-0-3-4-docs.md
+    version-0-3-5-docs.md
+    version-0-4-0-docs.md
   repo/
     images/
       project_screen.png
   beamer-up/
     beamerthemeUP.sty
-    beamerthemeUU.sty
     beamercolorthemeUP.sty
     beamerinnerthemeUP.sty
     beamerouterthemeUP.sty
@@ -169,7 +170,7 @@ beamer-up/
     logos/
 ```
 
-Public-facing docs intentionally omit ignored workflow scaffolding, internal planning/traceability artifacts, editor-local files, and local build artifacts.
+Public-facing docs intentionally omit ignored workflow scaffolding, internal planning/traceability artifacts, legacy-loader residue that is no longer part of the maintained public contract, editor-local files, and local build artifacts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -262,7 +263,7 @@ Migration note:
 
 - If you have older material that still uses `\usetheme{UU}`, update it to `\usetheme{UP}`.
 - Do not document or recommend `UU` as a supported public loader.
-- Remaining `UU` filenames in the repository exist for brownfield continuity and should be treated as internal implementation detail.
+- Remaining `UU` identifiers in the repository exist for brownfield continuity, inherited asset naming, or historical provenance and should be treated as internal detail.
 
 Compile and distribution note:
 
@@ -289,14 +290,14 @@ Branding note:
 - [x] Expand the showcase deck into a starter template for thesis defenses, class reports, and research talks.
 - [x] Consolidate public usage, migration, and distribution-scope guidance in `README.md` and `docs/usage-guide.md`.
 - [x] Finalize validation evidence and distribution-ready packaging notes for GitHub and Overleaf.
-- [ ] Preserve explicit attribution, release provenance, and legal clarity for the first broader public release cycle.
+- [ ] Obtain human approval for `B-UE-02` release-readiness evidence before broader deploy or ops handoff.
 
 See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for proposed improvements and open questions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Immediate Next Actions
-1. Review `docs/release-readiness.md` and decide whether the recorded evidence is sufficient to close `B-UE-02` and hand off to deploy/ops work.
+1. Review `docs/release-readiness.md` against the remaining `B-UE-02` approval gate and decide whether the recorded evidence is sufficient for deploy/ops handoff.
 2. Decide whether the broader public package should remain pdfLaTeX-first only or add wider engine validation evidence.
 3. If publishing to GitHub releases or Overleaf, carry forward the same provenance, disclaimer, and asset-governance notes captured in the readiness artifact.
 

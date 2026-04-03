@@ -1,6 +1,30 @@
 # Changelog
 
-Status: current approved public documentation baseline `v0.3.4`; the supported public loader is `UP`, `beamerthemeUP.sty` is the canonical implementation entry, the active color/inner/outer subthemes now also use `UP` filenames, `beamerthemeUU.sty` remains only as deprecated compatibility, the checked-in starter-template and usage guide define the published baseline, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+Status: current approved public documentation baseline `v0.4.0`; the supported public loader is `UP`, `beamerthemeUP.sty` is the canonical implementation entry, the active color/inner/outer subthemes use `UP` filenames, the public docs are now reconciled to the approved requirements baseline, and `docs/release-readiness.md` still records the human-gated evidence handoff for `B-UE-02`.
+
+## v0.4.0
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.5` to `v0.4.0`.
+- Reconciled `README.md` to the approved requirements baseline so the current public status, roadmap, and next-action wording now reflect that Units `U-A` through `U-E` are implemented and only the human approval gate for `B-UE-02` remains open before deploy or ops handoff.
+- Added `docs/version-0-4-0-docs.md` to capture the requirements-alignment reconciliation for this new public baseline.
+- Updated `SECURITY.md` so the supported-version matrix follows the new `v0.4.0` public baseline.
+- Normalized the `CHANGELOG.md` cleanup notes so ignored local LaTeX build artifacts are described generically instead of by explicit ignored filenames or wildcard patterns.
+
+### For Deletion
+- Generated local LaTeX build outputs from the bundled showcase workspace remained cleanup candidates before release packaging.
+
+## v0.3.5
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.4` to `v0.3.5`.
+- Updated `README.md`, `docs/usage-guide.md`, and `docs/release-readiness.md` so the current public contract now centers on the supported `UP` loader and no longer presents a legacy `UU` wrapper as part of the maintained public surface.
+- Updated the checked-in starter-template wording in `beamer-up/main.tex` and the source header in `beamer-up/beamerthemeUP.sty` so the current implementation notes now tell users to migrate older `\usetheme{UU}` material rather than implying an active legacy loader path.
+- Added `docs/version-0-3-5-docs.md` to capture the current public-contract cleanup after the legacy-wrapper retirement.
+- Updated `SECURITY.md` so the supported-version matrix follows the new `v0.3.5` public baseline.
+
+### For Deletion
+- Generated local LaTeX build outputs from the bundled showcase workspace remained cleanup candidates before release packaging.
 
 ## v0.3.4
 
@@ -14,7 +38,7 @@ Status: current approved public documentation baseline `v0.3.4`; the supported p
 - Added `docs/version-0-3-4-docs.md` to capture the active subtheme filename migration, rationale, and compile-validation notes for this patch-level release.
 
 ### For Deletion
-- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.bcf`, `main.fls`, `main.log`, `main.pdf`, `main.run.xml`, `main.synctex.gz`, `main.toc`, `main.vrb`, and the `main.*-SAVE-ERROR` byproducts, remained cleanup candidates before release packaging.
+- Generated local LaTeX build outputs from the bundled showcase workspace remained cleanup candidates before release packaging.
 
 ## v0.3.3
 
@@ -26,7 +50,7 @@ Status: current approved public documentation baseline `v0.3.4`; the supported p
 - Added `docs/version-0-3-3-docs.md` to capture the implementation-surface consolidation, rationale, and compile-validation notes for this patch-level release.
 
 ### For Deletion
-- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.*`, sync data, and related compile byproducts, remained cleanup candidates before release packaging.
+- Generated local LaTeX build outputs from the bundled showcase workspace remained cleanup candidates before release packaging.
 
 ## v0.3.2
 
@@ -37,7 +61,7 @@ Status: current approved public documentation baseline `v0.3.4`; the supported p
 - Updated `README.md` and `SECURITY.md` so the public repo layout and supported-version matrix match the reorganized version-doc trail.
 
 ### For Deletion
-- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.*`, `cover-check.*`, sync data, and related compile byproducts, remained cleanup candidates before release packaging.
+- Generated local LaTeX build outputs from the bundled showcase workspace remained cleanup candidates before release packaging.
 
 ## v0.3.0 Reconciliation Follow-Up
 
