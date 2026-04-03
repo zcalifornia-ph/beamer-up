@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.1.2
+    Version: v0.2.0
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page, refreshed public screenshot assets, checked-in UP-directed theme surfaces, and root docs reconciled to the approved planning and requirements baseline.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page with multiline-safe metadata layout, explicit-linebreak-safe conference affiliations, refreshed public screenshot assets, checked-in UP-directed theme surfaces, and public docs aligned to the current planning baseline for the next release cycle.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -81,17 +81,19 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.1.2` is the current public documentation baseline for this repository.
+- `v0.2.0` is the current public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
 - Remaining `UU`-named files or helper surfaces in the checked-in tree are brownfield implementation residue and migration detail, not the supported public interface.
 - The checked-in showcase deck under `beamer-up/` exercises the `UP` loader and demonstrates title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow.
 - The checked-in light-surface title page now adds a subtle `UPForestGreen` gradient wash while keeping the maroon accent bar and the simpler gradient-only cover treatment.
+- The checked-in title-page layout now keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
-- The showcase deck metadata now publishes `v0.1.1` on the title slide instead of the inherited `v1.0.0` marker, and the subtitle copy is shortened to "A \LaTeX\ presentation template for the UP System."
+- The showcase deck metadata now publishes `v0.1.1` on the title slide instead of the inherited `v1.0.0` marker, and the checked-in subtitle now demonstrates the multiline title-page path with a two-line "University of the Philippines System" wording.
 - The repository screenshot asset under `repo/images/project_screen.png` has been refreshed to match the current public showcase baseline.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
 - The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
-- Public root docs now align with the approved planning baseline for the current migration wave, whose remaining release focus is showcase validation, packaging notes, and distribution readiness.
+- The current planning baseline treats identity/governance, brownfield understanding, public `UP` interface migration, and UP-directed visual adaptation as complete enough for the present public baseline.
+- The remaining public-release focus is showcase expansion, validation evidence, and distribution-ready packaging notes for GitHub and Overleaf rather than another naming or visual-system reset.
 - `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
 - UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 
@@ -217,6 +219,11 @@ Supported user-facing options and helpers currently exercised by the checked-in 
 - Title helpers: `\multiauthor`, `\singleauthor`, `\addinstitute`, `\clearinstitutes`, `\venue`
 - Special frames: `\sectionframe`, `\standoutframe`, `\thankframe`
 
+Title-page behavior note:
+
+- Long `\institute{...}` values and long `\addinstitute{n}{...}` conference affiliations now wrap inside the title-page content block instead of overrunning the slide.
+- Multi-line conference affiliations continue after the affiliation number with a hanging indent whether the second line is created by automatic wrapping or by an explicit `\\` inside the affiliation text.
+
 Migration note:
 
 - If you have older material that still uses `\usetheme{UU}`, update it to `\usetheme{UP}`.
@@ -248,9 +255,9 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 
 ## Immediate Next Actions
 
-1. Prepare the validation evidence and distribution-ready packaging notes for the first broader release cycle.
-2. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
-3. Run broader compile validation across common TeX environments and document the results.
+1. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
+2. Prepare the validation evidence and distribution-ready packaging notes for the first broader release cycle.
+3. Run broader compile validation across common TeX environments and document the results for GitHub and Overleaf distribution surfaces.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
