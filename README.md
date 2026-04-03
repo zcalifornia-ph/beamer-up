@@ -31,7 +31,7 @@
     <br />
     Version: v1.0.0
     <br />
-    Status: first public release of an independently maintained derivative work with a supported public <code>UP</code> theme loader, a canonical <code>beamerthemeUP.sty</code> implementation entry backed by active <code>UP</code>-named subthemes, and a checked-in showcase that doubles as a starter template.
+    Status: First Public Release
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -50,7 +50,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#current-status">Current Status</a></li>
         <li><a href="#public-naming-contract">Public Naming Contract</a></li>
         <li><a href="#supported-first-release-scope">Supported First-Release Scope</a></li>
         <li><a href="#built-with">Built With</a></li>
@@ -65,8 +64,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#current-status">Current Status</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#immediate-next-actions">Immediate Next Actions</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -80,24 +79,7 @@
 
 This derivative work is maintained in this repository by Zildjian E. California. It preserves attribution to the original `beamer-uu` developer, A.J.H. (Jos) Zuijderwijk, and follows the license basis recorded in `LICENSE.txt`: the LaTeX Project Public License `LPPL 1.3c`. `beamer-up` should be identified as its own maintained derivative work rather than as the original `beamer-uu` release or an official University of the Philippines System publication.
 
-### Current Status
-
-- `v1.0.0` is the current supported public release for this repository.
-- The supported public loader is `\usetheme{UP}`.
-- `beamerthemeUP.sty` owns the canonical theme implementation directly and loads the active `beamercolor`, `beamerinner`, and `beamerouter` `UP` subtheme files.
-- No legacy `UU` wrapper or loader file is part of the maintained first-release surface.
-- The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
-- The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
-- This README and the checked-in starter deck are the public onboarding surface for the first release.
-- Historical `0.x` preparation-cycle narratives are preserved internally as release-trace material without changing the current public contract.
-- The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
-- The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported presentation surfaces.
-- The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
-- The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
-- The approved first-release scope is complete, and the final first-release readiness gate was approved and closed on April 3, 2026.
-- First-release validation evidence, screenshot proof, and packaging notes are already part of the maintained release record rather than an open approval handoff.
-- `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
-- UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
+Link to the original `beamer-uu` project is as follows: https://github.com/joszuijderwijk/beamer-uu
 
 ### Public Naming Contract
 
@@ -237,12 +219,6 @@ Title-page behavior note:
 - Long `\institute{...}` values and long `\addinstitute{n}{...}` conference affiliations wrap inside the title-page content block instead of overrunning the slide.
 - Multi-line conference affiliations continue after the affiliation number with a hanging indent whether the second line is created by automatic wrapping or by an explicit `\\` inside the affiliation text.
 
-Migration note:
-
-- If you have older material that still uses `\usetheme{UU}`, update it to `\usetheme{UP}`.
-- Do not document or recommend `UU` as a supported public loader.
-- Remaining `UU` identifiers in the repository exist for brownfield continuity, inherited asset naming, or historical provenance and should be treated as internal detail.
-
 Compile and distribution note:
 
 - Recommended compile command: `latexmk -pdf main.tex` from `beamer-up/`.
@@ -256,6 +232,25 @@ Branding note:
 - Use of UP names, logos, and other marks should follow UP branding guidance and any separate permission requirements outside `LPPL 1.3c`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Current Status
+
+- `v1.0.0` is the current supported public release for this repository.
+- The supported public loader is `\usetheme{UP}`.
+- `beamerthemeUP.sty` owns the canonical theme implementation directly and loads the active `beamercolor`, `beamerinner`, and `beamerouter` `UP` subtheme files.
+- No legacy `UU` wrapper or loader file is part of the maintained first-release surface.
+- The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
+- The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
+- This README and the checked-in starter deck are the public onboarding surface for the first release.
+- Historical `0.x` preparation-cycle narratives are preserved internally as release-trace material without changing the current public contract.
+- The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
+- The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported presentation surfaces.
+- The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
+- The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
+- The approved first-release scope is complete, and the final first-release readiness gate was approved and closed on April 3, 2026.
+- First-release validation evidence, screenshot proof, and packaging notes are already part of the maintained release record rather than an open approval handoff.
+- `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
+- UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 
 ## Roadmap
 
@@ -274,13 +269,6 @@ Branding note:
 - [ ] Expand the starter deck and packaging notes for more academic presentation patterns after the first release.
 
 See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for proposed improvements and open questions.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Immediate Next Actions
-1. Decide whether the broader public package should remain pdfLaTeX-first only or add wider XeLaTeX and LuaLaTeX validation evidence.
-2. Continue removing inherited internal `UU` identifiers where that cleanup is safe and does not alter the public `UP` contract.
-3. Keep GitHub and Overleaf distribution text aligned with the same provenance, disclaimer, and asset-governance posture used for the first release.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
