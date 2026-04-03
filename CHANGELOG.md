@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.2.0`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.3.0`; the supported public loader is `UP`, the checked-in starter-template and usage-guide baseline are now published, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,19 @@ Status: current public documentation baseline `v0.2.0`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.3.0
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.2.0` to `v0.3.0`.
+- Expanded `beamer-up/main.tex` from a showcase-only deck into the checked-in starter template for thesis defenses, class reports, and research talks while preserving the supported public `UP` loader path and the existing title-page, special-frame, bibliography, and content-surface coverage.
+- Added `docs/usage-guide.md` as the tracked public quick-start, migration, compile, provenance, and distribution-scope guide for the current baseline.
+- Updated `README.md` and `CONTRIBUTING.md` so the public onboarding contract and contributor guidance both point to the new starter-template plus usage-guide baseline.
+- Updated `SECURITY.md` so the supported-version matrix follows the `0.3.x` public baseline.
+- Added `docs/version-0-3-0-docs.md` so the public version trail records the starter-template and usage-guide release.
+
+### For Deletion
+- Generated local LaTeX build outputs and local compile-validation artifacts remained cleanup candidates before release packaging.
 
 ## v0.2.0
 
