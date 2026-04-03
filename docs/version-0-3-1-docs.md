@@ -1,14 +1,14 @@
-# Version v0.3.1 Documentation
+# Version v0.3.1 Follow-Up Documentation
 
 ## Title
-Published the `v0.3.1` Release-Readiness Evidence Baseline
+Captured the Pending `v0.3.1` Release-Readiness Follow-Up Narrative
 
 ## Quick Diagnostic Read
 
-This release turns the current public starter-template baseline into a documented readiness package.
+This follow-up captures the current readiness package without treating it as an approved published baseline.
 It does six concrete things:
 
-- publishes `v0.3.1` as the new public documentation baseline,
+- records the previously drafted `v0.3.1` readiness pass as pending rather than approved,
 - adds `docs/release-readiness.md` as the tracked evidence surface for compile, screenshot, asset-governance, and packaging notes,
 - refreshes `repo/images/project_screen.png` from the accepted final PDF,
 - aligns `README.md`, `docs/usage-guide.md`, and `CONTRIBUTING.md` around that new public evidence surface,
@@ -24,7 +24,7 @@ Make the repository's public starter-template baseline defensible for broader di
 `v0.3.0` made the checked-in deck usable as a real starter template and added a proper usage guide, but it still left one public-facing gap.
 The repository had the right starter surface, yet the compile proof, refreshed screenshot evidence, and GitHub/Overleaf packaging notes were still implied rather than packaged.
 
-`v0.3.1` closes that documentation gap.
+The readiness pass closes that documentation gap in evidence terms, but it does not by itself close the approval gap.
 
 The new `docs/release-readiness.md` file gives maintainers and reviewers one place to verify:
 
@@ -118,7 +118,7 @@ If the screenshot is stale, users cannot tell whether the public docs match the 
 ## 3) Public wording is now aligned around one evidence surface
 
 `README.md` and `docs/usage-guide.md` already described the supported `UP` loader, compile flow, and provenance posture.
-`v0.3.1` updates both files so they also point directly to `docs/release-readiness.md` for:
+The drafted `v0.3.1` follow-up updates both files so they also point directly to `docs/release-readiness.md` for:
 
 - compile proof,
 - screenshot proof,
@@ -141,7 +141,7 @@ That keeps the public deck copy aligned with the repository's own derivative-pro
 
 ## 5) This release still does not claim final public release or deploy closure
 
-`v0.3.1` improves the public audit trail significantly, but it does not silently collapse the human validation boundary.
+This follow-up improves the public audit trail significantly, but it does not silently collapse the human validation boundary.
 
 What remains explicitly human-gated:
 

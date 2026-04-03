@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.3.1
+    Version: v0.3.0
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a checked-in showcase that now doubles as a starter template for thesis defenses, class reports, and research talks, and tracked public usage plus release-readiness guidance for compile, migration, provenance, validation evidence, and distribution posture.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a checked-in showcase that now doubles as a starter template for thesis defenses, class reports, and research talks, plus a tracked follow-up release-readiness artifact for compile, migration, provenance, validation evidence, and distribution posture.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -82,12 +82,13 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.3.1` is the current public documentation baseline for this repository.
+- `v0.3.0` is the current approved public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
 - Remaining `UU`-named files or helper surfaces in the checked-in tree are brownfield implementation residue and migration detail, not the supported public interface.
 - The checked-in showcase deck under `beamer-up/` now doubles as a starter template for thesis defenses, class reports, and research talks.
 - The showcase still exercises title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow through the supported `UP` path.
-- The tracked public guides at `docs/usage-guide.md` and `docs/release-readiness.md` now cover quick start, migration notes, font fallback expectations, validation evidence, and supported GitHub/Overleaf wording for the current baseline.
+- `docs/usage-guide.md` is the tracked public quick-start and migration guide for the current `v0.3.0` baseline.
+- `docs/release-readiness.md` is a tracked follow-up evidence artifact for compile, screenshot, validation, and GitHub/Overleaf distribution wording; it remains human-gated rather than the approved version baseline.
 - The checked-in title-page layout keeps multiline single-author and multi-author metadata inside a bounded cover composition, including wrapped long-form conference affiliations whose continuation lines stay in the same hanging-indent column for both automatic wraps and explicit `\\` line breaks.
 - The current checked-in visual system uses the UP core palette `#8E1537`, `#005740`, `#FFB81D`, `#231F20`, with runtime-selected English and Filipino UP logo paths for the supported non-`nl` presentation surfaces.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
@@ -138,6 +139,7 @@ beamer-up/
     release-readiness.md
     version-0-0-2-docs.md
     ...
+    version-0-3-0-docs.md
     version-0-3-1-docs.md
   repo/
     images/
