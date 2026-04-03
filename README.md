@@ -29,9 +29,9 @@
   <p align="center">
     <strong>An unofficial Beamer theme initiative for the University of the Philippines System.</strong>
     <br />
-    Version: v0.1.4
+    Version: v0.2.0
     <br />
-    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page with multiline-safe metadata layout, explicit-linebreak-safe conference affiliations, refreshed public screenshot assets, checked-in UP-directed theme surfaces, and root docs reconciled to the approved planning and requirements baseline.
+    Status: independently maintained derivative work with a supported public <code>UP</code> theme loader, a refined light-surface title page with multiline-safe metadata layout, explicit-linebreak-safe conference affiliations, refreshed public screenshot assets, checked-in UP-directed theme surfaces, and public docs aligned to the current planning baseline for the next release cycle.
     <br />
     <a href="https://github.com/zcalifornia-ph/beamer-up"><strong>Explore the repository »</strong></a>
     <br />
@@ -81,7 +81,7 @@ This derivative work is maintained in this repository by Zildjian E. California.
 
 ### Current Status
 
-- `v0.1.4` is the current public documentation baseline for this repository.
+- `v0.2.0` is the current public documentation baseline for this repository.
 - The supported public loader is `\usetheme{UP}`.
 - Remaining `UU`-named files or helper surfaces in the checked-in tree are brownfield implementation residue and migration detail, not the supported public interface.
 - The checked-in showcase deck under `beamer-up/` exercises the `UP` loader and demonstrates title pages, section-divider slides, standout slides, thank-you slides, optional-logo behavior, bibliography rendering, and multi-author metadata flow.
@@ -92,7 +92,8 @@ This derivative work is maintained in this repository by Zildjian E. California.
 - The repository screenshot asset under `repo/images/project_screen.png` has been refreshed to match the current public showcase baseline.
 - The recommended compile command is `latexmk -pdf main.tex` from `beamer-up/`; the documented fallback is `pdflatex`, `biber`, `pdflatex`, `pdflatex`.
 - The supported typography baseline is Palatino for body text plus a tiered heading fallback of Optima -> Avenir -> Helvetica depending on engine and local font availability.
-- Public root docs now align with the approved planning baseline for the current migration wave, whose remaining release focus is showcase validation, packaging notes, and distribution readiness.
+- The current planning baseline treats identity/governance, brownfield understanding, public `UP` interface migration, and UP-directed visual adaptation as complete enough for the present public baseline.
+- The remaining public-release focus is showcase expansion, validation evidence, and distribution-ready packaging notes for GitHub and Overleaf rather than another naming or visual-system reset.
 - `beamer-up` does not imply endorsement by the University of the Philippines System, Utrecht University, or A.J.H. (Jos) Zuijderwijk.
 - UP-branded assets in this repository should follow the UP branding guidelines and are intended for UP constituents or internal use unless broader permission is documented explicitly.
 
@@ -254,9 +255,9 @@ See the [open issues](https://github.com/zcalifornia-ph/beamer-up/issues) for pr
 
 ## Immediate Next Actions
 
-1. Prepare the validation evidence and distribution-ready packaging notes for the first broader release cycle.
-2. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
-3. Run broader compile validation across common TeX environments and document the results.
+1. Expand the showcase deck for common UP use cases such as thesis defenses, class reports, and research talks.
+2. Prepare the validation evidence and distribution-ready packaging notes for the first broader release cycle.
+3. Run broader compile validation across common TeX environments and document the results for GitHub and Overleaf distribution surfaces.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

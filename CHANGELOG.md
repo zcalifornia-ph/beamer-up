@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.1.4`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.2.0`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,18 @@ Status: current public documentation baseline `v0.1.4`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.2.0
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.1.4` to `v0.2.0`.
+- Reconciled the root README status, roadmap, and next-action wording to the current planning reality: identity/governance, brownfield understanding, public `UP` interface migration, and visual adaptation are in place, while showcase expansion and distribution readiness remain open.
+- Preserved the current checked-in title-page baseline in the public docs, including multiline-safe metadata layout and explicit-linebreak-safe conference affiliations.
+- Updated `SECURITY.md` so the supported-version matrix follows the `0.2.x` public baseline.
+- Added `docs/version-0-2-0-docs.md` so the public version trail records the `0.2.0` documentation reconciliation release.
+
+### For Deletion
+- Generated local LaTeX build outputs and local title-page verification preview PNGs remained cleanup candidates before release packaging.
 
 ## v0.1.4
 
