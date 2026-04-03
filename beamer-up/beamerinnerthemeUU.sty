@@ -47,10 +47,11 @@
 \newcommand{\uuconfinstituterow}[2]{%
   \par
   \noindent
-  \hangindent=\@uuconfinstitutehangindent\relax
-  \hangafter=1
   \makebox[\@uuconfinstitutehangindent][l]{{\scriptsize\color{UPForestGreen}#1}}%
-  #2\par
+  \parbox[t]{\dimexpr\linewidth-\@uuconfinstitutehangindent\relax}{%
+    \raggedright
+    #2%
+  }\par
 }
 
 \newif\if@uufirstinstitute

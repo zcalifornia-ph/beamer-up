@@ -1,6 +1,6 @@
 # Changelog
 
-Status: current public documentation baseline `v0.1.3`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
+Status: current public documentation baseline `v0.1.4`; the supported public loader is `UP`, the root governance docs now align with the approved planning baseline, and detailed version narratives live under `docs/version-*-docs.md`.
 
 ## Unreleased
 
@@ -9,6 +9,16 @@ Status: current public documentation baseline `v0.1.3`; the supported public loa
 
 ### For Deletion
 - None yet.
+
+## v0.1.4
+
+### Added or Changed
+- Reworked the conference-affiliation row formatter in `beamer-up/beamerinnerthemeUU.sty` so explicit `\\` line breaks inside `\addinstitute{n}{...}` stay inside the same hanging-indent text column instead of resetting to the left margin.
+- Updated `beamer-up/main.tex` to exercise the manual-linebreak conference-affiliation case directly in the bundled multi-author title-page example.
+- Updated `README.md`, `CHANGELOG.md`, and added `docs/version-0-1-4-docs.md` so the public version trail distinguishes the explicit-linebreak follow-up from the earlier automatic-wrap repair.
+
+### For Deletion
+- Generated local LaTeX build outputs and local title-page verification preview PNGs remained cleanup candidates before release packaging.
 
 ## v0.1.3
 
