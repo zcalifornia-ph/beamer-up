@@ -1,7 +1,31 @@
-% beamerouterthemeUP.sty - UP outer-theme implementation file for the beamer-up derivative
-% Public project identity: beamer-up. Approved first-release public theme identifier: UP.
-% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
-% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
+% beamerouterthemeUP.sty
+% Copyright 2026 Zildjian E. California
+%
+% This file is part of the beamer-up derivative work and adapts the
+% original beamer-uu sources by A.J.H. (Jos) Zuijderwijk to the
+% maintained University of the Philippines `UP` theme surface.
+%
+% This work may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, either version 1.3c of this license
+% or (at your option) any later version. The latest version of this
+% license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Zildjian E. California.
+% Issue reports for this maintained derivative may be sent via
+%   https://github.com/zcalifornia-ph/beamer-up/issues
+%
+% This work consists of the files beamercolorthemeUP.sty,
+% beamerinnerthemeUP.sty, beamerouterthemeUP.sty, beamerthemeUP.sty,
+% main.tex, and references.bib.
+%
+% Branding note: distributed UP-branded assets should follow the UP
+% branding guidelines and are intended for UP constituents/internal
+% use. No official endorsement is implied.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{beamerouterthemeUP}[2026/04/03 UP outer theme for the beamer-up derivative]
@@ -70,15 +94,9 @@
   \if@UUshowlogo
     \begin{tikzpicture}[overlay, remember picture]
       \ifx\@uulogoblackpath\@empty\else
-        \if@UUnl
-          \node[anchor=north east, inner sep=0pt]
-            at ([xshift=-0.45cm, yshift=-0.12cm]current page.north east)
-            {\@uulogoblackinclude{1.4cm}};
-        \else
-          \node[anchor=north east, inner sep=0pt]
-            at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.15cm]current page.north east)
-            {\if@UUfilipino\@upheaderlogolockupblack{3.45cm}\else\@upheaderlogolockupblack{3.85cm}\fi};
-        \fi
+        \node[anchor=north east, inner sep=0pt]
+          at ([xshift=\dimexpr-\beamer@rightmargin+0.08cm\relax, yshift=-0.15cm]current page.north east)
+          {\if@UUfilipino\@upheaderlogolockupblack{3.45cm}\else\@upheaderlogolockupblack{3.85cm}\fi};
       \fi
     \end{tikzpicture}%
   \fi
@@ -102,14 +120,7 @@
     }\par
     \vfill
     \raisebox{0cm}{%
-      \if@UUnl
-        \ifx\@uulogopath\@empty\else
-          \tikz{\node[fill=UPWhite, rounded corners=3pt, inner sep=5pt]
-            {\@uulogoinclude{1.5cm}};}
-        \fi
-      \else
-        \@upclosinglogoinclude{\@upclosinglogoheight}%
-      \fi
+      \@upclosinglogoinclude{\@upclosinglogoheight}%
     }\par
     \vspace*{0.10cm}
   \end{frame}
