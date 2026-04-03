@@ -1,8 +1,19 @@
 # Changelog
 
-Status: current approved public documentation baseline `v0.3.0`; the supported public loader is `UP`, the checked-in starter-template and usage guide define the published baseline, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+Status: current approved public documentation baseline `v0.3.2`; the supported public loader is `UP`, the checked-in starter-template and usage guide define the published baseline, earlier `0.0.x` to `0.2.x` narratives are grouped into archive folders under `docs/`, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
 
-## Unreleased
+## v0.3.2
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.0` to `v0.3.2` for a docs-only archive-reorganization release.
+- Reorganized the historical public version trail so the `v0.0.x`, `v0.1.x`, and `v0.2.x` narratives now live under `docs/version-0-0-x/`, `docs/version-0-1-x/`, and `docs/version-0-2-x/` instead of crowding the root `docs/` directory.
+- Kept the active `v0.3.x` docs at the root of `docs/`, including the current baseline narrative, the `v0.3.0` reconciliation follow-up, the pending `v0.3.1` readiness narrative, and the new `docs/version-0-3-2-docs.md` archive-reorganization note.
+- Updated `README.md` and `SECURITY.md` so the public repo layout and supported-version matrix match the reorganized version-doc trail.
+
+### For Deletion
+- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.*`, `cover-check.*`, sync data, and related compile byproducts, remained cleanup candidates before release packaging.
+
+## v0.3.0 Reconciliation Follow-Up
 
 ### Added or Changed
 - Normalized the root public documentation version markers back to `v0.3.0` so the published baseline matches the approved requirements state while `B-UE-02` remains awaiting human approval.

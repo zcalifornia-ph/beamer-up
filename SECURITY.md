@@ -36,8 +36,8 @@ Our approach emphasizes:
 
 | Version | Supported |
 | --- | --- |
-| `0.3.0` | :white_check_mark: |
-| `0.2.x`, older releases, or unpublished follow-ups | :x: |
+| `0.3.2` | :white_check_mark: |
+| `0.3.1` pending follow-up narrative, `0.3.0`, `0.2.x`, older releases, or unpublished archives | :x: |
 
 ## Reporting a Vulnerability
 
