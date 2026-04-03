@@ -30,7 +30,7 @@ Contributions should support these working values:
 ## Naming and Branding Contract
 
 - Public project identity remains `beamer-up`.
-- Approved first-release public theme identifier is `UP`.
+- Current public theme identifier for the first release is `UP`.
 - Current `UU` identifiers in checked-in sources are brownfield implementation residue; do not introduce new public-facing `UU` expectations unless you are documenting migration history explicitly.
 - When you mention inherited `UU` behavior, direct readers to `UP` as the supported loader and do not present a legacy `UU` wrapper or loader path as part of the maintained public interface.
 - GitHub release text, repository docs, and Overleaf descriptions that mention UP-branded assets must preserve derivative provenance, non-endorsement wording, and the internal-use branding disclaimer when applicable.
@@ -43,7 +43,7 @@ Contributions should support these working values:
 - Keep changes focused and easy to review.
 - Preserve clear attribution to the original `beamer-uu` work and do not remove or obscure license context unless maintainers explicitly direct otherwise.
 - Do not switch new public examples, quick starts, screenshots, or migration guidance back to `\usetheme{UU}`.
-- Keep `README.md`, `docs/usage-guide.md`, and `docs/release-readiness.md` aligned when you change public quick-start, compile-validation, migration, or distribution wording.
+- Keep `README.md`, `CHANGELOG.md`, and the root governance docs aligned when you change public quick-start, compile-validation, migration, or distribution wording.
 - If you modify distributed theme components, record the change clearly in the file, pull request, or companion documentation.
 - Do not imply support, sponsorship, or endorsement from the original author, Utrecht University, the University of the Philippines System, or repository maintainers unless maintainers explicitly approve that wording.
 - If you add or replace logos, fonts, or institutional assets, make sure you have the right to use and redistribute them.
@@ -97,7 +97,7 @@ Open a pull request containing:
 Example:
 
 ```text
-docs/init-repo-governance
+documentation/root-governance-refresh
 ```
 
 ## Commit Conventions

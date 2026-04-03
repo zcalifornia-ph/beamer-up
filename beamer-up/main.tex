@@ -1,17 +1,46 @@
-% main.tex - showcase deck and starter template for the beamer-up derivative
-% Current checkout note: this deck exercises the supported \usetheme{UP} interface.
-% Older decks that still mention \usetheme{UU} should be updated to \usetheme{UP}.
-% Attribution: derived from the original beamer-uu work by A.J.H. (Jos) Zuijderwijk; independently maintained here by Zildjian E. California.
-% Branding note: distributed UP-branded assets should follow the UP branding guidelines and are intended for UP constituents/internal use. No official endorsement is implied.
-% This file now serves both as a compile-validation surface and as a starter template for common UP academic use cases.
+% main.tex
+% Copyright 2026 Zildjian E. California
+%
+% This file is part of the beamer-up derivative work and adapts the
+% original beamer-uu sources by A.J.H. (Jos) Zuijderwijk to the
+% maintained University of the Philippines `UP` theme surface.
+%
+% This work may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, either version 1.3c of this license
+% or (at your option) any later version. The latest version of this
+% license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is Zildjian E. California.
+% Issue reports for this maintained derivative may be sent via
+%   https://github.com/zcalifornia-ph/beamer-up/issues
+%
+% This work consists of the files beamercolorthemeUP.sty,
+% beamerinnerthemeUP.sty, beamerouterthemeUP.sty, beamerthemeUP.sty,
+% main.tex, and references.bib.
+%
+% Current checkout note: this deck exercises the supported
+% \usetheme{UP} interface.
+% Older decks that still mention \usetheme{UU} should be updated to
+% \usetheme{UP}.
+% Branding note: distributed UP-branded assets should follow the UP
+% branding guidelines and are intended for UP constituents/internal
+% use. No official endorsement is implied.
+% This file now serves both as a compile-validation surface and as a
+% starter template for common UP academic use cases.
 \documentclass[aspectratio=169]{beamer}
 \usetheme[showlogo,english]{UP}
 
 % -- Metadata -----------------------------------
-\title[beamer-up Template]{beamer-up Showcase and Starter Template {\footnotesize \quad \textcolor{UPForestGreen}{v0.1.1}}}
-\subtitle{\textbf{For thesis defenses, class reports, and research talks\\across the University of the Philippines System}}
-\author[M. D. Santos]{Maria Dominique L. Santos}
-\institute{Department of Computer Science \\ University of the Philippines Mindanao}
+\title[Beamer Theme for UP]{Beamer Theme for UP {\footnotesize \quad \textcolor{UPForestGreen}{v1.0.0}}}
+\subtitle{\textbf{A \LaTeX\ slide template for the University of the Philippines System\\for thesis defenses, class reports, and research talks.}}
+\author[J. C. M. Ibarra]{Juan Crisóstomo M. Ibarra}
+\institute{Department of Mathematics, Physics, and Computer Science\\College of Science and Mathematics\\University of the Philippines - Mindanao}
+\venue{UP System Research Colloquium 2026}
 \date{\today}
 
 
@@ -26,13 +55,13 @@
 \end{frame}
 
 % -- Multi-author / conference title --
-\author[Santos et al.]{%
-  Maria D. Santos\inst{1} \and
-  Rafael P. Cruz\inst{1} \and
-  Elena S. Navarro\inst{2}%
+\author[Gómez et al.]{%
+  Mariano C. Gómez\inst{1} \and
+  José A. Burgos\inst{1} \and
+  Jacinto D. Zamora\inst{2}%
 }
-\addinstitute{1}{Department of Computer Science, College of Engineering,\\University of the Philippines Diliman}
-\addinstitute{2}{Department of Mathematics, Physics, and Computer Science,\\College of Science and Mathematics, University of the Philippines Mindanao}
+\addinstitute{1}{Department of Computer Science, College of Engineering,\\University of the Philippines - Diliman}
+\addinstitute{2}{Department of Mathematics, Physics, and Computer Science,\\College of Science and Mathematics, University of the Philippines - Mindanao}
 \multiauthor
 \venue{UP System Research Colloquium 2026}
 \begin{frame}[plain]
@@ -40,8 +69,8 @@
 \end{frame}
 
 % -- Reset to single-author for the rest of the demo --
-\author[M. D. Santos]{Maria Dominique L. Santos}
-\institute{Department of Computer Science \\ University of the Philippines Mindanao}
+\author[J. C. M. Ibarra]{Juan Crisóstomo M. Ibarra}
+\institute{Department of Mathematics, Physics, and Computer Science,\\College of Science and Mathematics, University of the Philippines Mindanao}
 \clearinstitutes
 \singleauthor
 
@@ -65,7 +94,6 @@
     \item \texttt{\textbackslash usetheme[showlogo]\{UP\}} --- logo on every slide
     \item \texttt{\textbackslash usetheme[showlogo,english]\{UP\}} --- English UP logotype
     \item \texttt{\textbackslash usetheme[showlogo,filipino]\{UP\}} --- Filipino UP logotype
-    \item \texttt{\textbackslash usetheme[nl]\{UP\}} --- legacy Dutch-logo compatibility path
   \end{itemize}
 
   \vskip 6pt
@@ -99,8 +127,7 @@
       \end{block}
       \vskip 6pt
       \begin{exampleblock}{Public Contract}
-        The supported public loader is \texttt{UP}. Any remaining \texttt{UU}
-        naming is migration detail or implementation residue only.
+        The supported public loader is \texttt{UP}.
       \end{exampleblock}
     \end{column}
   \end{columns}
@@ -178,7 +205,7 @@
       \end{exampleblock}
       \vskip 6pt
       \begin{alertblock}{Migration reminder}
-        If your older deck still uses \texttt{\textbackslash usetheme\{UU\}}, migrate to
+        If your older deck still uses other themes, consider migrating them to
         \texttt{\textbackslash usetheme\{UP\}} before reusing this template.
       \end{alertblock}
     \end{column}
@@ -213,8 +240,7 @@
   \end{columns}
 
   \vskip 8pt
-  The public theme stays inside the UP four-colour system rather than the inherited
-  inherited multi-hue source palette.
+  The public theme stays inside the UP four-colour system as defined by the UP Visual Identity Guidebook~\cite{upvig2017}.
 \end{frame}
 
 \begin{frame}{Typography and Body Copy}
@@ -409,7 +435,6 @@ print(fibonacci(10))  # 55
     \item Preferred command from \texttt{beamer-up/}: \texttt{latexmk -pdf main.tex}
     \item Fallback command chain: \texttt{pdflatex}, \texttt{biber}, \texttt{pdflatex}, \texttt{pdflatex}
     \item Public quick-start and migration notes live in \texttt{README.md} and \texttt{docs/usage-guide.md}
-    \item GitHub and Overleaf guidance should describe the same supported \texttt{UP} entry path and disclaimer posture
     \item UP-branded assets remain subject to branding guidance beyond the software license
   \end{itemize}
 \end{frame}

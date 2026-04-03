@@ -4,7 +4,7 @@
 
 `beamer-up` is a LaTeX/Beamer theme repository.
 This repository is an independently maintained derivative distribution; do not treat the original `beamer-uu` author or Utrecht University as the support channel for `beamer-up`.
-The supported public theme loader is `UP`; any remaining `UU`-named files are relevant only insofar as they affect compile safety, provenance, or migration integrity.
+The supported public theme loader is `UP`; any remaining `UU`-derived identifiers are relevant only insofar as they affect compile safety, provenance, or migration integrity.
 Security reports are welcome for issues that could cause unsafe execution, harmful build behavior, accidental credential disclosure, or supply-chain risk in the repository's materials and instructions.
 Reports are also welcome for packaging or release issues that strip `LPPL 1.3c` notices or obscure whether distributed files are modified derivatives, because that creates provenance and downstream trust risk.
 
@@ -36,8 +36,8 @@ Our approach emphasizes:
 
 | Version | Supported |
 | --- | --- |
-| `0.4.0` | :white_check_mark: |
-| `0.3.5`, `0.3.4`, `0.3.3`, `0.3.2`, `0.3.1` pending follow-up narrative, `0.3.0`, `0.2.x`, older releases, or unpublished archives | :x: |
+| `1.0.0` | :white_check_mark: |
+| `0.4.0` and earlier `0.x` preparation baselines, plus unpublished archives | :x: |
 
 ## Reporting a Vulnerability
 
