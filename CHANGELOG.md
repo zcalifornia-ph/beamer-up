@@ -1,6 +1,18 @@
 # Changelog
 
-Status: current approved public documentation baseline `v0.3.2`; the supported public loader is `UP`, the checked-in starter-template and usage guide define the published baseline, earlier `0.0.x` to `0.2.x` narratives are grouped into archive folders under `docs/`, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+Status: current approved public documentation baseline `v0.3.3`; the supported public loader is `UP`, `beamerthemeUP.sty` is now the canonical implementation entry, `beamerthemeUU.sty` remains only as deprecated compatibility, the checked-in starter-template and usage guide define the published baseline, and `docs/release-readiness.md` records the still-human-gated evidence handoff for `B-UE-02`.
+
+## v0.3.3
+
+### Added or Changed
+- Bumped the root public documentation baseline from `v0.3.2` to `v0.3.3`.
+- Consolidated the theme orchestration into `beamer-up/beamerthemeUP.sty`, so the supported public `UP` package is now the real canonical implementation entry rather than a thin wrapper over `beamerthemeUU.sty`.
+- Reduced `beamer-up/beamerthemeUU.sty` to a deprecated compatibility wrapper that forwards options to `beamerthemeUP.sty` and preserves migration guidance for older `\usetheme{UU}` material.
+- Updated `README.md`, `docs/usage-guide.md`, and the checked-in showcase wording in `beamer-up/main.tex` so `beamerthemeUP.sty` is described as the canonical theme entry and `beamerthemeUU.sty` only as legacy compatibility.
+- Added `docs/version-0-3-3-docs.md` to capture the implementation-surface consolidation, rationale, and compile-validation notes for this patch-level release.
+
+### For Deletion
+- Generated local LaTeX build outputs from the bundled showcase workspace, including `main.*`, sync data, and related compile byproducts, remained cleanup candidates before release packaging.
 
 ## v0.3.2
 
